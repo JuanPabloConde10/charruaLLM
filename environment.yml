@@ -1,0 +1,11 @@
+name: charruallm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - torch>=2.4
+      - numpy>=1.26
+      - tokenizers>=0.20
+      - tqdm>=4.66

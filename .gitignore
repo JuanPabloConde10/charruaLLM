@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.bin
+*.pt
+runs/
+tokenizer.json
+meta.json
+.DS_Store
+data/
