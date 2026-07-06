@@ -65,6 +65,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--data-dir", default=".")
     p.add_argument("--out-dir", default="runs/run1")
+    p.add_argument("--resume", default=None, help="path to run dir to resume from (loads final.pt)")
     p.add_argument("--device", default="auto", choices=["auto", "cuda", "mps", "cpu"])
     p.add_argument("--compile", action="store_true", help="torch.compile (CUDA only)")
     # Model
@@ -115,15 +116,29 @@ def main():
     data_dict = {"train": train_data, "val": val_data}
 
     # model
-    cfg = GPTConfig(
-        vocab_size=meta["vocab_size"],
-        block_size=args.block_size,
-        n_layer=args.n_layer,
-        n_head=args.n_head,
-        n_embd=args.n_embd,
-        dropout=args.dropout,
-    )
-    model = GPT(cfg).to(device)
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.resume:
+        resume_ckpt = torch.load(Path(args.resume) / "final.pt", map_location=device, weights_only=False)
+        cfg = GPTConfig(**resume_ckpt["cfg"])
+        model = GPT(cfg).to(device)
+        model.load_state_dict(resume_ckpt["model"])
+        start_step = resume_ckpt["step"] + 1
+        best_val = resume_ckpt.get("best_val", float("inf"))
+        print(f"Resumed from {args.resume}/final.pt (step={resume_ckpt['step']}, best_val={best_val:.4f})")
+    else:
+        cfg = GPTConfig(
+            vocab_size=meta["vocab_size"],
+            block_size=args.block_size,
+            n_layer=args.n_layer,
+            n_head=args.n_head,
+            n_embd=args.n_embd,
+            dropout=args.dropout,
+        )
+        model = GPT(cfg).to(device)
+        start_step = 0
+        best_val = float("inf")
     print(f"Model params: {model.num_params():,}")
 
     raw_model = model
@@ -140,8 +155,13 @@ def main():
         optim_kwargs["fused"] = True
     optimizer = torch.optim.AdamW(model.parameters(), **optim_kwargs)
 
-    out_dir = Path(args.out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    if args.resume:
+        optimizer.load_state_dict(resume_ckpt["optimizer"])
+        for state in optimizer.state.values():
+            for k, v in state.items():
+                if isinstance(v, torch.Tensor):
+                    state[k] = v.to(device)
+
     with open(out_dir / "config.json", "w") as f:
         json.dump({"args": vars(args), "model_cfg": cfg.__dict__, "meta": meta}, f, indent=2)
 
@@ -152,9 +172,8 @@ def main():
     )
 
     t0 = time.time()
-    best_val = float("inf")
 
-    for step in range(args.max_steps + 1):
+    for step in range(start_step, args.max_steps + 1):
         lr = cosine_lr(step, args.warmup_steps, args.max_steps, args.lr, args.min_lr)
         for g in optimizer.param_groups:
             g["lr"] = lr
@@ -171,8 +190,11 @@ def main():
                 ckpt = {
                     "model": raw_model.state_dict(),
                     "cfg": cfg.__dict__,
+                    "optimizer": optimizer.state_dict(),
                     "step": step,
                     "val_loss": losses["val"],
+                    "best_val": best_val,
+                    "args": vars(args),
                 }
                 torch.save(ckpt, out_dir / "best.pt")
                 print(f"       saved best.pt (val={best_val:.4f})")
@@ -197,7 +219,8 @@ def main():
             print(f"step {step:6d} | loss {last_loss:.4f} | lr {lr:.2e}")
 
     torch.save(
-        {"model": raw_model.state_dict(), "cfg": cfg.__dict__, "step": args.max_steps},
+        {"model": raw_model.state_dict(), "cfg": cfg.__dict__, "optimizer": optimizer.state_dict(),
+         "step": args.max_steps, "best_val": best_val, "args": vars(args)},
         out_dir / "final.pt",
     )
     print(f"Saved {out_dir/'final.pt'}  | best val {best_val:.4f}")
