@@ -34,9 +34,13 @@ def main():
     p.add_argument("--src-dir", default="spanish-corpora/preprocessed")
     p.add_argument("--target-gb", type=float, default=3.0)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--out-subdir", default="small-sample")
     args = p.parse_args()
 
     src_dir = Path(args.src_dir)
+    out_dir = src_dir / args.out_subdir
+    out_dir.mkdir(exist_ok=True)
+    
     files = sorted(src_dir.glob("preprocessed_*_lower.txt"))
     assert files, f"no matching files in {src_dir}"
 
@@ -50,9 +54,9 @@ def main():
     for f in files:
         n_lines = count_lines(f)
         n_sample = max(1, int(n_lines * frac))
-        dst = f.parent / f.name.replace("_lower.txt", "_lower_sampled.txt")
+        dst = out_dir / f.name.replace("_lower.txt", "_lower_sampled.txt")
 
-        print(f"  {f.name}: {n_lines:,} lines -> {n_sample:,} sampled -> {dst.name}")
+        print(f"  {f.name}: {n_lines:,} lines -> {n_sample:,} sampled -> {out_dir.name}/{dst.name}")
         sample_lines(f, dst, n_sample, args.seed)
         sampled_bytes = dst.stat().st_size
         total_sampled += sampled_bytes
