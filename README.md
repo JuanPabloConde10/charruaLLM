@@ -1,7 +1,7 @@
 # charruaLLM
 
-Modelo base (next-token prediction) entrenado sobre noticias uruguayas en español
-(El Observador, El País, Montevideo Portal — corpus en `data/`).
+Modelo base (next-token prediction) entrenado sobre el dataset UY22: noticias
+uruguayas en español de El Observador, El País y Montevideo Portal (corpus en `data/`).
 
 Inspirado en nanoGPT / nanochat pero recortado al hueso para que entrene local
 en una Mac (M-series via MPS) y se pueda lanzar igual en una GPU NVIDIA sin tocar código.
