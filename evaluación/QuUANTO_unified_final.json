@@ -1,0 +1,5010 @@
+{
+  "dataset": "QuUANTO",
+  "description": "Assertions validated as correct by human reviewers. Each assertion was derived from a QuALES QA pair and verified through multi-agent LLM validation and manual human review.",
+  "assertions": [
+    {
+      "id": 0,
+      "quales_id": 10,
+      "quales_split": "dev_gold",
+      "assertion": "El Pereira Rossell es un hospital."
+    },
+    {
+      "id": 1,
+      "quales_id": 100,
+      "quales_split": "dev_gold",
+      "assertion": "El sector de alojamiento y servicios de comida envió la mayor cantidad de trabajadores al seguro de desempleo."
+    },
+    {
+      "id": 2,
+      "quales_id": 103,
+      "quales_split": "dev_gold",
+      "assertion": "Históricamente, el 60% de las empresas del sector manufacturero envió a sus trabajadores al seguro de desempleo."
+    },
+    {
+      "id": 3,
+      "quales_id": 108,
+      "quales_split": "dev_gold",
+      "assertion": "Las escuelas privadas no tenían una posible fecha para comenzar el nuevo régimen."
+    },
+    {
+      "id": 4,
+      "quales_id": 114,
+      "quales_split": "dev_gold",
+      "assertion": "La plataforma CREA, de Plan Ceibal, fue una herramienta clave para la educación virtual."
+    },
+    {
+      "id": 5,
+      "quales_id": 115,
+      "quales_split": "dev_gold",
+      "assertion": "La OPS es la Organización Panamericana de la Salud."
+    },
+    {
+      "id": 6,
+      "quales_id": 116,
+      "quales_split": "dev_gold",
+      "assertion": "Carissa Etienne fue el presidente de la OPS."
+    },
+    {
+      "id": 7,
+      "quales_id": 119,
+      "quales_split": "dev_gold",
+      "assertion": "La directora de la OPS, Carissa Etienne, era de Dominica."
+    },
+    {
+      "id": 8,
+      "quales_id": 12,
+      "quales_split": "dev_gold",
+      "assertion": "El Maciel es un hospital."
+    },
+    {
+      "id": 9,
+      "quales_id": 120,
+      "quales_split": "dev_gold",
+      "assertion": "Algunos sectores poblacionales del continente, como los indígenas y afrodescendientes, tienen peor acceso al sistema de salud estatal en Latinoamérica."
+    },
+    {
+      "id": 10,
+      "quales_id": 126,
+      "quales_split": "dev_gold",
+      "assertion": "En México se registraban diez femicidios por día."
+    },
+    {
+      "id": 11,
+      "quales_id": 131,
+      "quales_split": "dev_gold",
+      "assertion": "Nigel Manchini es profesor de Filosofía y magíster en Neuropsicología y Educación."
+    },
+    {
+      "id": 12,
+      "quales_id": 132,
+      "quales_split": "dev_gold",
+      "assertion": "Las manifestaciones populares desaparecieron con la pandemia."
+    },
+    {
+      "id": 13,
+      "quales_id": 133,
+      "quales_split": "dev_gold",
+      "assertion": "Jair Bolsonaro fue presidente de Brasil."
+    },
+    {
+      "id": 14,
+      "quales_id": 134,
+      "quales_split": "dev_gold",
+      "assertion": "Las redes bolsonaristas acusaron al Partido Comunista Chino por la expansión del coronavirus."
+    },
+    {
+      "id": 15,
+      "quales_id": 135,
+      "quales_split": "dev_gold",
+      "assertion": "Yang Wanming fue embajador chino en Brasil."
+    },
+    {
+      "id": 16,
+      "quales_id": 136,
+      "quales_split": "dev_gold",
+      "assertion": "El canciller de Brasil fue Ernesto Araújo."
+    },
+    {
+      "id": 17,
+      "quales_id": 137,
+      "quales_split": "dev_gold",
+      "assertion": "El hashtag #VirusChino se volvió tendencia."
+    },
+    {
+      "id": 18,
+      "quales_id": 138,
+      "quales_split": "dev_gold",
+      "assertion": "Bernardo Küster fue director del portal Brasil sin miedo."
+    },
+    {
+      "id": 19,
+      "quales_id": 143,
+      "quales_split": "dev_gold",
+      "assertion": "Las causas de la obesidad en niños son la falta de actividad física y el consumo de alimentos ultraprocesados y bebidas azucaradas."
+    },
+    {
+      "id": 20,
+      "quales_id": 145,
+      "quales_split": "dev_gold",
+      "assertion": "Unicef en América Latina está en Panamá."
+    },
+    {
+      "id": 21,
+      "quales_id": 146,
+      "quales_split": "dev_gold",
+      "assertion": "Jean Gough representó a Unicef en América Latina."
+    },
+    {
+      "id": 22,
+      "quales_id": 148,
+      "quales_split": "dev_gold",
+      "assertion": "El coronavirus provoca la enfermedad Covid-19."
+    },
+    {
+      "id": 23,
+      "quales_id": 149,
+      "quales_split": "dev_gold",
+      "assertion": "Los clubes de la B y de la C recibieron donaciones de alimentos y productos de limpieza."
+    },
+    {
+      "id": 24,
+      "quales_id": 151,
+      "quales_split": "dev_gold",
+      "assertion": "La Segunda División Amateur realizó un relevamiento entre todos los planteles de los jugadores que estaban en peor situación, ya que sabían que muchos estaban sin trabajo, recibían muy poco dinero y tenían familia, para evaluar la forma de hacerles llegar un surtido de alimentos y artículos de limpieza."
+    },
+    {
+      "id": 25,
+      "quales_id": 16,
+      "quales_split": "dev_gold",
+      "assertion": "Se deja constancia de los datos de coronavirus en la página web del Sistema Nacional de Emergencias (SINAE)."
+    },
+    {
+      "id": 26,
+      "quales_id": 164,
+      "quales_split": "dev_gold",
+      "assertion": "La Intersocial está integrada por la central obrera, la Federación de Estudiantes Universitarios del Uruguay, la Organización Nacional de Asociaciones de Jubilados y Pensionistas del Uruguay, la Federación Uruguaya de Cooperativas de Viviendas por Ayuda Mutua, el colectivo Ovejas Negras y la Intersocial Feminista."
+    },
+    {
+      "id": 27,
+      "quales_id": 168,
+      "quales_split": "dev_gold",
+      "assertion": "La Sociedad de Medicina Familiar y Comunitaria realizó la solicitud de mantener abiertas las policlínicas."
+    },
+    {
+      "id": 28,
+      "quales_id": 169,
+      "quales_split": "dev_gold",
+      "assertion": "Las policlínicas y las visitas domiciliarias de seguimiento resolvían cerca del 80% de los problemas de salud."
+    },
+    {
+      "id": 29,
+      "quales_id": 171,
+      "quales_split": "dev_gold",
+      "assertion": "Los especialistas pidieron reforzar la teleasistencia y que los prestadores brindaran vías alternativas de comunicación."
+    },
+    {
+      "id": 30,
+      "quales_id": 174,
+      "quales_split": "dev_gold",
+      "assertion": "Salvador Illa fue el ministro de Salud de España."
+    },
+    {
+      "id": 31,
+      "quales_id": 175,
+      "quales_split": "dev_gold",
+      "assertion": "En España, se recomendó el uso de tapabocas al aire libre, aunque no era obligatorio, y la policía, tanto a pie como en vehículos y helicópteros, llamaba a las personas a mantener la distancia social."
+    },
+    {
+      "id": 32,
+      "quales_id": 177,
+      "quales_split": "dev_gold",
+      "assertion": "La primera muerte por coronavirus en Brasil ocurrió en 2020."
+    },
+    {
+      "id": 33,
+      "quales_id": 181,
+      "quales_split": "dev_gold",
+      "assertion": "La Agencia Nacional de Seguridad Vial aumentó los controles para desalentar el turismo."
+    },
+    {
+      "id": 34,
+      "quales_id": 184,
+      "quales_split": "dev_gold",
+      "assertion": "El lanzamiento de la aplicación fue a las 19:30 horas."
+    },
+    {
+      "id": 35,
+      "quales_id": 186,
+      "quales_split": "dev_gold",
+      "assertion": "Inicialmente, la tecnología de alertas de exposición se probó en cuatro países."
+    },
+    {
+      "id": 36,
+      "quales_id": 187,
+      "quales_split": "dev_gold",
+      "assertion": "La Tabaré se presentó en la cárcel de Punta de Rieles."
+    },
+    {
+      "id": 37,
+      "quales_id": 191,
+      "quales_split": "dev_gold",
+      "assertion": "La Tabaré tocó arriba del ring de boxeo del gimnasio del Polo Industrial de la cárcel de Punta de Rieles."
+    },
+    {
+      "id": 38,
+      "quales_id": 201,
+      "quales_split": "dev_gold",
+      "assertion": "Lo primero que se debía hacer para combatir el covid-19 era cumplir y apoyar las medidas del gobierno."
+    },
+    {
+      "id": 39,
+      "quales_id": 206,
+      "quales_split": "dev_gold",
+      "assertion": "La pandemia del coronavirus está afectando al mundo entero."
+    },
+    {
+      "id": 40,
+      "quales_id": 209,
+      "quales_split": "dev_gold",
+      "assertion": "Gustavo Leal es el ex director de Convivencia y Seguridad Ciudadana del Ministerio del Interior."
+    },
+    {
+      "id": 41,
+      "quales_id": 210,
+      "quales_split": "dev_gold",
+      "assertion": "La decisión de la cuarentena general y estricta en Europa se tomó cuando la situación desbordó los servicios de salud."
+    },
+    {
+      "id": 42,
+      "quales_id": 211,
+      "quales_split": "dev_gold",
+      "assertion": "La cuarentena general y estricta implica claridad en las actividades autorizadas, control y sanciones en caso de incumplimiento."
+    },
+    {
+      "id": 43,
+      "quales_id": 214,
+      "quales_split": "dev_gold",
+      "assertion": "Los habitantes de Sydney podían alejarse hasta 10 kilómetros de sus casas."
+    },
+    {
+      "id": 44,
+      "quales_id": 232,
+      "quales_split": "dev_gold",
+      "assertion": "Las policlínicas estuvieron cerradas desde que se conocieron los primeros casos de covid-19."
+    },
+    {
+      "id": 45,
+      "quales_id": 236,
+      "quales_split": "dev_gold",
+      "assertion": "Sumefac es la sigla de la Sociedad Uruguaya de Medicina Familiar y Comunitaria."
+    },
+    {
+      "id": 46,
+      "quales_id": 24,
+      "quales_split": "dev_gold",
+      "assertion": "Las clases se suspendieron a causa de la pandemia."
+    },
+    {
+      "id": 47,
+      "quales_id": 241,
+      "quales_split": "dev_gold",
+      "assertion": "Las partidas se financiaron por medio de la recaudación del Impuesto de Primaria."
+    },
+    {
+      "id": 48,
+      "quales_id": 243,
+      "quales_split": "dev_gold",
+      "assertion": "La investigación sobre anticuerpos fue realizada por una subsidiaria de la farmacéutica estatal Sinopharm, que produce dos de las vacunas aprobadas por el Gobierno chino, y el Centro Nacional de Investigación de Medicina Traslacional de la Universidad de Jiaotong."
+    },
+    {
+      "id": 49,
+      "quales_id": 248,
+      "quales_split": "dev_gold",
+      "assertion": "RBDIgG es un tipo de anticuerpo que indica la fortaleza de la inmunidad contra el coronavirus."
+    },
+    {
+      "id": 50,
+      "quales_id": 251,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT exigió una renta básica para los afectados por la crisis no comprendidos en la red de protección social."
+    },
+    {
+      "id": 51,
+      "quales_id": 252,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT exigió una renta básica para aquellos afectados por la crisis que no estuvieran comprendidos en la red de protección social."
+    },
+    {
+      "id": 52,
+      "quales_id": 253,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT es la central de trabajadores."
+    },
+    {
+      "id": 53,
+      "quales_id": 254,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT reclamó flexibilizaciones en los vencimientos de las tarifas públicas, tributos, alquileres y tarjetas de crédito."
+    },
+    {
+      "id": 54,
+      "quales_id": 26,
+      "quales_split": "dev_gold",
+      "assertion": "La suspensión de clases rigió hasta que terminaron las vacaciones de turismo."
+    },
+    {
+      "id": 55,
+      "quales_id": 261,
+      "quales_split": "dev_gold",
+      "assertion": "Las casas de lotería fueron incluidas en la lista de servicios públicos y actividades esenciales mediante un decreto de Jair Bolsonaro."
+    },
+    {
+      "id": 56,
+      "quales_id": 269,
+      "quales_split": "dev_gold",
+      "assertion": "La OMS y el Banco Mundial convocaron a la Junta de Vigilancia Mundial de la Preparación ante Crisis Sanitarias."
+    },
+    {
+      "id": 57,
+      "quales_id": 27,
+      "quales_split": "dev_gold",
+      "assertion": "Crea fue la principal herramienta que utilizaron los docentes y alumnos en la educación virtual escolar."
+    },
+    {
+      "id": 58,
+      "quales_id": 271,
+      "quales_split": "dev_gold",
+      "assertion": "Los hospitales psiquiátricos suspendieron las visitas y las actividades que implican circulación de personas durante la pandemia de coronavirus."
+    },
+    {
+      "id": 59,
+      "quales_id": 275,
+      "quales_split": "dev_gold",
+      "assertion": "163 estudiantes recibieron tarjetas de débito de la Udelar para comprar alimentos."
+    },
+    {
+      "id": 60,
+      "quales_id": 277,
+      "quales_split": "dev_gold",
+      "assertion": "La Udelar ofreció clases en vivo de pilates, gimnasia laboral, fitness, gimnasia para adultos mayores y gimnasia familiar en las redes sociales Facebook (bienestar.udelar) e Instagram (deportesbienestaruniversitario) para que los estudiantes no perdieran el vínculo con la universidad."
+    },
+    {
+      "id": 61,
+      "quales_id": 280,
+      "quales_split": "dev_gold",
+      "assertion": "El cacerolazo fue una manifestación de respaldo a una batería de medidas propuestas para responder a la emergencia sanitaria."
+    },
+    {
+      "id": 62,
+      "quales_id": 282,
+      "quales_split": "dev_gold",
+      "assertion": "La central de trabajadores esperaba una respuesta del Poder Ejecutivo."
+    },
+    {
+      "id": 63,
+      "quales_id": 283,
+      "quales_split": "dev_gold",
+      "assertion": "El toque de queda impuesto por Perú impidió la repatriación de uruguayos varados en Perú."
+    },
+    {
+      "id": 64,
+      "quales_id": 292,
+      "quales_split": "dev_gold",
+      "assertion": "Sebastián Piñera fue presidente chileno."
+    },
+    {
+      "id": 65,
+      "quales_id": 298,
+      "quales_split": "dev_gold",
+      "assertion": "El Frente Amplio presentó proyectos de ley para la emergencia sanitaria."
+    },
+    {
+      "id": 66,
+      "quales_id": 302,
+      "quales_split": "dev_gold",
+      "assertion": "Lucía Etcheverry perteneció al Movimiento de Participación Popular."
+    },
+    {
+      "id": 67,
+      "quales_id": 303,
+      "quales_split": "dev_gold",
+      "assertion": "El Frente Amplio planteó un proyecto de flexibilización del seguro de paro."
+    },
+    {
+      "id": 68,
+      "quales_id": 307,
+      "quales_split": "dev_gold",
+      "assertion": "El Comité de Emergencia funcionaba día por medio o cada 72 horas."
+    },
+    {
+      "id": 69,
+      "quales_id": 309,
+      "quales_split": "dev_gold",
+      "assertion": "Se mantuvo el aumento del IVA en las compras con débito y crédito."
+    },
+    {
+      "id": 70,
+      "quales_id": 310,
+      "quales_split": "dev_gold",
+      "assertion": "Azucena Arbeleche fue ministra de Economía y Finanzas."
+    },
+    {
+      "id": 71,
+      "quales_id": 316,
+      "quales_split": "dev_gold",
+      "assertion": "El aeropuerto Heathrow de Londres probó filas rápidas para pasajeros vacunados procedentes de Atenas, Nueva York y Los Ángeles."
+    },
+    {
+      "id": 72,
+      "quales_id": 317,
+      "quales_split": "dev_gold",
+      "assertion": "Boris Johnson fue el primer ministro."
+    },
+    {
+      "id": 73,
+      "quales_id": 321,
+      "quales_split": "dev_gold",
+      "assertion": "El gobierno británico se apoyó en su programa masivo de vacunación para levantar las restricciones anticovid."
+    },
+    {
+      "id": 74,
+      "quales_id": 322,
+      "quales_split": "dev_gold",
+      "assertion": "Sajid Javid fue el ministro de Sanidad."
+    },
+    {
+      "id": 75,
+      "quales_id": 323,
+      "quales_split": "dev_gold",
+      "assertion": "El gobierno británico buscó acercar a su nación a la vida normal al levantar las restricciones anticovid."
+    },
+    {
+      "id": 76,
+      "quales_id": 327,
+      "quales_split": "dev_gold",
+      "assertion": "El Frente Amplio propuso suspender los cortes por atraso de pagos de UTE, OSE y Antel."
+    },
+    {
+      "id": 77,
+      "quales_id": 328,
+      "quales_split": "dev_gold",
+      "assertion": "El FA planteó que los refugios deberían estar abiertos 24 horas."
+    },
+    {
+      "id": 78,
+      "quales_id": 33,
+      "quales_split": "dev_gold",
+      "assertion": "La primera tanda de uruguayos traídos al país viajó en un avión Brasilia de la Fuerza Aérea."
+    },
+    {
+      "id": 79,
+      "quales_id": 333,
+      "quales_split": "dev_gold",
+      "assertion": "Omar Paganini fue ministro de Industria, Energía y Minería de Uruguay."
+    },
+    {
+      "id": 80,
+      "quales_id": 337,
+      "quales_split": "dev_gold",
+      "assertion": "El primer punto de las medidas propuestas por el Sindicato Médico del Uruguay (SMU) fue una 'cuarentena general' y 'medidas drásticas de prevención', como el cierre de fronteras y de todo espacio público, incluyendo restaurantes y centros comerciales."
+    },
+    {
+      "id": 81,
+      "quales_id": 339,
+      "quales_split": "dev_gold",
+      "assertion": "La APU es la Asociación de la Prensa Uruguaya."
+    },
+    {
+      "id": 82,
+      "quales_id": 34,
+      "quales_split": "dev_gold",
+      "assertion": "Nicolás Martinelli fue autoridad del Mides."
+    },
+    {
+      "id": 83,
+      "quales_id": 344,
+      "quales_split": "dev_gold",
+      "assertion": "El Mides trasladó al menos a 70 personas."
+    },
+    {
+      "id": 84,
+      "quales_id": 347,
+      "quales_split": "dev_gold",
+      "assertion": "Gabriel Cunha fue director de la División Programas de Personas en Situación de Calle."
+    },
+    {
+      "id": 85,
+      "quales_id": 35,
+      "quales_split": "dev_gold",
+      "assertion": "Verónica Alonso fue senadora"
+    },
+    {
+      "id": 86,
+      "quales_id": 350,
+      "quales_split": "dev_gold",
+      "assertion": "El Sarandí Hogar Valdense está ubicado en Colonia Valdense, departamento de Colonia."
+    },
+    {
+      "id": 87,
+      "quales_id": 355,
+      "quales_split": "dev_gold",
+      "assertion": "La Intendencia de Montevideo tiene la facultad de prorrogar el vencimiento del pago de patentes de rodados."
+    },
+    {
+      "id": 88,
+      "quales_id": 358,
+      "quales_split": "dev_gold",
+      "assertion": "Sebastián Bauzá fue el secretario nacional del Deporte."
+    },
+    {
+      "id": 89,
+      "quales_id": 361,
+      "quales_split": "dev_gold",
+      "assertion": "Sebastián Bauzá fue secretario nacional del Deporte."
+    },
+    {
+      "id": 90,
+      "quales_id": 369,
+      "quales_split": "dev_gold",
+      "assertion": "Se pretendió postergar las elecciones departamentales y municipales."
+    },
+    {
+      "id": 91,
+      "quales_id": 377,
+      "quales_split": "dev_gold",
+      "assertion": "Nunzia Catalfo fue ministra de Trabajo italiana."
+    },
+    {
+      "id": 92,
+      "quales_id": 379,
+      "quales_split": "dev_gold",
+      "assertion": "El gobierno recibió dinero del Banco Interamericano de Desarrollo, el Banco Mundial, Fonplata y el Banco de Desarrollo Latinoamericano (ex Corporación Andina de Fomento, CAF)."
+    },
+    {
+      "id": 93,
+      "quales_id": 38,
+      "quales_split": "dev_gold",
+      "assertion": "El hotel Urban Express se encuentra en Andes y Uruguay."
+    },
+    {
+      "id": 94,
+      "quales_id": 386,
+      "quales_split": "dev_gold",
+      "assertion": "Las comunidades autónomas españolas más afectadas por la pandemia fueron Madrid y Cataluña."
+    },
+    {
+      "id": 95,
+      "quales_id": 387,
+      "quales_split": "dev_gold",
+      "assertion": "Carmen Calvo fue la vicepresidenta primera del gobierno de España."
+    },
+    {
+      "id": 96,
+      "quales_id": 388,
+      "quales_split": "dev_gold",
+      "assertion": "El estado de alarma en España terminó en abril."
+    },
+    {
+      "id": 97,
+      "quales_id": 39,
+      "quales_split": "dev_gold",
+      "assertion": "Verónica Alonso fue la esposa de Marcel Gerwer."
+    },
+    {
+      "id": 98,
+      "quales_id": 397,
+      "quales_split": "dev_gold",
+      "assertion": "IM es la Intendencia de Montevideo."
+    },
+    {
+      "id": 99,
+      "quales_id": 398,
+      "quales_split": "dev_gold",
+      "assertion": "La Intendencia de Montevideo atiende al público a través de atención telefónica, correo electrónico y su sitio web."
+    },
+    {
+      "id": 100,
+      "quales_id": 4,
+      "quales_split": "dev_gold",
+      "assertion": "Fernando Pereira fue presidente del PIT-CNT."
+    },
+    {
+      "id": 101,
+      "quales_id": 40,
+      "quales_split": "dev_gold",
+      "assertion": "Marcel Gerwer es el esposo de Verónica Alonso."
+    },
+    {
+      "id": 102,
+      "quales_id": 401,
+      "quales_split": "dev_gold",
+      "assertion": "Guido Manini Ríos fue el líder de Cabildo Abierto."
+    },
+    {
+      "id": 103,
+      "quales_id": 408,
+      "quales_split": "dev_gold",
+      "assertion": "Barcelona fue uno de los epicentros del coronavirus en España."
+    },
+    {
+      "id": 104,
+      "quales_id": 414,
+      "quales_split": "dev_gold",
+      "assertion": "Dos tercios de la capacidad del estadio Wembley se habilitaron para las semifinales y la final de la Eurocopa."
+    },
+    {
+      "id": 105,
+      "quales_id": 417,
+      "quales_split": "dev_gold",
+      "assertion": "Los primeros casos de Covid en Uruguay se confirmaron un viernes 13."
+    },
+    {
+      "id": 106,
+      "quales_id": 418,
+      "quales_split": "dev_gold",
+      "assertion": "Las clases en Uruguay comenzaron después de la Semana de Turismo."
+    },
+    {
+      "id": 107,
+      "quales_id": 42,
+      "quales_split": "dev_gold",
+      "assertion": "El Mides gastó 9.600 pesos por persona en situación de calle que estuvo en el hotel Urban Express."
+    },
+    {
+      "id": 108,
+      "quales_id": 421,
+      "quales_split": "dev_gold",
+      "assertion": "Pablo Orefice fue el director del programa salud.uy."
+    },
+    {
+      "id": 109,
+      "quales_id": 423,
+      "quales_split": "dev_gold",
+      "assertion": "Se registraban unas 80 alertas de exposición por día a través de la app CoronavirusUY."
+    },
+    {
+      "id": 110,
+      "quales_id": 425,
+      "quales_split": "dev_gold",
+      "assertion": "La institución detrás de Salud.uy es la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento (Agesic)."
+    },
+    {
+      "id": 111,
+      "quales_id": 426,
+      "quales_split": "dev_gold",
+      "assertion": "Agesic es la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento."
+    },
+    {
+      "id": 112,
+      "quales_id": 430,
+      "quales_split": "dev_gold",
+      "assertion": "Los trabajadores de la vía pública solicitaron el subsidio integral por los meses que duró la situación generada por la pandemia de coronavirus."
+    },
+    {
+      "id": 113,
+      "quales_id": 432,
+      "quales_split": "dev_gold",
+      "assertion": "Las elecciones departamentales y municipales no pudieron realizarse con normalidad debido a la emergencia sanitaria."
+    },
+    {
+      "id": 114,
+      "quales_id": 434,
+      "quales_split": "dev_gold",
+      "assertion": "Los ministros de la Corte Electoral se reunieron."
+    },
+    {
+      "id": 115,
+      "quales_id": 439,
+      "quales_split": "dev_gold",
+      "assertion": "AEBU es la Asociación de Bancarios del Uruguay."
+    },
+    {
+      "id": 116,
+      "quales_id": 442,
+      "quales_split": "dev_gold",
+      "assertion": "China ofrece insumos médicos a Uruguay para combatir el avance del coronavirus."
+    },
+    {
+      "id": 117,
+      "quales_id": 444,
+      "quales_split": "dev_gold",
+      "assertion": "Luis Lacalle Pou fue presidente de Uruguay."
+    },
+    {
+      "id": 118,
+      "quales_id": 445,
+      "quales_split": "dev_gold",
+      "assertion": "China implementó una cuarentena general en la ciudad de Wuhan y la provincia de Hubei para evitar la expansión del virus."
+    },
+    {
+      "id": 119,
+      "quales_id": 446,
+      "quales_split": "dev_gold",
+      "assertion": "China transmitió su experiencia en el manejo de la crisis sanitaria y económica."
+    },
+    {
+      "id": 120,
+      "quales_id": 448,
+      "quales_split": "dev_gold",
+      "assertion": "Dos uruguayos estuvieron varados en Estados Unidos."
+    },
+    {
+      "id": 121,
+      "quales_id": 456,
+      "quales_split": "dev_gold",
+      "assertion": "La franja etárea con mayor cantidad de casos de coronavirus fue la de entre 55 y 64 años."
+    },
+    {
+      "id": 122,
+      "quales_id": 459,
+      "quales_split": "dev_gold",
+      "assertion": "Daniel Salinas fue ministro de Salud Pública."
+    },
+    {
+      "id": 123,
+      "quales_id": 460,
+      "quales_split": "dev_gold",
+      "assertion": "Carlos Batthyány fue director del Institut Pasteur de Montevideo."
+    },
+    {
+      "id": 124,
+      "quales_id": 462,
+      "quales_split": "dev_gold",
+      "assertion": "Las escuelas de todo el país reabrieron sus puertas."
+    },
+    {
+      "id": 125,
+      "quales_id": 469,
+      "quales_split": "dev_gold",
+      "assertion": "Durante una cuarentena obligatoria, los trabajadores de las farmacias, de los supermercados y de la recolección de residuos seguían trabajando."
+    },
+    {
+      "id": 126,
+      "quales_id": 47,
+      "quales_split": "dev_gold",
+      "assertion": "Las charlas en vivo del Colectivo Gastronómico Uruguay se realizaron a través de Instagram."
+    },
+    {
+      "id": 127,
+      "quales_id": 470,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT es una central sindical."
+    },
+    {
+      "id": 128,
+      "quales_id": 471,
+      "quales_split": "dev_gold",
+      "assertion": "400.000 trabajadores se quedaron sin ingresos durante la emergencia sanitaria."
+    },
+    {
+      "id": 129,
+      "quales_id": 472,
+      "quales_split": "dev_gold",
+      "assertion": "Azucena Arbeleche fue ministra de Economía y Finanzas del Uruguay."
+    },
+    {
+      "id": 130,
+      "quales_id": 476,
+      "quales_split": "dev_gold",
+      "assertion": "Las tareas de cuidados recaen mayoritariamente en las mujeres."
+    },
+    {
+      "id": 131,
+      "quales_id": 477,
+      "quales_split": "dev_gold",
+      "assertion": "Las mujeres y niñas migrantes corren riesgo de ser capturadas por redes de trata."
+    },
+    {
+      "id": 132,
+      "quales_id": 478,
+      "quales_split": "dev_gold",
+      "assertion": "Durante la pandemia, el uso del transporte público en Montevideo disminuyó más del 60% en el día de menor cantidad de pasajeros."
+    },
+    {
+      "id": 133,
+      "quales_id": 481,
+      "quales_split": "dev_gold",
+      "assertion": "La Intendencia de Montevideo comunicó la reducción de la frecuencia del transporte público y la extensión de la validez del boleto de una hora en media hora."
+    },
+    {
+      "id": 134,
+      "quales_id": 486,
+      "quales_split": "dev_gold",
+      "assertion": "El médico estaba habilitado a solicitar la prueba de coronavirus a cualquier persona que tuviera fiebre y presentara síntomas respiratorios, aunque no hubiera tenido contacto con un caso confirmado de Covid-19."
+    },
+    {
+      "id": 135,
+      "quales_id": 49,
+      "quales_split": "dev_gold",
+      "assertion": "El acuerdo para los obreros de la construcción en relación a la pandemia fue financiado en un 30% por el Estado, un 50% por las cámaras empresariales y un 20% por los trabajadores."
+    },
+    {
+      "id": 136,
+      "quales_id": 490,
+      "quales_split": "dev_gold",
+      "assertion": "Alejandro Stipanicic fue presidente de ANCAP."
+    },
+    {
+      "id": 137,
+      "quales_id": 491,
+      "quales_split": "dev_gold",
+      "assertion": "Pablo Caban fue gerente comercial de ALUR."
+    },
+    {
+      "id": 138,
+      "quales_id": 493,
+      "quales_split": "dev_gold",
+      "assertion": "El Frente Amplio propuso crear un subsidio de 16.300 pesos."
+    },
+    {
+      "id": 139,
+      "quales_id": 494,
+      "quales_split": "dev_gold",
+      "assertion": "El salario mínimo nacional fue de 16.300 pesos."
+    },
+    {
+      "id": 140,
+      "quales_id": 496,
+      "quales_split": "dev_gold",
+      "assertion": "Se sugirió diferir los vencimientos de la DGI y BPS de micro, pequeñas y medianas empresas por 60 días."
+    },
+    {
+      "id": 141,
+      "quales_id": 500,
+      "quales_split": "dev_gold",
+      "assertion": "El Tour de Francia 2020 atravesó la ciudad de Niza."
+    },
+    {
+      "id": 142,
+      "quales_id": 501,
+      "quales_split": "dev_gold",
+      "assertion": "El Tour de Francia se corrió entre agosto y setiembre."
+    },
+    {
+      "id": 143,
+      "quales_id": 502,
+      "quales_split": "dev_gold",
+      "assertion": "Egan Bernal ganó el Tour de Francia."
+    },
+    {
+      "id": 144,
+      "quales_id": 503,
+      "quales_split": "dev_gold",
+      "assertion": "Christian Prudhomme fue director del Tour de Francia."
+    },
+    {
+      "id": 145,
+      "quales_id": 511,
+      "quales_split": "dev_gold",
+      "assertion": "Se debían realizar tests de diagnóstico de Covid-19 a todos los casos sospechosos, a todos los pacientes con sintomatología respiratoria, y especialmente a los trabajadores de la salud."
+    },
+    {
+      "id": 146,
+      "quales_id": 513,
+      "quales_split": "dev_gold",
+      "assertion": "La tasa de ataque es el número de personas que presentan una enfermedad en relación al número de personas expuestas a sufrirla en un período limitado y en condiciones especiales."
+    },
+    {
+      "id": 147,
+      "quales_id": 515,
+      "quales_split": "dev_gold",
+      "assertion": "Las medidas necesarias para reducir la transmisión de Covid-19 incluyen el distanciamiento social, la cuarentena poblacional, el protocolo de aislamiento (cierre de escuelas, cancelación de eventos masivos, cierre de fronteras y exhortación a quedarse en domicilio), así como la reducción del riesgo individual y colectivo mediante el lavado de manos y toser en el pliegue del codo."
+    },
+    {
+      "id": 148,
+      "quales_id": 519,
+      "quales_split": "dev_gold",
+      "assertion": "Los trabajadores informales no fueron contemplados en las medidas gubernamentales adoptadas durante la pandemia de COVID-19."
+    },
+    {
+      "id": 149,
+      "quales_id": 521,
+      "quales_split": "dev_gold",
+      "assertion": "Alrededor de 400 funcionarios de la AUF fueron al seguro de paro."
+    },
+    {
+      "id": 150,
+      "quales_id": 523,
+      "quales_split": "dev_gold",
+      "assertion": "Ignacio Alonso fue presidente de la AUF."
+    },
+    {
+      "id": 151,
+      "quales_id": 524,
+      "quales_split": "dev_gold",
+      "assertion": "Óscar Tabárez fue director de la selección mayor de Uruguay."
+    },
+    {
+      "id": 152,
+      "quales_id": 528,
+      "quales_split": "dev_gold",
+      "assertion": "Lombardía es la región italiana que fue más afectada por el Coronavirus."
+    },
+    {
+      "id": 153,
+      "quales_id": 53,
+      "quales_split": "dev_gold",
+      "assertion": "El artículo 7 de la Constitución protege la libertad de las personas."
+    },
+    {
+      "id": 154,
+      "quales_id": 531,
+      "quales_split": "dev_gold",
+      "assertion": "El preacuerdo impulsado para los trabajadores del SUNCA buscaba comenzar con una licencia especial por diez días hábiles."
+    },
+    {
+      "id": 155,
+      "quales_id": 535,
+      "quales_split": "dev_gold",
+      "assertion": "El SUNCA continuó trabajando en el preacuerdo luego de recibir la negativa del Ministerio de Trabajo y Seguridad Social."
+    },
+    {
+      "id": 156,
+      "quales_id": 537,
+      "quales_split": "dev_gold",
+      "assertion": "El primer fallecido por coronavirus en Uruguay fue una persona de 71 años."
+    },
+    {
+      "id": 157,
+      "quales_id": 538,
+      "quales_split": "dev_gold",
+      "assertion": "El teléfono de apoyo para violencia de género es 0800 41 41 (o * 4141 por celular)."
+    },
+    {
+      "id": 158,
+      "quales_id": 54,
+      "quales_split": "dev_gold",
+      "assertion": "Las elecciones departamentales aplazadas por la pandemia de Covid-19 estaban previstas para mayo."
+    },
+    {
+      "id": 159,
+      "quales_id": 540,
+      "quales_split": "dev_gold",
+      "assertion": "Mónica Bottero fue presidenta del Instituto Nacional de las Mujeres."
+    },
+    {
+      "id": 160,
+      "quales_id": 546,
+      "quales_split": "dev_gold",
+      "assertion": "El Mides es el Ministerio de Desarrollo Social."
+    },
+    {
+      "id": 161,
+      "quales_id": 548,
+      "quales_split": "dev_gold",
+      "assertion": "Los refugios nocturnos funcionaban desde las 18.00 hasta las 9.00."
+    },
+    {
+      "id": 162,
+      "quales_id": 549,
+      "quales_split": "dev_gold",
+      "assertion": "Pablo Bartol fue el Ministro de Desarrollo Social de Uruguay."
+    },
+    {
+      "id": 163,
+      "quales_id": 550,
+      "quales_split": "dev_gold",
+      "assertion": "El colectivo 'Ni Todo Está Perdido (Nitep)' es un colectivo integrado por personas que viven en la calle."
+    },
+    {
+      "id": 164,
+      "quales_id": 553,
+      "quales_split": "dev_gold",
+      "assertion": "La OMS es la Organización Mundial de la Salud."
+    },
+    {
+      "id": 165,
+      "quales_id": 555,
+      "quales_split": "dev_gold",
+      "assertion": "La demanda de servicios de salud aumenta en los inviernos."
+    },
+    {
+      "id": 166,
+      "quales_id": 556,
+      "quales_split": "dev_gold",
+      "assertion": "El Puente San Martín es el paso fronterizo entre Fray Bentos y Gualeguaychú."
+    },
+    {
+      "id": 167,
+      "quales_id": 557,
+      "quales_split": "dev_gold",
+      "assertion": "El primer caso positivo de COVID-19 en el puente San Martín es un camionero argentino."
+    },
+    {
+      "id": 168,
+      "quales_id": 56,
+      "quales_split": "dev_gold",
+      "assertion": "El artículo 331 literal D de la Constitución es el mecanismo constitucional para re-programar las elecciones obligatorias."
+    },
+    {
+      "id": 169,
+      "quales_id": 566,
+      "quales_split": "dev_gold",
+      "assertion": "Los primeros casos de Coronavirus en Uruguay se registraron en marzo de 2020."
+    },
+    {
+      "id": 170,
+      "quales_id": 568,
+      "quales_split": "dev_gold",
+      "assertion": "Se desaconsejó la asistencia a los velatorios de las personas que conformaban la población de riesgo, así como de quienes presentaban síntomas o tenían un riesgo mayor de haber contraído la enfermedad."
+    },
+    {
+      "id": 171,
+      "quales_id": 569,
+      "quales_split": "dev_gold",
+      "assertion": "El ministerio propuso que los directores de las funerarias ofrecieran una transmisión en vivo."
+    },
+    {
+      "id": 172,
+      "quales_id": 571,
+      "quales_split": "dev_gold",
+      "assertion": "Ruben Melogno es el vocalista de Psiglo."
+    },
+    {
+      "id": 173,
+      "quales_id": 572,
+      "quales_split": "dev_gold",
+      "assertion": "Ruben Melogno murió de Covid-19."
+    },
+    {
+      "id": 174,
+      "quales_id": 573,
+      "quales_split": "dev_gold",
+      "assertion": "Italia fue el país europeo con el mayor número de víctimas por Coronavirus."
+    },
+    {
+      "id": 175,
+      "quales_id": 584,
+      "quales_split": "dev_gold",
+      "assertion": "El tiempo de funcionamiento de estos refugios dependió de la evolución de la emergencia sanitaria."
+    },
+    {
+      "id": 176,
+      "quales_id": 590,
+      "quales_split": "dev_gold",
+      "assertion": "La pérdida de ingresos globales estimada a consecuencia de la crisis de la pandemia fue de 2 billones de dólares."
+    },
+    {
+      "id": 177,
+      "quales_id": 591,
+      "quales_split": "dev_gold",
+      "assertion": "25 millones de empleos estuvieron en riesgo a nivel global debido a la pandemia."
+    },
+    {
+      "id": 178,
+      "quales_id": 597,
+      "quales_split": "dev_gold",
+      "assertion": "Rodolfo Reich fue periodista de La Nación."
+    },
+    {
+      "id": 179,
+      "quales_id": 6,
+      "quales_split": "dev_gold",
+      "assertion": "Pablo da Silveira fue ministro de Educación y Cultura."
+    },
+    {
+      "id": 180,
+      "quales_id": 601,
+      "quales_split": "dev_gold",
+      "assertion": "Guido Manini Ríos fue líder de Cabildo Abierto."
+    },
+    {
+      "id": 181,
+      "quales_id": 603,
+      "quales_split": "dev_gold",
+      "assertion": "La curva de casos de coronavirus representa la cantidad de casos registrados en cada país."
+    },
+    {
+      "id": 182,
+      "quales_id": 606,
+      "quales_split": "dev_gold",
+      "assertion": "Los primeros casos de Covid-19 en América del Sur comenzaron a comienzos de marzo."
+    },
+    {
+      "id": 183,
+      "quales_id": 608,
+      "quales_split": "dev_gold",
+      "assertion": "La Comisión Académica de Posgrados depende de la Universidad de la República."
+    },
+    {
+      "id": 184,
+      "quales_id": 61,
+      "quales_split": "dev_gold",
+      "assertion": "La emergencia sanitaria se declaró en Uruguay en marzo."
+    },
+    {
+      "id": 185,
+      "quales_id": 612,
+      "quales_split": "dev_gold",
+      "assertion": "La Agencia Nacional de Investigación e Innovación financió los proyectos para los kits RT-PCR."
+    },
+    {
+      "id": 186,
+      "quales_id": 614,
+      "quales_split": "dev_gold",
+      "assertion": "Los Juegos Olímpicos se jugaron en Japón."
+    },
+    {
+      "id": 187,
+      "quales_id": 615,
+      "quales_split": "dev_gold",
+      "assertion": "Shinzo Abe fue presidente de Japón."
+    },
+    {
+      "id": 188,
+      "quales_id": 616,
+      "quales_split": "dev_gold",
+      "assertion": "Thomas Bach fue el presidente del Comité Olímpico Internacional."
+    },
+    {
+      "id": 189,
+      "quales_id": 617,
+      "quales_split": "dev_gold",
+      "assertion": "Los Juegos Olímpicos de Tokio se realizaron en 2021."
+    },
+    {
+      "id": 190,
+      "quales_id": 618,
+      "quales_split": "dev_gold",
+      "assertion": "Christophe de Kepper fue el director general del Comité Olímpico Internacional."
+    },
+    {
+      "id": 191,
+      "quales_id": 620,
+      "quales_split": "dev_gold",
+      "assertion": "Margaret Harris fue la vocera de la OMS."
+    },
+    {
+      "id": 192,
+      "quales_id": 621,
+      "quales_split": "dev_gold",
+      "assertion": "El coronavirus se detectó por primera vez en la ciudad china de Wuhan."
+    },
+    {
+      "id": 193,
+      "quales_id": 624,
+      "quales_split": "dev_gold",
+      "assertion": "Giuseppe Conte fue presidente de Italia."
+    },
+    {
+      "id": 194,
+      "quales_id": 627,
+      "quales_split": "dev_gold",
+      "assertion": "En cerca de 100 escuelas hubo que contratar nuevos auxiliares."
+    },
+    {
+      "id": 195,
+      "quales_id": 63,
+      "quales_split": "dev_gold",
+      "assertion": "Las elecciones departamentales estuvieron previstas para el 10 de mayo."
+    },
+    {
+      "id": 196,
+      "quales_id": 633,
+      "quales_split": "dev_gold",
+      "assertion": "Pinduoduo es una popular plataforma de comercio electrónico de compras en grupo."
+    },
+    {
+      "id": 197,
+      "quales_id": 637,
+      "quales_split": "dev_gold",
+      "assertion": "El máximo de personas por grupo en los pubs y restaurantes de Irlanda era de seis personas."
+    },
+    {
+      "id": 198,
+      "quales_id": 641,
+      "quales_split": "dev_gold",
+      "assertion": "Enrique Ruiz Escudero fue el ministro de salud español."
+    },
+    {
+      "id": 199,
+      "quales_id": 644,
+      "quales_split": "dev_gold",
+      "assertion": "Pedro Sánchez fue presidente de España"
+    },
+    {
+      "id": 200,
+      "quales_id": 646,
+      "quales_split": "dev_gold",
+      "assertion": "Las elecciones departamentales se quisieron posponer por el avance del nuevo coronavirus."
+    },
+    {
+      "id": 201,
+      "quales_id": 647,
+      "quales_split": "dev_gold",
+      "assertion": "El diputado Iván Posada perteneció al Partido Independiente."
+    },
+    {
+      "id": 202,
+      "quales_id": 648,
+      "quales_split": "dev_gold",
+      "assertion": "Beatriz Argimón fue vicepresidenta de Uruguay."
+    },
+    {
+      "id": 203,
+      "quales_id": 649,
+      "quales_split": "dev_gold",
+      "assertion": "Wilfredo Penco emitió un comunicado como vicepresidente de la Corte Electoral."
+    },
+    {
+      "id": 204,
+      "quales_id": 650,
+      "quales_split": "dev_gold",
+      "assertion": "El primer caso de covid en China se dio a finales de 2019."
+    },
+    {
+      "id": 205,
+      "quales_id": 652,
+      "quales_split": "dev_gold",
+      "assertion": "China controló la expansión del coronavirus."
+    },
+    {
+      "id": 206,
+      "quales_id": 653,
+      "quales_split": "dev_gold",
+      "assertion": "Varios millones de personas se confinaron en China debido al brote de COVID-19."
+    },
+    {
+      "id": 207,
+      "quales_id": 66,
+      "quales_split": "dev_gold",
+      "assertion": "El artículo 77 determina la fecha de las elecciones departamentales."
+    },
+    {
+      "id": 208,
+      "quales_id": 660,
+      "quales_split": "dev_gold",
+      "assertion": "El documento que recoge los resultados del estudio realizado por el grupo de investigación de género se llama 'La romantización del \"quédate en casa\"'."
+    },
+    {
+      "id": 209,
+      "quales_id": 666,
+      "quales_split": "dev_gold",
+      "assertion": "La distancia a mantener entre personas saludables para evitar la propagación del virus era de más de dos metros."
+    },
+    {
+      "id": 210,
+      "quales_id": 670,
+      "quales_split": "dev_gold",
+      "assertion": "Gustavo Grecco fue presidente del SMU."
+    },
+    {
+      "id": 211,
+      "quales_id": 671,
+      "quales_split": "dev_gold",
+      "assertion": "El Sindicato Médico del Uruguay fue el primero en pedir el aislamiento masivo."
+    },
+    {
+      "id": 212,
+      "quales_id": 672,
+      "quales_split": "dev_gold",
+      "assertion": "Guido Manini Ríos fue el líder del partido Cabildo Abierto."
+    },
+    {
+      "id": 213,
+      "quales_id": 673,
+      "quales_split": "dev_gold",
+      "assertion": "Gustavo Ribero fue el vocero del SUAS."
+    },
+    {
+      "id": 214,
+      "quales_id": 674,
+      "quales_split": "dev_gold",
+      "assertion": "El coronavirus se conoce desde el año 1960."
+    },
+    {
+      "id": 215,
+      "quales_id": 677,
+      "quales_split": "dev_gold",
+      "assertion": "Larry David nació en 1947."
+    },
+    {
+      "id": 216,
+      "quales_id": 678,
+      "quales_split": "dev_gold",
+      "assertion": "Larry David nació en Brooklyn."
+    },
+    {
+      "id": 217,
+      "quales_id": 680,
+      "quales_split": "dev_gold",
+      "assertion": "José Luis Satdjian fue subsecretario del MSP."
+    },
+    {
+      "id": 218,
+      "quales_id": 681,
+      "quales_split": "dev_gold",
+      "assertion": "José Luis Satdjian fue subsecretario del MSP."
+    },
+    {
+      "id": 219,
+      "quales_id": 682,
+      "quales_split": "dev_gold",
+      "assertion": "Un médico con covid asintomático debía hacer 14 días de cuarentena."
+    },
+    {
+      "id": 220,
+      "quales_id": 683,
+      "quales_split": "dev_gold",
+      "assertion": "Se consideraba 'contacto cercano' a aquella persona que estuviera a menos de dos metros de una persona confirmada como covid positivo durante un tiempo de diez minutos."
+    },
+    {
+      "id": 221,
+      "quales_id": 690,
+      "quales_split": "dev_gold",
+      "assertion": "El Sindicato Médico del Uruguay y el ex presidente Tabaré Vázquez propusieron la cuarentena obligatoria."
+    },
+    {
+      "id": 222,
+      "quales_id": 692,
+      "quales_split": "dev_gold",
+      "assertion": "Uruguay pudo realizar 200 tests por día."
+    },
+    {
+      "id": 223,
+      "quales_id": 697,
+      "quales_split": "dev_gold",
+      "assertion": "Christian Di Candia fue intendente de Montevideo."
+    },
+    {
+      "id": 224,
+      "quales_id": 7,
+      "quales_split": "dev_gold",
+      "assertion": "Pablo Mieres fue ministro de Trabajo y Seguridad Social."
+    },
+    {
+      "id": 225,
+      "quales_id": 707,
+      "quales_split": "dev_gold",
+      "assertion": "Se estimó que el número de personas que padecen hambre aguda aumentaría en 130 millones a causa de la pandemia de covid-19."
+    },
+    {
+      "id": 226,
+      "quales_id": 708,
+      "quales_split": "dev_gold",
+      "assertion": "Arif Husain fue jefe de la WFP."
+    },
+    {
+      "id": 227,
+      "quales_id": 712,
+      "quales_split": "dev_gold",
+      "assertion": "El gobierno de Estados Unidos planeó tres fases para reabrir el país tras la cuarentena."
+    },
+    {
+      "id": 228,
+      "quales_id": 713,
+      "quales_split": "dev_gold",
+      "assertion": "Estaba previsto avanzar de una etapa a otra cada 14 días."
+    },
+    {
+      "id": 229,
+      "quales_id": 719,
+      "quales_split": "dev_gold",
+      "assertion": "La duración del seguro de paro para los trabajadores de COPSA fue de cuatro meses."
+    },
+    {
+      "id": 230,
+      "quales_id": 724,
+      "quales_split": "dev_gold",
+      "assertion": "En Israel, los niños mayores de 12 años podían vacunarse en horario escolar."
+    },
+    {
+      "id": 231,
+      "quales_id": 725,
+      "quales_split": "dev_gold",
+      "assertion": "En Israel, cuatro de cada diez personas de entre 12 y 15 años tenían al menos una dosis de la vacuna contra el COVID-19."
+    },
+    {
+      "id": 232,
+      "quales_id": 726,
+      "quales_split": "dev_gold",
+      "assertion": "Claudio Moroni fue ministro de Trabajo de Argentina."
+    },
+    {
+      "id": 233,
+      "quales_id": 728,
+      "quales_split": "dev_gold",
+      "assertion": "Las medidas del gobierno argentino para pagar la mitad del sueldo de los trabajadores del sector privado representaron el 3% del PIB."
+    },
+    {
+      "id": 234,
+      "quales_id": 729,
+      "quales_split": "dev_gold",
+      "assertion": "Ginés González García fue ministro de Salud."
+    },
+    {
+      "id": 235,
+      "quales_id": 731,
+      "quales_split": "dev_gold",
+      "assertion": "Yamandú Orsi fue candidato a la Intendencia de Canelones por el Frente Amplio."
+    },
+    {
+      "id": 236,
+      "quales_id": 733,
+      "quales_split": "dev_gold",
+      "assertion": "Guido Manini Ríos representó a Cabildo Abierto."
+    },
+    {
+      "id": 237,
+      "quales_id": 737,
+      "quales_split": "dev_gold",
+      "assertion": "Daniel Salinas fue ministro de Salud Pública."
+    },
+    {
+      "id": 238,
+      "quales_id": 738,
+      "quales_split": "dev_gold",
+      "assertion": "El laboratorio del MSP era capaz de procesar entre 80 y 100 muestras diarias."
+    },
+    {
+      "id": 239,
+      "quales_id": 74,
+      "quales_split": "dev_gold",
+      "assertion": "Iuli Edelstein fue presidente del Parlamento Israelí."
+    },
+    {
+      "id": 240,
+      "quales_id": 744,
+      "quales_split": "dev_gold",
+      "assertion": "Baviera fue el estado con más casos de Covid-19."
+    },
+    {
+      "id": 241,
+      "quales_id": 746,
+      "quales_split": "dev_gold",
+      "assertion": "Wuhan es la capital de la provincia de Hubei."
+    },
+    {
+      "id": 242,
+      "quales_id": 75,
+      "quales_split": "dev_gold",
+      "assertion": "La capital de Israel es Jerusalén."
+    },
+    {
+      "id": 243,
+      "quales_id": 753,
+      "quales_split": "dev_gold",
+      "assertion": "La VPN fue una de las herramientas informáticas más utilizadas para trabajar a distancia."
+    },
+    {
+      "id": 244,
+      "quales_id": 754,
+      "quales_split": "dev_gold",
+      "assertion": "Vestirse de trabajo es una actividad que se recomienda para no distraerse al teletrabajar."
+    },
+    {
+      "id": 245,
+      "quales_id": 757,
+      "quales_split": "dev_gold",
+      "assertion": "Slack es una aplicación de chat."
+    },
+    {
+      "id": 246,
+      "quales_id": 76,
+      "quales_split": "dev_gold",
+      "assertion": "Benny Gantz fue el líder del partido Azul y Blanco."
+    },
+    {
+      "id": 247,
+      "quales_id": 760,
+      "quales_split": "dev_gold",
+      "assertion": "Las medidas sanitarias que se debían respetar durante la caravana del 1 de mayo de 2020 incluían, por ejemplo, que solo pudiera ir una persona por moto o bicicleta, no más de dos por auto (una persona adelante y otra atrás) y todo el mundo con tapaboca."
+    },
+    {
+      "id": 248,
+      "quales_id": 764,
+      "quales_split": "dev_gold",
+      "assertion": "El Colegio Médico del Uruguay invirtió en la compra de hasta 2.000 kits de diagnóstico."
+    },
+    {
+      "id": 249,
+      "quales_id": 765,
+      "quales_split": "dev_gold",
+      "assertion": "La Red de Costura Solidaria entregó 1.235 tapabocas en el Hospital Maciel."
+    },
+    {
+      "id": 250,
+      "quales_id": 768,
+      "quales_split": "dev_gold",
+      "assertion": "En la ciudad italiana de Magenta se denunció discriminación al momento de realizar tests de Covid."
+    },
+    {
+      "id": 251,
+      "quales_id": 770,
+      "quales_split": "dev_gold",
+      "assertion": "Nicola Mumoli fue jerarca del hospital de Magenta."
+    },
+    {
+      "id": 252,
+      "quales_id": 771,
+      "quales_split": "dev_gold",
+      "assertion": "Lombardía fue una de las regiones de Italia más afectadas por el Covid."
+    },
+    {
+      "id": 253,
+      "quales_id": 772,
+      "quales_split": "dev_gold",
+      "assertion": "Tedros Adhanom Ghebreyesus fue director general de la Organización Mundial de la Salud."
+    },
+    {
+      "id": 254,
+      "quales_id": 80,
+      "quales_split": "dev_gold",
+      "assertion": "En Israel, debían pasar más de cinco meses desde la segunda dosis para recibir la vacuna de refuerzo."
+    },
+    {
+      "id": 255,
+      "quales_id": 81,
+      "quales_split": "dev_gold",
+      "assertion": "Más de 1,2 millones de personas en Israel recibieron la tercera dosis contra el covid."
+    },
+    {
+      "id": 256,
+      "quales_id": 83,
+      "quales_split": "dev_gold",
+      "assertion": "Las restricciones en Israel durante la cuarta ola de covid fueron el certificado de vacunación para acceder a determinados espacios y la limitación de personas congregadas, incluido en centros comerciales."
+    },
+    {
+      "id": 257,
+      "quales_id": 87,
+      "quales_split": "dev_gold",
+      "assertion": "Las empresas más afectadas por la pandemia fueron las microempresas y las empresas del sector vinculado a los alojamientos y servicios de comida y comercio."
+    },
+    {
+      "id": 258,
+      "quales_id": 9,
+      "quales_split": "dev_gold",
+      "assertion": "El PIT-CNT publicó un video en Facebook."
+    },
+    {
+      "id": 259,
+      "quales_id": 90,
+      "quales_split": "dev_gold",
+      "assertion": "Las medidas anunciadas por el gobierno que más implementaron las empresas fueron el seguro de paro flexible y el aplazamiento de aportes tributarios."
+    },
+    {
+      "id": 260,
+      "quales_id": 99,
+      "quales_split": "dev_gold",
+      "assertion": "Históricamente, seis de cada diez empresas han enviado empleados al seguro de desempleo."
+    },
+    {
+      "id": 261,
+      "quales_id": 10,
+      "quales_split": "test_gold",
+      "assertion": "INAC quiere decir Instituto Nacional de Carnes."
+    },
+    {
+      "id": 262,
+      "quales_id": 102,
+      "quales_split": "test_gold",
+      "assertion": "El Comité Olímpico Nacional Italiano (CONI) decidió suspender el deporte en Italia."
+    },
+    {
+      "id": 263,
+      "quales_id": 109,
+      "quales_split": "test_gold",
+      "assertion": "El período de incubación del virus está en un rango que va de dos a diez días."
+    },
+    {
+      "id": 264,
+      "quales_id": 11,
+      "quales_split": "test_gold",
+      "assertion": "Pablo Bartol fue ministro de Desarrollo Social."
+    },
+    {
+      "id": 265,
+      "quales_id": 110,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus era muy similar a la gripe."
+    },
+    {
+      "id": 266,
+      "quales_id": 111,
+      "quales_split": "test_gold",
+      "assertion": "El segundo caso positivo de COVID-19 en Liverpool fue el preparador físico Gastón Mañaka."
+    },
+    {
+      "id": 267,
+      "quales_id": 112,
+      "quales_split": "test_gold",
+      "assertion": "El segundo caso positivo de COVID-19 en Liverpool estuvo en cuarentena durante 7 días."
+    },
+    {
+      "id": 268,
+      "quales_id": 114,
+      "quales_split": "test_gold",
+      "assertion": "Algunos medios tuvieron una actitud xenofóbica hacia los chinos."
+    },
+    {
+      "id": 269,
+      "quales_id": 115,
+      "quales_split": "test_gold",
+      "assertion": "El principal motivo de desinformación sobre el coronavirus son las noticias morbosas, inexactas o lisa y llanamente inventadas."
+    },
+    {
+      "id": 270,
+      "quales_id": 119,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de Covid-19 en Argentina fue un hombre de 43 años que regresó a Argentina desde el norte de Italia."
+    },
+    {
+      "id": 271,
+      "quales_id": 12,
+      "quales_split": "test_gold",
+      "assertion": "Ignacio Elgue fue el presidente del Instituto Nacional de Alimentación."
+    },
+    {
+      "id": 272,
+      "quales_id": 120,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de Covid en Chile fue un médico de 33 años."
+    },
+    {
+      "id": 273,
+      "quales_id": 122,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de Covid en Chile provino del sudeste asiático."
+    },
+    {
+      "id": 274,
+      "quales_id": 123,
+      "quales_split": "test_gold",
+      "assertion": "El primer país donde se detectaron casos de Covid-19 fue China."
+    },
+    {
+      "id": 275,
+      "quales_id": 125,
+      "quales_split": "test_gold",
+      "assertion": "Ginés González García fue el Ministro de Salud de Argentina."
+    },
+    {
+      "id": 276,
+      "quales_id": 126,
+      "quales_split": "test_gold",
+      "assertion": "Miguel Asqueta fue director general de Salud."
+    },
+    {
+      "id": 277,
+      "quales_id": 127,
+      "quales_split": "test_gold",
+      "assertion": "Los primeros casos de Covid en el sudeste asiático aparecieron en enero de 2020."
+    },
+    {
+      "id": 278,
+      "quales_id": 128,
+      "quales_split": "test_gold",
+      "assertion": "Jaime Mañalich fue Ministro de Salud de Chile."
+    },
+    {
+      "id": 279,
+      "quales_id": 129,
+      "quales_split": "test_gold",
+      "assertion": "El CAF puso a disposición fondos para atender problemáticas relacionadas con el covid en América Latina."
+    },
+    {
+      "id": 280,
+      "quales_id": 138,
+      "quales_split": "test_gold",
+      "assertion": "El Consejo Superior de Deportes de España, la Liga y la Real Federación Española de Fútbol son los anunciantes de la vuelta del fútbol en España."
+    },
+    {
+      "id": 281,
+      "quales_id": 140,
+      "quales_split": "test_gold",
+      "assertion": "Irene Lozano fue presidenta del Consejo Superior de Deportes."
+    },
+    {
+      "id": 282,
+      "quales_id": 143,
+      "quales_split": "test_gold",
+      "assertion": "El Palacio de Viana está ubicado en Madrid."
+    },
+    {
+      "id": 283,
+      "quales_id": 147,
+      "quales_split": "test_gold",
+      "assertion": "Las economías de América del Norte y Asia fueron las más afectadas por la pandemia."
+    },
+    {
+      "id": 284,
+      "quales_id": 148,
+      "quales_split": "test_gold",
+      "assertion": "Se esperaban caídas superiores al 30% en el comercio local de América Latina."
+    },
+    {
+      "id": 285,
+      "quales_id": 150,
+      "quales_split": "test_gold",
+      "assertion": "Los sectores económicos más afectados por la pandemia de COVID-19 fueron la construcción, el comercio, la hotelería y la gastronomía."
+    },
+    {
+      "id": 286,
+      "quales_id": 154,
+      "quales_split": "test_gold",
+      "assertion": "El undécimo fallecido por coronavirus en Uruguay tenía 80 años."
+    },
+    {
+      "id": 287,
+      "quales_id": 160,
+      "quales_split": "test_gold",
+      "assertion": "Tedros Adhanom Ghebreyesus fue director general de la OMS."
+    },
+    {
+      "id": 288,
+      "quales_id": 164,
+      "quales_split": "test_gold",
+      "assertion": "China fue el país más afectado por el COVID-19."
+    },
+    {
+      "id": 289,
+      "quales_id": 165,
+      "quales_split": "test_gold",
+      "assertion": "Italia fue el segundo país más afectado por el Covid."
+    },
+    {
+      "id": 290,
+      "quales_id": 167,
+      "quales_split": "test_gold",
+      "assertion": "El Covid empezó en la ciudad china de Wuhan."
+    },
+    {
+      "id": 291,
+      "quales_id": 171,
+      "quales_split": "test_gold",
+      "assertion": "Jorge Quian fue ministro de Salud."
+    },
+    {
+      "id": 292,
+      "quales_id": 172,
+      "quales_split": "test_gold",
+      "assertion": "Lucía Alonso fue directora de Epidemiología."
+    },
+    {
+      "id": 293,
+      "quales_id": 173,
+      "quales_split": "test_gold",
+      "assertion": "Los principales síntomas de Covid eran fiebre, tos y dificultad para respirar."
+    },
+    {
+      "id": 294,
+      "quales_id": 174,
+      "quales_split": "test_gold",
+      "assertion": "Giovanni Escalante fue representante de la OPS en Uruguay."
+    },
+    {
+      "id": 295,
+      "quales_id": 181,
+      "quales_split": "test_gold",
+      "assertion": "Sao Paulo fue el estado de Brasil con más casos de Covid."
+    },
+    {
+      "id": 296,
+      "quales_id": 184,
+      "quales_split": "test_gold",
+      "assertion": "En Brasil se administró la vacuna Sinovac."
+    },
+    {
+      "id": 297,
+      "quales_id": 186,
+      "quales_split": "test_gold",
+      "assertion": "Brasil fue uno de los países con más casos de COVID-19 en el mundo, junto a Estados Unidos y la India."
+    },
+    {
+      "id": 298,
+      "quales_id": 193,
+      "quales_split": "test_gold",
+      "assertion": "Juan Carlos Blanco fue asistente técnico de Jorge Giordano."
+    },
+    {
+      "id": 299,
+      "quales_id": 196,
+      "quales_split": "test_gold",
+      "assertion": "El riesgo de expansión del Covid-19 aumentó."
+    },
+    {
+      "id": 300,
+      "quales_id": 2,
+      "quales_split": "test_gold",
+      "assertion": "Los jugadores de Nacional estuvieron aislados por una semana."
+    },
+    {
+      "id": 301,
+      "quales_id": 20,
+      "quales_split": "test_gold",
+      "assertion": "Los dirigentes del SUNCA se reunieron con los representantes de las cámaras empresariales."
+    },
+    {
+      "id": 302,
+      "quales_id": 200,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de Covid-19 en el África Subsahariana se detectó."
+    },
+    {
+      "id": 303,
+      "quales_id": 201,
+      "quales_split": "test_gold",
+      "assertion": "Brasil es el primer país de Latinoamérica en haber presentado un caso de COVID-19."
+    },
+    {
+      "id": 304,
+      "quales_id": 202,
+      "quales_split": "test_gold",
+      "assertion": "México fue el segundo país de Latinoamérica en presentar un caso de Covid."
+    },
+    {
+      "id": 305,
+      "quales_id": 203,
+      "quales_split": "test_gold",
+      "assertion": "Jorge Quian fue subsecretario de Salud Pública."
+    },
+    {
+      "id": 306,
+      "quales_id": 206,
+      "quales_split": "test_gold",
+      "assertion": "Los casos graves de coronavirus eran poco frecuentes."
+    },
+    {
+      "id": 307,
+      "quales_id": 212,
+      "quales_split": "test_gold",
+      "assertion": "Las medidas solicitadas buscan proteger a mujeres, niñas, niños y adolescentes."
+    },
+    {
+      "id": 308,
+      "quales_id": 216,
+      "quales_split": "test_gold",
+      "assertion": "Tedros Adhanom Ghebreyesus fue director de la OMS."
+    },
+    {
+      "id": 309,
+      "quales_id": 217,
+      "quales_split": "test_gold",
+      "assertion": "El director de la OMS fue etíope."
+    },
+    {
+      "id": 310,
+      "quales_id": 218,
+      "quales_split": "test_gold",
+      "assertion": "Tedros Adhanom Ghebreyesus fue el director general de la Organización Mundial de la Salud."
+    },
+    {
+      "id": 311,
+      "quales_id": 219,
+      "quales_split": "test_gold",
+      "assertion": "La OMS es la Organización Mundial de la Salud."
+    },
+    {
+      "id": 312,
+      "quales_id": 221,
+      "quales_split": "test_gold",
+      "assertion": "El covid-19 se originó en Wuhan."
+    },
+    {
+      "id": 313,
+      "quales_id": 223,
+      "quales_split": "test_gold",
+      "assertion": "El virus que llevó a la pandemia se llama SARS CoV-2."
+    },
+    {
+      "id": 314,
+      "quales_id": 226,
+      "quales_split": "test_gold",
+      "assertion": "El virus SARS CoV-2 causa la enfermedad covid-19."
+    },
+    {
+      "id": 315,
+      "quales_id": 23,
+      "quales_split": "test_gold",
+      "assertion": "Daniel Radío fue el secretario del Sistema Integrado de Cuidados."
+    },
+    {
+      "id": 316,
+      "quales_id": 232,
+      "quales_split": "test_gold",
+      "assertion": "La OMS es la Organización Mundial de la Salud."
+    },
+    {
+      "id": 317,
+      "quales_id": 233,
+      "quales_split": "test_gold",
+      "assertion": "La OMS declaró la pandemia."
+    },
+    {
+      "id": 318,
+      "quales_id": 24,
+      "quales_split": "test_gold",
+      "assertion": "Margarita Percovich integra la Red Pro Cuidados."
+    },
+    {
+      "id": 319,
+      "quales_id": 241,
+      "quales_split": "test_gold",
+      "assertion": "Países solicitaron asistencia financiera al FMI."
+    },
+    {
+      "id": 320,
+      "quales_id": 242,
+      "quales_split": "test_gold",
+      "assertion": "Se esperaba que más de 170 países afiliados al FMI tuvieran un crecimiento per cápita negativo."
+    },
+    {
+      "id": 321,
+      "quales_id": 243,
+      "quales_split": "test_gold",
+      "assertion": "América Latina, África y Asia fueron algunas de las regiones más afectadas por la pandemia."
+    },
+    {
+      "id": 322,
+      "quales_id": 248,
+      "quales_split": "test_gold",
+      "assertion": "Algunos de los países con menor cantidad de casos flexibilizaron las restricciones por la pandemia."
+    },
+    {
+      "id": 323,
+      "quales_id": 250,
+      "quales_split": "test_gold",
+      "assertion": "Según el Centro Europeo de Prevención y Control de Enfermedades, las medidas impuestas para la pandemia debían mantenerse al menos unos meses."
+    },
+    {
+      "id": 324,
+      "quales_id": 261,
+      "quales_split": "test_gold",
+      "assertion": "Cerca de 600 personas murieron a causa del COVID en Suecia en 2020."
+    },
+    {
+      "id": 325,
+      "quales_id": 264,
+      "quales_split": "test_gold",
+      "assertion": "Camberra es la capital de Australia."
+    },
+    {
+      "id": 326,
+      "quales_id": 268,
+      "quales_split": "test_gold",
+      "assertion": "Unos 430.000 pobladores de Canberra y sus comunidades aledañas tuvieron que confinarse tras detectarse un caso de COVID-19."
+    },
+    {
+      "id": 327,
+      "quales_id": 270,
+      "quales_split": "test_gold",
+      "assertion": "El fallecido tenía 73 años."
+    },
+    {
+      "id": 328,
+      "quales_id": 274,
+      "quales_split": "test_gold",
+      "assertion": "El CDC son los Centros de Control y Prevención de Enfermedades."
+    },
+    {
+      "id": 329,
+      "quales_id": 276,
+      "quales_split": "test_gold",
+      "assertion": "La Reserva Federal planeó comprar bonos del Tesoro."
+    },
+    {
+      "id": 330,
+      "quales_id": 277,
+      "quales_split": "test_gold",
+      "assertion": "El límite fijado por la Reserva Federal para la compra de activos fue de 700.000 millones de dólares."
+    },
+    {
+      "id": 331,
+      "quales_id": 282,
+      "quales_split": "test_gold",
+      "assertion": "El Comité de Emergencia de la OMS se reunió en Ginebra (Suiza)."
+    },
+    {
+      "id": 332,
+      "quales_id": 283,
+      "quales_split": "test_gold",
+      "assertion": "La OMS declaró la emergencia internacional por el coronavirus."
+    },
+    {
+      "id": 333,
+      "quales_id": 284,
+      "quales_split": "test_gold",
+      "assertion": "Tedros Adhanom Ghebreyesus fue director general de la OMS."
+    },
+    {
+      "id": 334,
+      "quales_id": 286,
+      "quales_split": "test_gold",
+      "assertion": "Los casos de coronavirus en América se registraron en Canadá y Estados Unidos."
+    },
+    {
+      "id": 335,
+      "quales_id": 287,
+      "quales_split": "test_gold",
+      "assertion": "Los coronavirus son una extensa familia de virus que pueden causar desde un resfrío común hasta el síndrome respiratorio agudo severo."
+    },
+    {
+      "id": 336,
+      "quales_id": 291,
+      "quales_split": "test_gold",
+      "assertion": "Nacional y Wanderers jugaron la final del Torneo Intermedio."
+    },
+    {
+      "id": 337,
+      "quales_id": 294,
+      "quales_split": "test_gold",
+      "assertion": "Boris Johnson estuvo aislado en la residencia oficial de Downing Street."
+    },
+    {
+      "id": 338,
+      "quales_id": 295,
+      "quales_split": "test_gold",
+      "assertion": "La residencia oficial de Downing Street se encuentra en Londres."
+    },
+    {
+      "id": 339,
+      "quales_id": 296,
+      "quales_split": "test_gold",
+      "assertion": "Matt Hancock fue el secretario de salud británico."
+    },
+    {
+      "id": 340,
+      "quales_id": 299,
+      "quales_split": "test_gold",
+      "assertion": "Andrew Cuomo fue gobernador de Nueva York."
+    },
+    {
+      "id": 341,
+      "quales_id": 302,
+      "quales_split": "test_gold",
+      "assertion": "Chris Sununu fue republicano."
+    },
+    {
+      "id": 342,
+      "quales_id": 303,
+      "quales_split": "test_gold",
+      "assertion": "Chris Sununu fue gobernador de Nueva Hampshire."
+    },
+    {
+      "id": 343,
+      "quales_id": 31,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus se originó en China."
+    },
+    {
+      "id": 344,
+      "quales_id": 310,
+      "quales_split": "test_gold",
+      "assertion": "La Trastienda abrió nuevamente con shows en vivo."
+    },
+    {
+      "id": 345,
+      "quales_id": 312,
+      "quales_split": "test_gold",
+      "assertion": "El protocolo de seguridad para los shows en vivo fue aprobado por el Poder Ejecutivo y la Intendencia de Montevideo."
+    },
+    {
+      "id": 346,
+      "quales_id": 315,
+      "quales_split": "test_gold",
+      "assertion": "El show de Buenos Muchachos en La Trastienda empezó a las 21 horas."
+    },
+    {
+      "id": 347,
+      "quales_id": 326,
+      "quales_split": "test_gold",
+      "assertion": "Los anticuerpos monoclonales son proteínas artificiales que también se han usado en tratamientos contra determinados tipos de cáncer."
+    },
+    {
+      "id": 348,
+      "quales_id": 328,
+      "quales_split": "test_gold",
+      "assertion": "Una desventaja del uso de anticuerpos monoclonales era que un tratamiento sin coberturas sanitarias podía costar miles de dólares."
+    },
+    {
+      "id": 349,
+      "quales_id": 33,
+      "quales_split": "test_gold",
+      "assertion": "El primer paciente con coronavirus en Estados Unidos fue una persona que había viajado a Wuhan."
+    },
+    {
+      "id": 350,
+      "quales_id": 330,
+      "quales_split": "test_gold",
+      "assertion": "Los corticoesteroides como la dexametasona, de bajo precio y disponibles en todo el mundo, y los antagonistas de interleucina-6 fueron los fármacos recomendados contra la COVID-19."
+    },
+    {
+      "id": 351,
+      "quales_id": 333,
+      "quales_split": "test_gold",
+      "assertion": "Italia fue el país más afectado por la pandemia de COVID-19."
+    },
+    {
+      "id": 352,
+      "quales_id": 334,
+      "quales_split": "test_gold",
+      "assertion": "Austria es un país donde el gobierno permitió la reapertura de los pequeños comercios."
+    },
+    {
+      "id": 353,
+      "quales_id": 338,
+      "quales_split": "test_gold",
+      "assertion": "La pandemia tiene su origen en Wuhan, capital de la provincia de Hubei, China."
+    },
+    {
+      "id": 354,
+      "quales_id": 34,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus afectó más a personas con enfermedades debilitantes, como afecciones neurológicas, diabetes y obesidad."
+    },
+    {
+      "id": 355,
+      "quales_id": 341,
+      "quales_split": "test_gold",
+      "assertion": "El primer contagiado en Wuhan murió el 11 de enero."
+    },
+    {
+      "id": 356,
+      "quales_id": 342,
+      "quales_split": "test_gold",
+      "assertion": "La primera muerte por coronavirus fuera de China se registró en enero de 2020."
+    },
+    {
+      "id": 357,
+      "quales_id": 349,
+      "quales_split": "test_gold",
+      "assertion": "La información completa de la pandemia se encuentra en el Center for Systems Science and Engineering de la Johns Hopkins University."
+    },
+    {
+      "id": 358,
+      "quales_id": 352,
+      "quales_split": "test_gold",
+      "assertion": "La covid-19 no logró vencer a las vacunas, que fueron eficaces contra las formas graves de la enfermedad."
+    },
+    {
+      "id": 359,
+      "quales_id": 362,
+      "quales_split": "test_gold",
+      "assertion": "El 88% de los pacientes con covid-19 que participaron en un estudio multicéntrico europeo tuvo alteración del gusto."
+    },
+    {
+      "id": 360,
+      "quales_id": 363,
+      "quales_split": "test_gold",
+      "assertion": "Martín Fraschini fue presidente de la Sociedad de Otorrinolaringología del Uruguay."
+    },
+    {
+      "id": 361,
+      "quales_id": 364,
+      "quales_split": "test_gold",
+      "assertion": "Martín Fraschini fue presidente de la Sorlu."
+    },
+    {
+      "id": 362,
+      "quales_id": 365,
+      "quales_split": "test_gold",
+      "assertion": "La Sorlu es la Sociedad de Otorrinolaringología del Uruguay."
+    },
+    {
+      "id": 363,
+      "quales_id": 366,
+      "quales_split": "test_gold",
+      "assertion": "Daniel Salinas fue ministro de Salud."
+    },
+    {
+      "id": 364,
+      "quales_id": 367,
+      "quales_split": "test_gold",
+      "assertion": "Daniel Salinas fue ministro de salud."
+    },
+    {
+      "id": 365,
+      "quales_id": 368,
+      "quales_split": "test_gold",
+      "assertion": "Miguel Asqueta fue el director general de la Salud."
+    },
+    {
+      "id": 366,
+      "quales_id": 369,
+      "quales_split": "test_gold",
+      "assertion": "Miguel Asqueta fue director general de Salud."
+    },
+    {
+      "id": 367,
+      "quales_id": 37,
+      "quales_split": "test_gold",
+      "assertion": "Argentina es el país de América Latina donde ocurrió la primera muerte por Covid-19."
+    },
+    {
+      "id": 368,
+      "quales_id": 374,
+      "quales_split": "test_gold",
+      "assertion": "El mismo tapabocas se podía usar durante tres horas."
+    },
+    {
+      "id": 369,
+      "quales_id": 377,
+      "quales_split": "test_gold",
+      "assertion": "Los sectores para los que se flexibilizaron los seguros de paro fueron comercios, comercios minoristas, servicios turísticos, agencias de viajes y restaurantes."
+    },
+    {
+      "id": 370,
+      "quales_id": 379,
+      "quales_split": "test_gold",
+      "assertion": "Pablo Mieres fue ministro de Trabajo y Seguridad Social."
+    },
+    {
+      "id": 371,
+      "quales_id": 38,
+      "quales_split": "test_gold",
+      "assertion": "La primera muerte por Covid-19 en América Latina fue un hombre de 64 años que regresó de un viaje a Europa y estaba internado en un hospital de la Ciudad de Buenos Aires."
+    },
+    {
+      "id": 372,
+      "quales_id": 381,
+      "quales_split": "test_gold",
+      "assertion": "El seguro de paro parcial es una reducción horaria para los empleados, y el resto del salario lo cubre el Banco de Previsión Social."
+    },
+    {
+      "id": 373,
+      "quales_id": 383,
+      "quales_split": "test_gold",
+      "assertion": "Se implementó un chatbot en la página del Ministerio de Salud Pública (MSP), un sistema de respuesta automática a las dudas más frecuentes sobre el coronavirus, con información recabada por el Sistema Nacional de Emergencias, el MSP y la Administración de los Servicios de Salud del Estado."
+    },
+    {
+      "id": 374,
+      "quales_id": 384,
+      "quales_split": "test_gold",
+      "assertion": "Se empezó a controlar el precio del alcohol en gel y los tapabocas."
+    },
+    {
+      "id": 375,
+      "quales_id": 385,
+      "quales_split": "test_gold",
+      "assertion": "Álvaro Delgado fue secretario de Presidencia."
+    },
+    {
+      "id": 376,
+      "quales_id": 389,
+      "quales_split": "test_gold",
+      "assertion": "Las canastas financiadas por los Fondos Sociales de la Construcción pesan unos 40 kilos."
+    },
+    {
+      "id": 377,
+      "quales_id": 39,
+      "quales_split": "test_gold",
+      "assertion": "Roberto Tórrez fue el jefe de Epidemiología de Santa Cruz, Bolivia."
+    },
+    {
+      "id": 378,
+      "quales_id": 395,
+      "quales_split": "test_gold",
+      "assertion": "Íñigo Urkullu fue presidente del País Vasco."
+    },
+    {
+      "id": 379,
+      "quales_id": 396,
+      "quales_split": "test_gold",
+      "assertion": "La Guerra Civil Española terminó en 1939."
+    },
+    {
+      "id": 380,
+      "quales_id": 40,
+      "quales_split": "test_gold",
+      "assertion": "Bolivia, Venezuela y Uruguay fueron los países de América Latina que no tenían casos de Covid."
+    },
+    {
+      "id": 381,
+      "quales_id": 403,
+      "quales_split": "test_gold",
+      "assertion": "Los no vacunados que viajaban a Suiza debían presentar un test negativo al llegar y, además, hacerse otra prueba entre cuatro y siete días después."
+    },
+    {
+      "id": 382,
+      "quales_id": 406,
+      "quales_split": "test_gold",
+      "assertion": "Greg Mortimer es un crucero."
+    },
+    {
+      "id": 383,
+      "quales_id": 409,
+      "quales_split": "test_gold",
+      "assertion": "El crucero Greg Mortimer tuvo 200 personas a bordo."
+    },
+    {
+      "id": 384,
+      "quales_id": 41,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus apareció por primera vez en diciembre."
+    },
+    {
+      "id": 385,
+      "quales_id": 410,
+      "quales_split": "test_gold",
+      "assertion": "La Armada Nacional evacuó a ciudadanos australianos con COVID-19 del crucero Greg Mortimer."
+    },
+    {
+      "id": 386,
+      "quales_id": 413,
+      "quales_split": "test_gold",
+      "assertion": "Tim Cook fue el CEO de Apple que felicitó al gobierno por las alertas de Coronavirus.uy."
+    },
+    {
+      "id": 387,
+      "quales_id": 42,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus apareció por primera vez en China."
+    },
+    {
+      "id": 388,
+      "quales_id": 428,
+      "quales_split": "test_gold",
+      "assertion": "La rebaja de sueldos para el fondo coronavirus duró dos meses."
+    },
+    {
+      "id": 389,
+      "quales_id": 429,
+      "quales_split": "test_gold",
+      "assertion": "El descuento a funcionarios se hizo a partir de un sueldo líquido por encima de los 80.000 pesos."
+    },
+    {
+      "id": 390,
+      "quales_id": 43,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de Covid en Paraguay apareció en 2020."
+    },
+    {
+      "id": 391,
+      "quales_id": 436,
+      "quales_split": "test_gold",
+      "assertion": "La información para conocer quiénes necesitan asistencia proviene de fuentes de datos del Ministerio de Desarrollo Social, el Banco de Previsión Social y la Intendencia de Montevideo."
+    },
+    {
+      "id": 392,
+      "quales_id": 438,
+      "quales_split": "test_gold",
+      "assertion": "En España, los pacientes más graves y con mayor probabilidad de supervivencia tenían prioridad para ingresar a cuidados intensivos."
+    },
+    {
+      "id": 393,
+      "quales_id": 44,
+      "quales_split": "test_gold",
+      "assertion": "La LUD es la Liga Universitaria de Deportes."
+    },
+    {
+      "id": 394,
+      "quales_id": 440,
+      "quales_split": "test_gold",
+      "assertion": "María Cruz Martín es una médica intensivista española."
+    },
+    {
+      "id": 395,
+      "quales_id": 445,
+      "quales_split": "test_gold",
+      "assertion": "Robert Silva fue el presidente de la Administración Nacional de Educación Pública."
+    },
+    {
+      "id": 396,
+      "quales_id": 447,
+      "quales_split": "test_gold",
+      "assertion": "Un estudiante de enseñanza media tiene 12 o 13 profesores."
+    },
+    {
+      "id": 397,
+      "quales_id": 448,
+      "quales_split": "test_gold",
+      "assertion": "La estrategia para enfrentar la pandemia fue el aislamiento social y quedarse en casa."
+    },
+    {
+      "id": 398,
+      "quales_id": 45,
+      "quales_split": "test_gold",
+      "assertion": "Santiago Alonso fue presidente de la LUD."
+    },
+    {
+      "id": 399,
+      "quales_id": 455,
+      "quales_split": "test_gold",
+      "assertion": "La aplicación CoronavirusUy contiene información sobre ingresos, egresos, test, agendas y vacunas."
+    },
+    {
+      "id": 400,
+      "quales_id": 456,
+      "quales_split": "test_gold",
+      "assertion": "La aplicación CoronavirusUy requería 15 minutos para detectar a una persona contagiada cercana."
+    },
+    {
+      "id": 401,
+      "quales_id": 457,
+      "quales_split": "test_gold",
+      "assertion": "Gastón Milano es un ingeniero que formó parte del equipo que creó la aplicación CoronavirusUy."
+    },
+    {
+      "id": 402,
+      "quales_id": 46,
+      "quales_split": "test_gold",
+      "assertion": "La LUD suspendió su actividad deportiva."
+    },
+    {
+      "id": 403,
+      "quales_id": 465,
+      "quales_split": "test_gold",
+      "assertion": "El uso de los teléfonos celulares puede desarrollar conductas adictivas."
+    },
+    {
+      "id": 404,
+      "quales_id": 467,
+      "quales_split": "test_gold",
+      "assertion": "Los trastornos que pueden venir a consecuencia del exceso de información son la ansiedad y la depresión."
+    },
+    {
+      "id": 405,
+      "quales_id": 468,
+      "quales_split": "test_gold",
+      "assertion": "La hiperconectividad provoca adicciones sociales."
+    },
+    {
+      "id": 406,
+      "quales_id": 469,
+      "quales_split": "test_gold",
+      "assertion": "Los teléfonos celulares fueron la tecnología de comunicación con mayor crecimiento a nivel global."
+    },
+    {
+      "id": 407,
+      "quales_id": 47,
+      "quales_split": "test_gold",
+      "assertion": "La LUD retomó su actividad deportiva."
+    },
+    {
+      "id": 408,
+      "quales_id": 471,
+      "quales_split": "test_gold",
+      "assertion": "El primer caso de covid-19 en Uruguay se detectó en marzo."
+    },
+    {
+      "id": 409,
+      "quales_id": 472,
+      "quales_split": "test_gold",
+      "assertion": "El proyecto de secuenciación del genoma de SARS-CoV-2 en Uruguay estuvo a cargo de la Universidad de la República (Udelar), el Institut Pasteur de Montevideo, el Instituto Nacional de Investigación Agropecuaria (INIA) y el Instituto de Investigaciones Biológicas Clemente Estable (IIBCE)."
+    },
+    {
+      "id": 410,
+      "quales_id": 474,
+      "quales_split": "test_gold",
+      "assertion": "El test serológico detecta, en sangre obtenida de las personas, si hay anticuerpos generados por el virus."
+    },
+    {
+      "id": 411,
+      "quales_id": 475,
+      "quales_split": "test_gold",
+      "assertion": "Gonzalo Moratorio trabajó en el Laboratorio de Virología Molecular de la Facultad de Ciencias."
+    },
+    {
+      "id": 412,
+      "quales_id": 476,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus ingresó a Uruguay."
+    },
+    {
+      "id": 413,
+      "quales_id": 48,
+      "quales_split": "test_gold",
+      "assertion": "El doctor Carlos Voituret estuvo involucrado en la redacción de los protocolos sanitarios."
+    },
+    {
+      "id": 414,
+      "quales_id": 481,
+      "quales_split": "test_gold",
+      "assertion": "José Quintín Olano fue el director de Salud del departamento de Treinta y Tres."
+    },
+    {
+      "id": 415,
+      "quales_id": 491,
+      "quales_split": "test_gold",
+      "assertion": "Las N95 son máscaras."
+    },
+    {
+      "id": 416,
+      "quales_id": 492,
+      "quales_split": "test_gold",
+      "assertion": "El coronavirus se contagia por el aire."
+    },
+    {
+      "id": 417,
+      "quales_id": 495,
+      "quales_split": "test_gold",
+      "assertion": "El 1º de mayo se celebra el Día Internacional de los Trabajadores."
+    },
+    {
+      "id": 418,
+      "quales_id": 509,
+      "quales_split": "test_gold",
+      "assertion": "Los vecinos de Cotravi pidieron un subsidio de 20.000 pesos."
+    },
+    {
+      "id": 419,
+      "quales_id": 51,
+      "quales_split": "test_gold",
+      "assertion": "Reino Unido, Baréin, Canadá, Arabia Saudita y México aprobaron el uso de emergencia de la vacuna de Pfizer-BioNTech contra el covid-19."
+    },
+    {
+      "id": 420,
+      "quales_id": 510,
+      "quales_split": "test_gold",
+      "assertion": "Las canastas del gobierno valían 1.200 pesos."
+    },
+    {
+      "id": 421,
+      "quales_id": 514,
+      "quales_split": "test_gold",
+      "assertion": "Nicolás Jodal trabajó en GeneXus"
+    },
+    {
+      "id": 422,
+      "quales_id": 515,
+      "quales_split": "test_gold",
+      "assertion": "Las nuevas funcionalidades de CoronavirusUy fueron informadas por Jodal a través de Twitter."
+    },
+    {
+      "id": 423,
+      "quales_id": 516,
+      "quales_split": "test_gold",
+      "assertion": "Los datos sobre vacunación en la aplicación CoronavirusUy se actualizaban cada dos horas."
+    },
+    {
+      "id": 424,
+      "quales_id": 517,
+      "quales_split": "test_gold",
+      "assertion": "El MSP es el Ministerio de Salud Pública."
+    },
+    {
+      "id": 425,
+      "quales_id": 52,
+      "quales_split": "test_gold",
+      "assertion": "El órgano regulador sanitario de México es Cofepris."
+    },
+    {
+      "id": 426,
+      "quales_id": 520,
+      "quales_split": "test_gold",
+      "assertion": "El tapabocas debía cubrir el mentón, la boca y la nariz."
+    },
+    {
+      "id": 427,
+      "quales_id": 521,
+      "quales_split": "test_gold",
+      "assertion": "Para evitar el contagio de COVID-19, se debía mantener una distancia de dos metros."
+    },
+    {
+      "id": 428,
+      "quales_id": 523,
+      "quales_split": "test_gold",
+      "assertion": "Los ministros de Economía de la zona euro se han reunido durante seis horas."
+    },
+    {
+      "id": 429,
+      "quales_id": 526,
+      "quales_split": "test_gold",
+      "assertion": "La zona euro dispuso de un fondo de medio billón de euros."
+    },
+    {
+      "id": 430,
+      "quales_id": 527,
+      "quales_split": "test_gold",
+      "assertion": "Italia y España fueron los países de la zona euro con mayor cantidad de casos de COVID durante la pandemia."
+    },
+    {
+      "id": 431,
+      "quales_id": 53,
+      "quales_split": "test_gold",
+      "assertion": "Hugo López-Gatell fue subsecretario de salud de México."
+    },
+    {
+      "id": 432,
+      "quales_id": 541,
+      "quales_split": "test_gold",
+      "assertion": "Nicolás Jodal desarrolló la aplicación CoronavirusUY."
+    },
+    {
+      "id": 433,
+      "quales_id": 542,
+      "quales_split": "test_gold",
+      "assertion": "Jodal trabaja en GeneXus."
+    },
+    {
+      "id": 434,
+      "quales_id": 543,
+      "quales_split": "test_gold",
+      "assertion": "Los menores de 18 años no podían inscribirse para vacunarse."
+    },
+    {
+      "id": 435,
+      "quales_id": 547,
+      "quales_split": "test_gold",
+      "assertion": "El gobierno decretó la emergencia sanitaria por el coronavirus."
+    },
+    {
+      "id": 436,
+      "quales_id": 549,
+      "quales_split": "test_gold",
+      "assertion": "La encuesta de la Academia Internacional de Sexología Médica encontró que la masturbación fue la actividad sexual más frecuente durante la cuarentena, tanto en varones como en mujeres."
+    },
+    {
+      "id": 437,
+      "quales_id": 551,
+      "quales_split": "test_gold",
+      "assertion": "El sexting es el intercambio consentido de mensajes, fotos y videos eróticos por internet."
+    },
+    {
+      "id": 438,
+      "quales_id": 552,
+      "quales_split": "test_gold",
+      "assertion": "La cuarentena afectó psicológicamente causando ansiedad y estrés."
+    },
+    {
+      "id": 439,
+      "quales_id": 554,
+      "quales_split": "test_gold",
+      "assertion": "El ex preso político Juan José Noveched Sosa falleció por coronavirus."
+    },
+    {
+      "id": 440,
+      "quales_id": 557,
+      "quales_split": "test_gold",
+      "assertion": "Juan José Noveched murió a los 76 años."
+    },
+    {
+      "id": 441,
+      "quales_id": 558,
+      "quales_split": "test_gold",
+      "assertion": "Juan José Noveched estuvo preso entre 1971 y 1981."
+    },
+    {
+      "id": 442,
+      "quales_id": 559,
+      "quales_split": "test_gold",
+      "assertion": "Crysol es una agrupación de ex presos políticos."
+    },
+    {
+      "id": 443,
+      "quales_id": 56,
+      "quales_split": "test_gold",
+      "assertion": "La FDA es la Administración de Alimentos y Medicamentos en Estados Unidos."
+    },
+    {
+      "id": 444,
+      "quales_id": 560,
+      "quales_split": "test_gold",
+      "assertion": "El número de atención psicológica 0800 1920 funcionó las 24 horas."
+    },
+    {
+      "id": 445,
+      "quales_id": 565,
+      "quales_split": "test_gold",
+      "assertion": "El número para llamar en caso de una situación peligrosa es el 911."
+    },
+    {
+      "id": 446,
+      "quales_id": 566,
+      "quales_split": "test_gold",
+      "assertion": "En Argentina, durante la cuarentena, se permitió salir a correr en un radio de hasta 500 metros de la casa."
+    },
+    {
+      "id": 447,
+      "quales_id": 567,
+      "quales_split": "test_gold",
+      "assertion": "Las ciudades argentinas con mayor presencia de COVID fueron la ciudad de Buenos Aires y otras capitales, como Rosario o Córdoba."
+    },
+    {
+      "id": 448,
+      "quales_id": 570,
+      "quales_split": "test_gold",
+      "assertion": "Los países más afectados por covid en Europa fueron Italia y España."
+    },
+    {
+      "id": 449,
+      "quales_id": 579,
+      "quales_split": "test_gold",
+      "assertion": "Pablo Orefice fue el director del programa salud.uy."
+    },
+    {
+      "id": 450,
+      "quales_id": 583,
+      "quales_split": "test_gold",
+      "assertion": "La aplicación CoronavirusUy fue utilizada para alertar a las personas que habían estado en contacto con un paciente positivo de COVID-19."
+    },
+    {
+      "id": 451,
+      "quales_id": 584,
+      "quales_split": "test_gold",
+      "assertion": "La aplicación Coronavirus.uy envía el mensaje 'Alerta: La persona que usa este celular puede haber estado expuesta al virus del COVID-19' en caso de exposición a un caso positivo de Covid."
+    },
+    {
+      "id": 452,
+      "quales_id": 588,
+      "quales_split": "test_gold",
+      "assertion": "El proyecto para penalizar la educación sexual en Polonia fue presentado por organizaciones civiles 'pro vida' y contrarias a los derechos de la población LGBTI."
+    },
+    {
+      "id": 453,
+      "quales_id": 590,
+      "quales_split": "test_gold",
+      "assertion": "Draginja Nadazdin fue directora de Amnistía Internacional Polonia."
+    },
+    {
+      "id": 454,
+      "quales_id": 592,
+      "quales_split": "test_gold",
+      "assertion": "Las personas en situación de calle se albergaron en el Gran Parque Central."
+    },
+    {
+      "id": 455,
+      "quales_id": 596,
+      "quales_split": "test_gold",
+      "assertion": "Jacinda Ardern fue primera ministra de Nueva Zelanda."
+    },
+    {
+      "id": 456,
+      "quales_id": 597,
+      "quales_split": "test_gold",
+      "assertion": "Nueva Zelanda tuvo un período de seis meses sin casos de coronavirus."
+    },
+    {
+      "id": 457,
+      "quales_id": 6,
+      "quales_split": "test_gold",
+      "assertion": "No se diagnosticó a ninguna persona con coronavirus en las cárceles de Uruguay."
+    },
+    {
+      "id": 458,
+      "quales_id": 600,
+      "quales_split": "test_gold",
+      "assertion": "Phil Valentine, un conductor de radio de Estados Unidos, falleció a los 61 años a causa de la covid-19."
+    },
+    {
+      "id": 459,
+      "quales_id": 602,
+      "quales_split": "test_gold",
+      "assertion": "Los contactos vacunados no necesitaban aislarse en el Reino Unido."
+    },
+    {
+      "id": 460,
+      "quales_id": 603,
+      "quales_split": "test_gold",
+      "assertion": "Los contactos de positivos de Reino Unido estaban obligados a guardar una cuarentena de diez días."
+    },
+    {
+      "id": 461,
+      "quales_id": 604,
+      "quales_split": "test_gold",
+      "assertion": "NHS Covid-19 es la aplicación oficial del sistema de salud británico."
+    },
+    {
+      "id": 462,
+      "quales_id": 606,
+      "quales_split": "test_gold",
+      "assertion": "Terra Brasserie es un restaurante."
+    },
+    {
+      "id": 463,
+      "quales_id": 608,
+      "quales_split": "test_gold",
+      "assertion": "La propuesta de subsidios del FA tenía un costo estimado de 240 millones de dólares."
+    },
+    {
+      "id": 464,
+      "quales_id": 614,
+      "quales_split": "test_gold",
+      "assertion": "Los diputados Eduardo Lust (Cabildo Abierto) y César Vega (Partido Ecologista Radical Intransigente), los abogados Gustavo Salle y Hoenir Sarthou, y la comunicadora Patricia Wolf le plantearon al presidente la suspensión del contrato con UPM."
+    },
+    {
+      "id": 465,
+      "quales_id": 615,
+      "quales_split": "test_gold",
+      "assertion": "El tercer caso confirmado de COVID-19 en Deportivo Maldonado fue Agustín Sant'Ann."
+    },
+    {
+      "id": 466,
+      "quales_id": 617,
+      "quales_split": "test_gold",
+      "assertion": "El jugador de Deportivo Maldonado contagiado de COVID-19 se encontraba aislado."
+    },
+    {
+      "id": 467,
+      "quales_id": 62,
+      "quales_split": "test_gold",
+      "assertion": "Carissa Etienne fue directora de la Organización Panamericana de la Salud."
+    },
+    {
+      "id": 468,
+      "quales_id": 624,
+      "quales_split": "test_gold",
+      "assertion": "Participar en Eno Breathe fue gratuito."
+    },
+    {
+      "id": 469,
+      "quales_id": 626,
+      "quales_split": "test_gold",
+      "assertion": "El arquero John fue uno de los casos positivos de Santos tras el partido con Boca Juniors."
+    },
+    {
+      "id": 470,
+      "quales_id": 629,
+      "quales_split": "test_gold",
+      "assertion": "La Conmebol resolvió que no había lugar a reclamo de puntos."
+    },
+    {
+      "id": 471,
+      "quales_id": 636,
+      "quales_split": "test_gold",
+      "assertion": "Alexandr Gorélov fue subdirector del Instituto de Epidemiología de la oficina nacional de protección al consumidor."
+    },
+    {
+      "id": 472,
+      "quales_id": 639,
+      "quales_split": "test_gold",
+      "assertion": "CEPAL es la Comisión Económica para América Latina y el Caribe."
+    },
+    {
+      "id": 473,
+      "quales_id": 647,
+      "quales_split": "test_gold",
+      "assertion": "ASSE es la Administración de Servicios de Salud del Estado."
+    },
+    {
+      "id": 474,
+      "quales_id": 650,
+      "quales_split": "test_gold",
+      "assertion": "Eduardo Henderson fue gerente general de ASSE."
+    },
+    {
+      "id": 475,
+      "quales_id": 651,
+      "quales_split": "test_gold",
+      "assertion": "Eduardo Henderson fue el gerente general de ASSE."
+    },
+    {
+      "id": 476,
+      "quales_id": 656,
+      "quales_split": "test_gold",
+      "assertion": "Miguel Martinez fue el decano de la Facultad de Medicina."
+    },
+    {
+      "id": 477,
+      "quales_id": 657,
+      "quales_split": "test_gold",
+      "assertion": "Miguel Martínez fue decano de la Facultad de Medicina."
+    },
+    {
+      "id": 478,
+      "quales_id": 667,
+      "quales_split": "test_gold",
+      "assertion": "Los renunciantes de ASSE permanecieron en sus cargos hasta el 30 del mes."
+    },
+    {
+      "id": 479,
+      "quales_id": 668,
+      "quales_split": "test_gold",
+      "assertion": "Leonardo Cipriani fue presidente de ASSE."
+    },
+    {
+      "id": 480,
+      "quales_id": 669,
+      "quales_split": "test_gold",
+      "assertion": "Jorge Basso fue ministro de Salud Pública."
+    },
+    {
+      "id": 481,
+      "quales_id": 674,
+      "quales_split": "test_gold",
+      "assertion": "El dengue fue una de las enfermedades que más preocuparon al Ministerio de Salud Pública (MSP)."
+    },
+    {
+      "id": 482,
+      "quales_id": 678,
+      "quales_split": "test_gold",
+      "assertion": "Liverpool fue el campeón en Inglaterra."
+    },
+    {
+      "id": 483,
+      "quales_id": 680,
+      "quales_split": "test_gold",
+      "assertion": "el pastor Márquez fue el fundador de la Iglesia Misión y de la ONG Beraca, Jorge Márquez."
+    },
+    {
+      "id": 484,
+      "quales_id": 681,
+      "quales_split": "test_gold",
+      "assertion": "El pastor Márquez es de la iglesia Misión Vida."
+    },
+    {
+      "id": 485,
+      "quales_id": 686,
+      "quales_split": "test_gold",
+      "assertion": "Marcos Carámbula fue el presidente de la Administración de Servicios de Salud del Estado (ASSE)."
+    },
+    {
+      "id": 486,
+      "quales_id": 688,
+      "quales_split": "test_gold",
+      "assertion": "Carámbula propone la vacunación como solución para la pandemia."
+    },
+    {
+      "id": 487,
+      "quales_id": 689,
+      "quales_split": "test_gold",
+      "assertion": "Las poblaciones prioritarias con respecto a la vacunación fueron el personal de la salud, las personas de mayor riesgo que coexistían con el COVID y los adultos mayores."
+    },
+    {
+      "id": 488,
+      "quales_id": 693,
+      "quales_split": "test_gold",
+      "assertion": "Los dispositivos de medición de calor se emplean en escuelas, aeropuertos e instalaciones médicas."
+    },
+    {
+      "id": 489,
+      "quales_id": 703,
+      "quales_split": "test_gold",
+      "assertion": "Aleksander Čeferin fue presidente de la UEFA."
+    },
+    {
+      "id": 490,
+      "quales_id": 708,
+      "quales_split": "test_gold",
+      "assertion": "Los participantes del estudio de anticuerpos de IrsiCaixa fueron observados durante 15 meses."
+    },
+    {
+      "id": 491,
+      "quales_id": 713,
+      "quales_split": "test_gold",
+      "assertion": "La enzima se encuentra unida a la membrana que recubre las células de pulmones, las arterias, los riñones y los intestinos."
+    },
+    {
+      "id": 492,
+      "quales_id": 714,
+      "quales_split": "test_gold",
+      "assertion": "El nombre científico del coronavirus es SARS-CoV-2."
+    },
+    {
+      "id": 493,
+      "quales_id": 72,
+      "quales_split": "test_gold",
+      "assertion": "Las directrices de la DGS de Portugal recomendaron que las personas más vulnerables, especialmente aquellas con enfermedades crónicas o inmunodepresión, usaran mascarilla."
+    },
+    {
+      "id": 494,
+      "quales_id": 721,
+      "quales_split": "test_gold",
+      "assertion": "Llegaron dos millones de vacunas de Pfizer."
+    },
+    {
+      "id": 495,
+      "quales_id": 723,
+      "quales_split": "test_gold",
+      "assertion": "Llegaron a Uruguay 172.800 dosis de la vacuna AstraZeneca."
+    },
+    {
+      "id": 496,
+      "quales_id": 727,
+      "quales_split": "test_gold",
+      "assertion": "El shock de la demanda ocurre cuando los gastos del consumo caen en picada."
+    },
+    {
+      "id": 497,
+      "quales_id": 728,
+      "quales_split": "test_gold",
+      "assertion": "Algunos de los países europeos más afectados por la pandemia fueron aquellos que habían sufrido los peores recortes en el presupuesto público durante las medidas de austeridad en la zona euro, lo que vinculó la inversión pública con el control adecuado de la pandemia."
+    },
+    {
+      "id": 498,
+      "quales_id": 729,
+      "quales_split": "test_gold",
+      "assertion": "OMS significa Organización Mundial de la Salud."
+    },
+    {
+      "id": 499,
+      "quales_id": 730,
+      "quales_split": "test_gold",
+      "assertion": "Una infección endémica es una enfermedad que ha logrado una presencia constante o prevalencia en una población."
+    },
+    {
+      "id": 500,
+      "quales_id": 731,
+      "quales_split": "test_gold",
+      "assertion": "Michael Ryan fue el director ejecutivo del Programa de Emergencias Sanitarias de la OMS."
+    },
+    {
+      "id": 501,
+      "quales_id": 734,
+      "quales_split": "test_gold",
+      "assertion": "La línea de apoyo psicológico estuvo disponible las 24 horas."
+    },
+    {
+      "id": 502,
+      "quales_id": 736,
+      "quales_split": "test_gold",
+      "assertion": "La medida del gobierno de invertir en la compra de estudios de covid-19 fue anunciada por la Unidad Centralizada de Adquisiciones del Ministerio de Economía y Finanzas (MEF)."
+    },
+    {
+      "id": 503,
+      "quales_id": 737,
+      "quales_split": "test_gold",
+      "assertion": "El gobierno uruguayo invirtió casi ocho millones de dólares en la compra de estudios diagnósticos y tomas de muestras de covid-19."
+    },
+    {
+      "id": 504,
+      "quales_id": 74,
+      "quales_split": "test_gold",
+      "assertion": "La mascarilla es una medida eficaz para prevenir el contagio de covid-19."
+    },
+    {
+      "id": 505,
+      "quales_id": 747,
+      "quales_split": "test_gold",
+      "assertion": "El Colectivo Trans del Uruguay (CTU) lanzó una campaña de donaciones para armar canastas de alimentos."
+    },
+    {
+      "id": 506,
+      "quales_id": 757,
+      "quales_split": "test_gold",
+      "assertion": "El testeo de anticuerpos en Rivera se realizó en marzo."
+    },
+    {
+      "id": 507,
+      "quales_id": 76,
+      "quales_split": "test_gold",
+      "assertion": "El proyecto de ley presentado por la senadora Carmen Sanguinetti establecía que el teletrabajo no podía superar el límite máximo de 44 y 48 horas semanales."
+    },
+    {
+      "id": 508,
+      "quales_id": 77,
+      "quales_split": "test_gold",
+      "assertion": "Carmen Sanguinetti fue senadora del Partido Colorado."
+    },
+    {
+      "id": 509,
+      "quales_id": 8,
+      "quales_split": "test_gold",
+      "assertion": "Las restricciones para las visitas a los reclusos permitían una visita mayor de 18 años por persona privada de libertad y no permitían mujeres embarazadas, personas inmunodeprimidas o que presentaran síntomas de coronavirus."
+    },
+    {
+      "id": 510,
+      "quales_id": 83,
+      "quales_split": "test_gold",
+      "assertion": "Nacional y Peñarol donaron kits de cuidados personales al personal de la salud."
+    },
+    {
+      "id": 511,
+      "quales_id": 84,
+      "quales_split": "test_gold",
+      "assertion": "Nacional donó 3.000 kits por la pandemia."
+    },
+    {
+      "id": 512,
+      "quales_id": 9,
+      "quales_split": "test_gold",
+      "assertion": "Fernando Mattos fue presidente del INAC."
+    },
+    {
+      "id": 513,
+      "quales_id": 96,
+      "quales_split": "test_gold",
+      "assertion": "Benett fue primer ministro de Israel."
+    },
+    {
+      "id": 514,
+      "quales_id": 97,
+      "quales_split": "test_gold",
+      "assertion": "El Sinae es el Sistema Nacional de Emergencias."
+    },
+    {
+      "id": 515,
+      "quales_id": 0,
+      "quales_split": "train",
+      "assertion": "El plan de contención económica social se elaboró para mitigar el impacto de la emergencia sanitaria."
+    },
+    {
+      "id": 516,
+      "quales_id": 1,
+      "quales_split": "train",
+      "assertion": "La comisión de expertos del FA estuvo integrada por Danilo Astori, el senador Daniel Olesker, el ex ministro de Trabajo y Seguridad Social Ernesto Murro y la economista Andrea Vigorito."
+    },
+    {
+      "id": 517,
+      "quales_id": 100,
+      "quales_split": "train",
+      "assertion": "Durante la pandemia por coronavirus, en la página de UNICEF se podía descargar una guía para hablar sobre Covid-19."
+    },
+    {
+      "id": 518,
+      "quales_id": 101,
+      "quales_split": "train",
+      "assertion": "El libro disponible en la página de UNICEF trata sobre los derechos del niño."
+    },
+    {
+      "id": 519,
+      "quales_id": 102,
+      "quales_split": "train",
+      "assertion": "El juego Right Runner estuvo disponible para celular."
+    },
+    {
+      "id": 520,
+      "quales_id": 103,
+      "quales_split": "train",
+      "assertion": "El ibuprofeno es un antiinflamatorio no esteroideo."
+    },
+    {
+      "id": 521,
+      "quales_id": 105,
+      "quales_split": "train",
+      "assertion": "Olivier Veran fue el ministro de salud de Francia."
+    },
+    {
+      "id": 522,
+      "quales_id": 106,
+      "quales_split": "train",
+      "assertion": "Las comorbilidades que se asociaron a muertes por Covid-19 fueron enfermedades cerebrovasculares y coronarias, diabetes e hipertensión."
+    },
+    {
+      "id": 523,
+      "quales_id": 107,
+      "quales_split": "train",
+      "assertion": "Charlotte Warren-Gash fue profesor asociado de epidemiología en la Escuela de Higiene y Medicina Tropical de Londres."
+    },
+    {
+      "id": 524,
+      "quales_id": 109,
+      "quales_split": "train",
+      "assertion": "Las autoridades del Centro de Almaceneros Minoristas, Baristas, Autoservicistas y Afines del Uruguay (CAMBADU) y el secretario de Presidencia, Álvaro Delgado, están evaluando la medida de exigir el uso de tapabocas en los comercios minoristas asociados a la gremial."
+    },
+    {
+      "id": 525,
+      "quales_id": 11,
+      "quales_split": "train",
+      "assertion": "En la pandemia por coronavirus quien recomendó al gobierno argentino mantener el aislamiento fue un grupo de expertos de entidades nacionales e internacionales."
+    },
+    {
+      "id": 526,
+      "quales_id": 115,
+      "quales_split": "train",
+      "assertion": "El primer caso de Covid en Argentina apareció el 3 de marzo."
+    },
+    {
+      "id": 527,
+      "quales_id": 117,
+      "quales_split": "train",
+      "assertion": "Eduardo Wado de Pedro fue el Ministro del Interior de la Argentina."
+    },
+    {
+      "id": 528,
+      "quales_id": 118,
+      "quales_split": "train",
+      "assertion": "Mario Meoni fue el Ministro de Transporte de la Argentina."
+    },
+    {
+      "id": 529,
+      "quales_id": 14,
+      "quales_split": "train",
+      "assertion": "Ginés González García fue ministro de Salud de Argentina."
+    },
+    {
+      "id": 530,
+      "quales_id": 143,
+      "quales_split": "train",
+      "assertion": "El organizador del concurso de dibujo y fotografía 'La cuarentena' fue la Facultad de Arquitectura, Diseño y Urbanismo de la Universidad de la República."
+    },
+    {
+      "id": 531,
+      "quales_id": 145,
+      "quales_split": "train",
+      "assertion": "El jurado del concurso La Cuarentena estuvo compuesto por Julio Pereira, Ernesto Ryan, Nicolás Garrido, Mariana Cecilio y Leonardo Finotti."
+    },
+    {
+      "id": 532,
+      "quales_id": 146,
+      "quales_split": "train",
+      "assertion": "El acrónimo de la Universidad de la República es Udelar."
+    },
+    {
+      "id": 533,
+      "quales_id": 147,
+      "quales_split": "train",
+      "assertion": "Mariana Cecilio es de Brasil."
+    },
+    {
+      "id": 534,
+      "quales_id": 15,
+      "quales_split": "train",
+      "assertion": "En Argentina, en el marco de las medidas para combatir la pandemia de coronavirus, la cuarentena se flexibilizó en las provincias de Entre Ríos, Misiones, Salta, San Juan y Neuquén."
+    },
+    {
+      "id": 535,
+      "quales_id": 154,
+      "quales_split": "train",
+      "assertion": "Los primeros contagiados de Covid-19 en el deporte uruguayo fueron dos jugadores de rugby y tres jugadoras de hockey."
+    },
+    {
+      "id": 536,
+      "quales_id": 16,
+      "quales_split": "train",
+      "assertion": "El aislamiento social, preventivo y obligatorio en Argentina, adoptado para combatir la pandemia de coronavirus, durará al menos hasta el 10 de mayo."
+    },
+    {
+      "id": 537,
+      "quales_id": 160,
+      "quales_split": "train",
+      "assertion": "Los científicos británicos recomendaron, para combatir el coronavirus, aislar los casos sospechosos, poner en cuarentena a quienes viven con ellos y poner a resguardo a ancianos y personas con factores de riesgo."
+    },
+    {
+      "id": 538,
+      "quales_id": 17,
+      "quales_split": "train",
+      "assertion": "Las zonas de Argentina más afectadas por el Covid fueron la ciudad de Buenos Aires y la zona metropolitana."
+    },
+    {
+      "id": 539,
+      "quales_id": 177,
+      "quales_split": "train",
+      "assertion": "El sindicato de trabajadoras domésticas es el Sindicato Único de Trabajadoras Domésticas (SUTD)."
+    },
+    {
+      "id": 540,
+      "quales_id": 179,
+      "quales_split": "train",
+      "assertion": "Yaneth Mazzoleni fue dirigente del Sindicato Único de Trabajadoras Domésticas."
+    },
+    {
+      "id": 541,
+      "quales_id": 182,
+      "quales_split": "train",
+      "assertion": "El acrónimo del Ministerio de Desarrollo Social es Mides."
+    },
+    {
+      "id": 542,
+      "quales_id": 183,
+      "quales_split": "train",
+      "assertion": "La dirección del hotel Urban Express es Andes y Uruguay."
+    },
+    {
+      "id": 543,
+      "quales_id": 184,
+      "quales_split": "train",
+      "assertion": "Gabriel Cunha fue director de Coordinación de Programas para Personas en Situación de Calle del Mides."
+    },
+    {
+      "id": 544,
+      "quales_id": 185,
+      "quales_split": "train",
+      "assertion": "Nicolás Martinelli fue director general de Secretaría del Mides."
+    },
+    {
+      "id": 545,
+      "quales_id": 186,
+      "quales_split": "train",
+      "assertion": "Luis Lacalle Pou fue presidente."
+    },
+    {
+      "id": 546,
+      "quales_id": 189,
+      "quales_split": "train",
+      "assertion": "Magdalena Furtado fue la representante de ONU Mujeres en Uruguay."
+    },
+    {
+      "id": 547,
+      "quales_id": 19,
+      "quales_split": "train",
+      "assertion": "En el marco de la pandemia por coronavirus, quien solicitó al gobierno no retomar las clases presenciales en escuelas rurales el 22 de abril fue la Sociedad de Medicina Rural del Uruguay."
+    },
+    {
+      "id": 548,
+      "quales_id": 190,
+      "quales_split": "train",
+      "assertion": "Soledad Quesada fue directora de la Asesoría para la Igualdad de Género de la Intendencia de Montevideo."
+    },
+    {
+      "id": 549,
+      "quales_id": 193,
+      "quales_split": "train",
+      "assertion": "El confinamiento en España comenzó el domingo en que el gobierno de Pedro Sánchez decretó el estado de alerta durante la pandemia de Covid-19."
+    },
+    {
+      "id": 550,
+      "quales_id": 197,
+      "quales_split": "train",
+      "assertion": "Giuseppe Conte fue el primer ministro de Italia."
+    },
+    {
+      "id": 551,
+      "quales_id": 2,
+      "quales_split": "train",
+      "assertion": "Durante la pandemia por coronavirus el FA elaboró el “plan de contención económica social” que, en materia laboral, estableció medidas de preservación de puestos de trabajo"
+    },
+    {
+      "id": 552,
+      "quales_id": 20,
+      "quales_split": "train",
+      "assertion": "Luego de suspender las clases presenciales por la pandemia de coronavirus, se pensaba retomarlas un 22 de abril."
+    },
+    {
+      "id": 553,
+      "quales_id": 202,
+      "quales_split": "train",
+      "assertion": "La estrategia sanitaria presentada por el gobierno del primer ministro italiano, Giuseppe Conte, para la reapertura gradual del país a partir del 4 de mayo durante la pandemia de coronavirus, tiene cinco puntos."
+    },
+    {
+      "id": 554,
+      "quales_id": 203,
+      "quales_split": "train",
+      "assertion": "El seminario de Isol Misenta se transmitió en vivo a través del Instagram Live de @plastilinarte."
+    },
+    {
+      "id": 555,
+      "quales_id": 205,
+      "quales_split": "train",
+      "assertion": "Isol Misenta es una autora e ilustradora argentina."
+    },
+    {
+      "id": 556,
+      "quales_id": 206,
+      "quales_split": "train",
+      "assertion": "El seminario de Isol Misenta está dirigido a familias."
+    },
+    {
+      "id": 557,
+      "quales_id": 208,
+      "quales_split": "train",
+      "assertion": "Isol Misenta ganó el Memorial Astrid Lindgren."
+    },
+    {
+      "id": 558,
+      "quales_id": 209,
+      "quales_split": "train",
+      "assertion": "El pueblo Kichwa es una comunidad indígena de Ecuador."
+    },
+    {
+      "id": 559,
+      "quales_id": 22,
+      "quales_split": "train",
+      "assertion": "En el marco de la pandemia por coronavirus, la decisión de retomar las clases un 22 abril fue tomada por el gobierno."
+    },
+    {
+      "id": 560,
+      "quales_id": 221,
+      "quales_split": "train",
+      "assertion": "Dos aviones, uno de la empresa Amaszonas y otro de la Fuerza Aérea Uruguaya, traerán a más de 120 uruguayos varados en Perú como parte de una operación del gobierno uruguayo para repatriarlos debido a los cierres de fronteras por la pandemia de coronavirus."
+    },
+    {
+      "id": 561,
+      "quales_id": 222,
+      "quales_split": "train",
+      "assertion": "Ernesto Talvi fue Ministro de Relaciones Exteriores."
+    },
+    {
+      "id": 562,
+      "quales_id": 223,
+      "quales_split": "train",
+      "assertion": "En la repatriación de uruguayos varados en Perú, tuvieron prioridad los adultos mayores, las personas en situación de vulnerabilidad, las familias con hijos menores y aquellas personas que estuvieron varadas por más tiempo."
+    },
+    {
+      "id": 563,
+      "quales_id": 224,
+      "quales_split": "train",
+      "assertion": "La pandemia del nuevo coronavirus causó la suspensión de la asamblea de Wanderers."
+    },
+    {
+      "id": 564,
+      "quales_id": 229,
+      "quales_split": "train",
+      "assertion": "El Sudamericano femenino sub 17 postergado por el Covid-19 estaba previsto para comenzar el 15 de abril."
+    },
+    {
+      "id": 565,
+      "quales_id": 23,
+      "quales_split": "train",
+      "assertion": "En Uruguay, las clases presenciales de las escuelas rurales no se retomarán el 22 de abril de 2020 en el departamento de Canelones."
+    },
+    {
+      "id": 566,
+      "quales_id": 232,
+      "quales_split": "train",
+      "assertion": "La primera fase del Sudamericano femenino sub 17 en Uruguay se jugó en el estadio Charrúa de Montevideo."
+    },
+    {
+      "id": 567,
+      "quales_id": 234,
+      "quales_split": "train",
+      "assertion": "La AUF es la Asociación Uruguaya de Fútbol."
+    },
+    {
+      "id": 568,
+      "quales_id": 236,
+      "quales_split": "train",
+      "assertion": "Defensor Sporting y Plaza Colonia decidieron mandar a sus jugadores al seguro de paro."
+    },
+    {
+      "id": 569,
+      "quales_id": 237,
+      "quales_split": "train",
+      "assertion": "Los extranjeros liberados por los clubes uruguayos fueron el argentino Imanol Enríquez, los paraguayos Guido Verdún y Santiago Irala, y el brasileño Leonai Souza."
+    },
+    {
+      "id": 570,
+      "quales_id": 238,
+      "quales_split": "train",
+      "assertion": "Para acceder al seguro de paro se requerían al menos 180 días de actividad."
+    },
+    {
+      "id": 571,
+      "quales_id": 239,
+      "quales_split": "train",
+      "assertion": "En el año 2020, los clubes Defensor Sporting y Plaza Colonia de la Asociación Uruguaya de Fútbol enviaron al seguro de paro a los futbolistas del plantel principal, al cuerpo técnico, a los trabajadores con cargos rentados y a la mayoría del personal administrativo."
+    },
+    {
+      "id": 572,
+      "quales_id": 24,
+      "quales_split": "train",
+      "assertion": "Someruy es la Sociedad de Medicina Rural del Uruguay."
+    },
+    {
+      "id": 573,
+      "quales_id": 245,
+      "quales_split": "train",
+      "assertion": "El coronavirus de las aves presenta síntomas respiratorios, pero puede agravarse por infecciones secundarias."
+    },
+    {
+      "id": 574,
+      "quales_id": 246,
+      "quales_split": "train",
+      "assertion": "El primer caso de coronavirus en un ave se detectó a principios del siglo XXI."
+    },
+    {
+      "id": 575,
+      "quales_id": 247,
+      "quales_split": "train",
+      "assertion": "Los virus son entidades biológicas compuestas de material hereditario y proteínas que requieren necesariamente de un hospedero para replicarse y generar copias de sí mismos."
+    },
+    {
+      "id": 576,
+      "quales_id": 248,
+      "quales_split": "train",
+      "assertion": "Los coronavirus son virus con envoltura (una capa lipídica asociada a glicoproteínas) cuyo genoma es una única hebra de ARN de entre 25 y 32 kb."
+    },
+    {
+      "id": 577,
+      "quales_id": 249,
+      "quales_split": "train",
+      "assertion": "De acuerdo a su origen, los dos grandes grupos de coronavirus son el de las aves y el de los mamíferos (murciélagos)."
+    },
+    {
+      "id": 578,
+      "quales_id": 25,
+      "quales_split": "train",
+      "assertion": "Menos del 6% de los médicos uruguayos vivía y asistía al norte del Río Negro."
+    },
+    {
+      "id": 579,
+      "quales_id": 26,
+      "quales_split": "train",
+      "assertion": "Patricia Nava fue la presidenta de la Federación Médica del Interior."
+    },
+    {
+      "id": 580,
+      "quales_id": 261,
+      "quales_split": "train",
+      "assertion": "El gobierno aumentó el IVA al reducir el descuento para compras con tarjeta de débito de 4% a 2% y para compras con tarjeta de crédito."
+    },
+    {
+      "id": 581,
+      "quales_id": 262,
+      "quales_split": "train",
+      "assertion": "El descuento para las tarjetas de débito se redujo del 4% al 2%."
+    },
+    {
+      "id": 582,
+      "quales_id": 263,
+      "quales_split": "train",
+      "assertion": "El Frente Amplio es una coalición de izquierda."
+    },
+    {
+      "id": 583,
+      "quales_id": 264,
+      "quales_split": "train",
+      "assertion": "Javier Miranda fue presidente del Frente Amplio (FA)."
+    },
+    {
+      "id": 584,
+      "quales_id": 269,
+      "quales_split": "train",
+      "assertion": "El país de origen del covid-19 es China."
+    },
+    {
+      "id": 585,
+      "quales_id": 27,
+      "quales_split": "train",
+      "assertion": "Patricia Nava fue la presidenta de Femi."
+    },
+    {
+      "id": 586,
+      "quales_id": 271,
+      "quales_split": "train",
+      "assertion": "Teletrabajar es una actividad laboral que se lleva a cabo fuera de la organización."
+    },
+    {
+      "id": 587,
+      "quales_id": 272,
+      "quales_split": "train",
+      "assertion": "El teletrabajo puede generar beneficios a los empleadores, como la optimización de recursos y la disminución de gastos operativos."
+    },
+    {
+      "id": 588,
+      "quales_id": 273,
+      "quales_split": "train",
+      "assertion": "En Uruguay, la modalidad de teletrabajo no está contenida en el marco jurídico."
+    },
+    {
+      "id": 589,
+      "quales_id": 274,
+      "quales_split": "train",
+      "assertion": "Algunos beneficios del teletrabajo, para los empleados, son mayor disponibilidad de tiempo y reducción de costos."
+    },
+    {
+      "id": 590,
+      "quales_id": 277,
+      "quales_split": "train",
+      "assertion": "El sitio 'Cine.ar' contiene decenas de películas, series, documentales y cortos de producción argentina."
+    },
+    {
+      "id": 591,
+      "quales_id": 278,
+      "quales_split": "train",
+      "assertion": "Los protagonistas de la película 'Alelí' son Néstor Guzzini, Cristina Morán, Mirella Pascual y Romina Peluffo."
+    },
+    {
+      "id": 592,
+      "quales_id": 279,
+      "quales_split": "train",
+      "assertion": "Cine.ar es una plataforma con sede en Medellín."
+    },
+    {
+      "id": 593,
+      "quales_id": 28,
+      "quales_split": "train",
+      "assertion": "FEMI es la Federación Médica del Interior."
+    },
+    {
+      "id": 594,
+      "quales_id": 280,
+      "quales_split": "train",
+      "assertion": "El SMU pidió 'medidas drásticas de prevención' de la expansión del COVID-19, entre ellas una 'cuarentena general'."
+    },
+    {
+      "id": 595,
+      "quales_id": 283,
+      "quales_split": "train",
+      "assertion": "El SMU pidió que se cerraran restaurantes, centros comerciales y otros posibles lugares de esparcimiento del virus."
+    },
+    {
+      "id": 596,
+      "quales_id": 284,
+      "quales_split": "train",
+      "assertion": "Tener una amplia disponibilidad de tests permite detectar el virus en las personas, mejorando la estrategia de prevención, el aislamiento de contactos y protegiendo al personal sanitario para no mermar los recursos humanos del sistema de salud."
+    },
+    {
+      "id": 597,
+      "quales_id": 285,
+      "quales_split": "train",
+      "assertion": "La OFI es la Organización del Fútbol del Interior."
+    },
+    {
+      "id": 598,
+      "quales_id": 286,
+      "quales_split": "train",
+      "assertion": "Tras la suspensión por coronavirus, los torneos de fútbol organizador por la OFI se reiniciarán un 15 de mayo."
+    },
+    {
+      "id": 599,
+      "quales_id": 287,
+      "quales_split": "train",
+      "assertion": "La Copa Nacional de Selecciones, el primer campeonato del año de la Organización del Fútbol del Interior (OFI), se suspendió cuando estaban por empezar a jugarse los cuartos de final de la Fase Nacional."
+    },
+    {
+      "id": 600,
+      "quales_id": 288,
+      "quales_split": "train",
+      "assertion": "Unos días antes de la suspensión de la Copa Nacional de Selecciones de la Organización del Fútbol del Interior (OFI), las selecciones de San José, Salto y Canelones del Este fueron campeonas de las zonas Sur, Litoral y Este, respectivamente."
+    },
+    {
+      "id": 601,
+      "quales_id": 289,
+      "quales_split": "train",
+      "assertion": "Los cruces de ida en cuartos de final de la Fase Nacional de la Copa Nacional de Selecciones de la Organización del Fútbol del Interior (OFI) son Canelones del Este-Paysandú, Cerro Largo-San José, Rocha-Río Negro y Canelones-Salto."
+    },
+    {
+      "id": 602,
+      "quales_id": 293,
+      "quales_split": "train",
+      "assertion": "Las personas que vivían en condiciones de mayor vulnerabilidad eran las más afectadas."
+    },
+    {
+      "id": 603,
+      "quales_id": 295,
+      "quales_split": "train",
+      "assertion": "Actualmente, el humor en España pasa por un momento dorado."
+    },
+    {
+      "id": 604,
+      "quales_id": 296,
+      "quales_split": "train",
+      "assertion": "El humor español actual, que incluye miles de videos de stand-up, programas televisivos y sketches de dúos como Pantomima Full y Venga Monjas, se puede encontrar en la plataforma YouTube."
+    },
+    {
+      "id": 605,
+      "quales_id": 297,
+      "quales_split": "train",
+      "assertion": "En el actual momento dorado del humor en España, los videos de stand-up se pueden encontrar en YouTube."
+    },
+    {
+      "id": 606,
+      "quales_id": 298,
+      "quales_split": "train",
+      "assertion": "Pantomima Full es una parodia de tipos urbanos: el emprendedor, el ciclista, el adicto al trabajo, el salidor, el solitario, el místico, el crossfitero, el fanático de la cerveza artesanal y el de la sidra."
+    },
+    {
+      "id": 607,
+      "quales_id": 299,
+      "quales_split": "train",
+      "assertion": "Si la parodia de tipos urbanos del dúo madrileño Pantomima Full estuviera ambientada en Montevideo, el objetivo de la broma sería el 'nuevo uruguayo'."
+    },
+    {
+      "id": 608,
+      "quales_id": 3,
+      "quales_split": "train",
+      "assertion": "Los objetivos del plan de contención económica social son preservar las empresas y las y los trabajadores, no aumentar la pobreza y la desigualdad, y prepararse para el día después."
+    },
+    {
+      "id": 609,
+      "quales_id": 300,
+      "quales_split": "train",
+      "assertion": "La OMS es la Organización Mundial de la Salud."
+    },
+    {
+      "id": 610,
+      "quales_id": 301,
+      "quales_split": "train",
+      "assertion": "Según la Organización Mundial de la Salud (OMS), un ejercicio que se puede realizar en el hogar para mantener la salud física durante la cuarentena por coronavirus es bajar y subir escaleras."
+    },
+    {
+      "id": 611,
+      "quales_id": 303,
+      "quales_split": "train",
+      "assertion": "Fumar aumenta el peligro de verse afectado por otras enfermedades graves en relación al coronavirus."
+    },
+    {
+      "id": 612,
+      "quales_id": 304,
+      "quales_split": "train",
+      "assertion": "El número para suscribirse a las actualizaciones de coronavirus de la OMS mediante mensaje de texto era 0041798931892."
+    },
+    {
+      "id": 613,
+      "quales_id": 309,
+      "quales_split": "train",
+      "assertion": "Los principales síntomas del covid-19 son fiebre, tos seca o poco productiva, dificultad respiratoria, resfrío, dolor de garganta, decaimiento, dolores musculares y articulares, cefalea y, con menor frecuencia, dolor abdominal y a veces diarrea."
+    },
+    {
+      "id": 614,
+      "quales_id": 31,
+      "quales_split": "train",
+      "assertion": "Beatriz Argimón fue la vicepresidenta de Uruguay."
+    },
+    {
+      "id": 615,
+      "quales_id": 312,
+      "quales_split": "train",
+      "assertion": "La ANII es la Agencia Nacional de Investigación e Innovación."
+    },
+    {
+      "id": 616,
+      "quales_id": 313,
+      "quales_split": "train",
+      "assertion": "Los kits de diagnóstico de Covid-19 debían estar disponibles antes de mayo de 2020."
+    },
+    {
+      "id": 617,
+      "quales_id": 318,
+      "quales_split": "train",
+      "assertion": "Argentina registró 41.080 casos positivos de covid-19 en un solo día."
+    },
+    {
+      "id": 618,
+      "quales_id": 32,
+      "quales_split": "train",
+      "assertion": "Las elecciones departamentales de Uruguay, cuyo posible aplazamiento fue analizado por la vicepresidenta Beatriz Argimón y los partidos políticos, estaban previstas para el 10 de mayo."
+    },
+    {
+      "id": 619,
+      "quales_id": 322,
+      "quales_split": "train",
+      "assertion": "Cao Liping fue representante del Ministerio de Ecología y Medio Ambiente de China."
+    },
+    {
+      "id": 620,
+      "quales_id": 323,
+      "quales_split": "train",
+      "assertion": "El paquete de estímulo económico aprobado por Donald Trump fue de dos billones de dólares."
+    },
+    {
+      "id": 621,
+      "quales_id": 325,
+      "quales_split": "train",
+      "assertion": "La secuencia de los genomas del coronavirus permite saber de dónde provienen las cepas que ingresaron a Uruguay, cuándo llegaron y si hay diferentes variantes del nuevo coronavirus en el país."
+    },
+    {
+      "id": 622,
+      "quales_id": 327,
+      "quales_split": "train",
+      "assertion": "El estudio del Institut Pasteur de Montevideo para secuenciar los genomas del SARS-CoV-2 en diez pacientes uruguayos con Covid-19 fue liderado por Gregorio Iraola junto a Pilar Moreno y Gonzalo Moratorio."
+    },
+    {
+      "id": 623,
+      "quales_id": 33,
+      "quales_split": "train",
+      "assertion": "Iván Posada fue diputado del Partido Independiente."
+    },
+    {
+      "id": 624,
+      "quales_id": 331,
+      "quales_split": "train",
+      "assertion": "Los gobiernos latinoamericanos tomaron medidas para proteger a los sectores más vulnerables de la población y de las empresas frente al impacto económico del coronavirus."
+    },
+    {
+      "id": 625,
+      "quales_id": 333,
+      "quales_split": "train",
+      "assertion": "Iván Duque fue presidente de Colombia."
+    },
+    {
+      "id": 626,
+      "quales_id": 34,
+      "quales_split": "train",
+      "assertion": "En el contexto de la crisis por la pandemia del coronavirus (Covid-19), se prevé que las consecuencias económicas, sociales y sanitarias serán de largo plazo."
+    },
+    {
+      "id": 627,
+      "quales_id": 340,
+      "quales_split": "train",
+      "assertion": "El PIAS (Plan Integral de Atención a la Salud) es el plan que establece las prestaciones obligatorias que deben ofrecer las instituciones del Sistema Nacional Integrado de Salud."
+    },
+    {
+      "id": 628,
+      "quales_id": 342,
+      "quales_split": "train",
+      "assertion": "Los estudios diagnósticos que debían dar los prestadores de salud eran la técnica de PCR (reacción en cadena de la polimerasa)."
+    },
+    {
+      "id": 629,
+      "quales_id": 345,
+      "quales_split": "train",
+      "assertion": "Juan Pablo Labat es el ex director nacional de Evaluación y Monitoreo del Mides."
+    },
+    {
+      "id": 630,
+      "quales_id": 350,
+      "quales_split": "train",
+      "assertion": "Valeria Ripoll fue la secretaria general de la Asociación de Empleados y Obreros Municipales de Montevideo (Adeom)."
+    },
+    {
+      "id": 631,
+      "quales_id": 351,
+      "quales_split": "train",
+      "assertion": "El Ministerio de Salud Pública (MSP) es quien determina el protocolo a aplicar en los cementerios de Montevideo para los fallecidos por coronavirus."
+    },
+    {
+      "id": 632,
+      "quales_id": 352,
+      "quales_split": "train",
+      "assertion": "Según Ripoll, los responsables de salud de los trabajadores de la Intendencia debían acudir presencialmente al cementerio e indicar qué había que hacer."
+    },
+    {
+      "id": 633,
+      "quales_id": 353,
+      "quales_split": "train",
+      "assertion": "La Intendencia tomó como medida adicional en el protocolo para fallecidos por coronavirus que la túnica debía ser desechable."
+    },
+    {
+      "id": 634,
+      "quales_id": 357,
+      "quales_split": "train",
+      "assertion": "Azucena Arbeleche fue ministra de Economía."
+    },
+    {
+      "id": 635,
+      "quales_id": 36,
+      "quales_split": "train",
+      "assertion": "Al comienzo de la pandemia, el país con más casos de Covid-19 fue China."
+    },
+    {
+      "id": 636,
+      "quales_id": 360,
+      "quales_split": "train",
+      "assertion": "Carmela Hountou fue denunciada por violación de cuarentena."
+    },
+    {
+      "id": 637,
+      "quales_id": 362,
+      "quales_split": "train",
+      "assertion": "Violar una cuarentena puede tener consecuencias penales."
+    },
+    {
+      "id": 638,
+      "quales_id": 365,
+      "quales_split": "train",
+      "assertion": "Omar Paganini fue ministro de Industria, Energía y Minería."
+    },
+    {
+      "id": 639,
+      "quales_id": 367,
+      "quales_split": "train",
+      "assertion": "Las empresas que desarrollaron la tecnología para las alertas de exposición de la aplicación uruguaya Coronavirus Uy fueron Google y Apple."
+    },
+    {
+      "id": 640,
+      "quales_id": 368,
+      "quales_split": "train",
+      "assertion": "Los únicos países que desarrollaron una app para coronavirus antes que Uruguay fueron Italia y Suiza."
+    },
+    {
+      "id": 641,
+      "quales_id": 37,
+      "quales_split": "train",
+      "assertion": "En el marco de la pandemia de Covid-19, Italia es el país que registra más muertes causadas por la enfermedad, superando incluso a China, el país donde surgió el virus."
+    },
+    {
+      "id": 642,
+      "quales_id": 372,
+      "quales_split": "train",
+      "assertion": "Los torneos sudamericanos de fútbol de clubes que fueron suspendidos por la Conmebol en 2020 a raíz de la pandemia de Covid-19 fueron la Copa Libertadores y la Copa Sudamericana."
+    },
+    {
+      "id": 643,
+      "quales_id": 379,
+      "quales_split": "train",
+      "assertion": "El GACH es el Grupo Asesor Científico Honorario."
+    },
+    {
+      "id": 644,
+      "quales_id": 38,
+      "quales_split": "train",
+      "assertion": "La clave coreana para tener una baja tasa de mortalidad a causa del Covid19 fue el testeo masivo de la población."
+    },
+    {
+      "id": 645,
+      "quales_id": 383,
+      "quales_split": "train",
+      "assertion": "Pablo Caggiani fue consejero del Consejo de Educación Inicial y Primaria."
+    },
+    {
+      "id": 646,
+      "quales_id": 384,
+      "quales_split": "train",
+      "assertion": "Los comedores escolares reciben habitualmente a 250.000 niños."
+    },
+    {
+      "id": 647,
+      "quales_id": 389,
+      "quales_split": "train",
+      "assertion": "Daniel Radio fue la mayor autoridad de la secretaría del Sistema Nacional Integrado de Cuidados."
+    },
+    {
+      "id": 648,
+      "quales_id": 39,
+      "quales_split": "train",
+      "assertion": "La suspensión de la actividad causó el incremento de solicitudes de seguro de desempleo."
+    },
+    {
+      "id": 649,
+      "quales_id": 394,
+      "quales_split": "train",
+      "assertion": "Durante la crisis sanitaria por el coronavirus, el Banco Central Europeo espera que los accionistas de la banca se unan a los esfuerzos colectivos de no pagar dividendos y mantener líneas de crédito para apoyar a las personas y pequeñas empresas a superar la crisis."
+    },
+    {
+      "id": 650,
+      "quales_id": 396,
+      "quales_split": "train",
+      "assertion": "Los docentes de la Universidad Tecnológica (Utec) planearon desarrollar insumos médicos de fabricación 3D ante la emergencia sanitaria mediante un formulario para quienes quisieran aportar de alguna manera a la iniciativa."
+    },
+    {
+      "id": 651,
+      "quales_id": 397,
+      "quales_split": "train",
+      "assertion": "Las máscaras de acetato protegen toda la cara de la persona y evitan el contacto con cualquier tipo de fluidos."
+    },
+    {
+      "id": 652,
+      "quales_id": 4,
+      "quales_split": "train",
+      "assertion": "El plan de contención económica social se basó en un aumento transitorio del gasto y de la inversión pública para minimizar el efecto de la desaceleración económica y su impacto en la población."
+    },
+    {
+      "id": 653,
+      "quales_id": 405,
+      "quales_split": "train",
+      "assertion": "El INDDHH es la Institución Nacional de Derechos Humanos y Defensoría del Pueblo."
+    },
+    {
+      "id": 654,
+      "quales_id": 41,
+      "quales_split": "train",
+      "assertion": "Hasta el miércoles 18 de marzo, en el Banco de Previsión Social (BPS) los departamentos donde se presentaron solicitudes de seguro de desempleo fueron Montevideo, seguido por Canelones, Maldonado, Colonia, Paysandú, Salto y Tacuarembó."
+    },
+    {
+      "id": 655,
+      "quales_id": 410,
+      "quales_split": "train",
+      "assertion": "El número de la Ley de Faltas es 19.120."
+    },
+    {
+      "id": 656,
+      "quales_id": 419,
+      "quales_split": "train",
+      "assertion": "El gobierno uruguayo recomendó cuarentena para los no vacunados, un test PCR negativo antes de ingresar al país y otro a los cinco días para las personas que vuelven del exterior."
+    },
+    {
+      "id": 657,
+      "quales_id": 421,
+      "quales_split": "train",
+      "assertion": "Un ciudadano podía obtener la aplicación del Covid19 a través del Play Store de los teléfonos."
+    },
+    {
+      "id": 658,
+      "quales_id": 424,
+      "quales_split": "train",
+      "assertion": "China donó 150.000 mascarillas a Uruguay en apoyo a la pandemia."
+    },
+    {
+      "id": 659,
+      "quales_id": 428,
+      "quales_split": "train",
+      "assertion": "Wuhan es la capital de la provincia de Hubei."
+    },
+    {
+      "id": 660,
+      "quales_id": 429,
+      "quales_split": "train",
+      "assertion": "La ciudad de Wuhan estuvo cerrada por 56 días."
+    },
+    {
+      "id": 661,
+      "quales_id": 430,
+      "quales_split": "train",
+      "assertion": "Xi Jinping es el presidente de China."
+    },
+    {
+      "id": 662,
+      "quales_id": 432,
+      "quales_split": "train",
+      "assertion": "La aplicación presentada por el gobierno para el rastreo del coronavirus se llama CoronavirusUy."
+    },
+    {
+      "id": 663,
+      "quales_id": 433,
+      "quales_split": "train",
+      "assertion": "En la nueva versión de la aplicación CoronavirusUy, el celular intercambia identificadores a través de Bluetooth cuando está a menos de tres metros de otro celular por más de 5 o 10 minutos."
+    },
+    {
+      "id": 664,
+      "quales_id": 436,
+      "quales_split": "train",
+      "assertion": "Alberto Fernández fue presidente de Argentina."
+    },
+    {
+      "id": 665,
+      "quales_id": 440,
+      "quales_split": "train",
+      "assertion": "Durante la cuarentena por el coronavirus, el presidente de Argentina, Alberto Fernández, anunció que el Banco Mundial aprobó un apoyo presupuestario de 300 millones de dólares."
+    },
+    {
+      "id": 666,
+      "quales_id": 444,
+      "quales_split": "train",
+      "assertion": "Alejandro Domínguez fue presidente de la Conmebol."
+    },
+    {
+      "id": 667,
+      "quales_id": 45,
+      "quales_split": "train",
+      "assertion": "Durante la pandemia de COVID-19, la distancia que se debía mantener con otras personas para evitar el contagio era mayor a un metro."
+    },
+    {
+      "id": 668,
+      "quales_id": 459,
+      "quales_split": "train",
+      "assertion": "La tercera y cuarta fecha de las Eliminatorias Sudamericanas de fútbol rumbo al Mundial de Catar 2022 estaban programadas originalmente para el mes de setiembre."
+    },
+    {
+      "id": 669,
+      "quales_id": 461,
+      "quales_split": "train",
+      "assertion": "La investigación científica sobre el origen zoonótico del virus SARS-CoV-2, que provoca la covid-19, fue liderada por Edward Holmes de la Universidad de Sídney y Andrew Rambaut de la Universidad de Edinburgo."
+    },
+    {
+      "id": 670,
+      "quales_id": 462,
+      "quales_split": "train",
+      "assertion": "Que el covid-19 tenga un origen zoonótico significa que fue transmitido a humanos desde otras especies."
+    },
+    {
+      "id": 671,
+      "quales_id": 464,
+      "quales_split": "train",
+      "assertion": "El virus de la covid-19 fue detectado por primera vez en la ciudad de Wuhan."
+    },
+    {
+      "id": 672,
+      "quales_id": 465,
+      "quales_split": "train",
+      "assertion": "El SARS-CoV-2 es un virus."
+    },
+    {
+      "id": 673,
+      "quales_id": 470,
+      "quales_split": "train",
+      "assertion": "La influenza H1N1 y el SARS-CoV-2 son virus de ARN."
+    },
+    {
+      "id": 674,
+      "quales_id": 475,
+      "quales_split": "train",
+      "assertion": "El número para comunicarse en caso de violencia doméstica es el 911."
+    },
+    {
+      "id": 675,
+      "quales_id": 48,
+      "quales_split": "train",
+      "assertion": "El porcentaje de personales que mueren por Covid-19 es del 2%"
+    },
+    {
+      "id": 676,
+      "quales_id": 480,
+      "quales_split": "train",
+      "assertion": "Ginés González García fue el Ministro de Salud de Argentina."
+    },
+    {
+      "id": 677,
+      "quales_id": 483,
+      "quales_split": "train",
+      "assertion": "Donald Trump fue el presidente de Estados Unidos."
+    },
+    {
+      "id": 678,
+      "quales_id": 484,
+      "quales_split": "train",
+      "assertion": "António Guterres fue el secretario general de la ONU."
+    },
+    {
+      "id": 679,
+      "quales_id": 487,
+      "quales_split": "train",
+      "assertion": "Leandro Cabrera, defensor uruguayo del Espanyol, es uno de los futbolistas afectados por coronavirus."
+    },
+    {
+      "id": 680,
+      "quales_id": 49,
+      "quales_split": "train",
+      "assertion": "Para evitar el Covid, era necesario lavarse las manos por más de 20 segundos."
+    },
+    {
+      "id": 681,
+      "quales_id": 493,
+      "quales_split": "train",
+      "assertion": "Álvaro Delgado fue secretario de Presidencia."
+    },
+    {
+      "id": 682,
+      "quales_id": 495,
+      "quales_split": "train",
+      "assertion": "Los organismos multilaterales de crédito pueden donar fondos no reembolsables."
+    },
+    {
+      "id": 683,
+      "quales_id": 50,
+      "quales_split": "train",
+      "assertion": "Los síntomas de Covid aparecen entre los dos y los 14 días después de haber contraído el virus."
+    },
+    {
+      "id": 684,
+      "quales_id": 500,
+      "quales_split": "train",
+      "assertion": "Eduardo Brenta es el director de Gestión Humana de la Intendencia de Montevideo."
+    },
+    {
+      "id": 685,
+      "quales_id": 501,
+      "quales_split": "train",
+      "assertion": "Según la Intendencia de Montevideo (IM), las personas que forman parte de los grupos de riesgo del coronavirus y que no deben concurrir a trabajar son las personas de 60 años o más de edad, inmunodeprimidos, pacientes oncológicos, con EPOC o enfermedades autoinmunes, embarazadas y diabéticos."
+    },
+    {
+      "id": 686,
+      "quales_id": 505,
+      "quales_split": "train",
+      "assertion": "Monica Bottero fue directora de Inmujeres."
+    },
+    {
+      "id": 687,
+      "quales_id": 51,
+      "quales_split": "train",
+      "assertion": "Los síntomas de la Covid-19 pueden presentarse hasta 14 días después del contagio."
+    },
+    {
+      "id": 688,
+      "quales_id": 520,
+      "quales_split": "train",
+      "assertion": "El aislamiento vertical, medida propuesta por el presidente de Brasil Jair Bolsonaro durante la pandemia de coronavirus, es un aislamiento restringido a los grupos de riesgo y a las personas ya infectadas."
+    },
+    {
+      "id": 689,
+      "quales_id": 523,
+      "quales_split": "train",
+      "assertion": "En Uruguay, la cuarentena tiene efectos sobre la salud mental como síntomas de estrés postraumático, confusión y enojo."
+    },
+    {
+      "id": 690,
+      "quales_id": 526,
+      "quales_split": "train",
+      "assertion": "Según un estudio de investigadores de la universidad King’s College de Londres publicado en la revista médica The Lancet sobre el impacto psicológico de la cuarentena, los factores que provocan mayor estrés son: mayor duración de la cuarentena, temor de contagiarse la infección, frustración, aburrimiento, suministros inadecuados, información inadecuada, pérdidas financieras y estigma."
+    },
+    {
+      "id": 691,
+      "quales_id": 527,
+      "quales_split": "train",
+      "assertion": "En Uruguay, las personas que regresaban de países considerados de riesgo eran obligadas a hacer una cuarentena de 14 días."
+    },
+    {
+      "id": 692,
+      "quales_id": 53,
+      "quales_split": "train",
+      "assertion": "Alrededor del 5% de las personas con COVID-19 requirieron ingreso a CTI."
+    },
+    {
+      "id": 693,
+      "quales_id": 537,
+      "quales_split": "train",
+      "assertion": "Las clases presenciales de algunos cursos se retomarían en las universidades privadas en mayo, según la propuesta que evalúa el Ministerio de Educación y Cultura."
+    },
+    {
+      "id": 694,
+      "quales_id": 539,
+      "quales_split": "train",
+      "assertion": "Luego de la suspención de clases por el coronavirus. La propuesta presentada por las universidades privadas al Ministerio de Educación y Cultura (MEC), evaluada por el ministro Pablo Da Silveira, consiste en retomar algunos cursos presenciales en mayo."
+    },
+    {
+      "id": 695,
+      "quales_id": 541,
+      "quales_split": "train",
+      "assertion": "La propuesta para retomar algunos cursos presenciales en mayo, que está siendo evaluada por el Ministerio de Educación y Cultura (MEC), fue realizada por las universidades privadas."
+    },
+    {
+      "id": 696,
+      "quales_id": 542,
+      "quales_split": "train",
+      "assertion": "Las universidades privadas están pensando retomar algunos cursos presenciales en mayo, según una propuesta que está evaluando el Ministerio de Educación y Cultura (MEC)."
+    },
+    {
+      "id": 697,
+      "quales_id": 544,
+      "quales_split": "train",
+      "assertion": "Luego de la suspensión de clases presenciales a causa del coronavirus, la propuesta de retomar los cursos presenciales en mayo vino por parte de las universidades privadas."
+    },
+    {
+      "id": 698,
+      "quales_id": 545,
+      "quales_split": "train",
+      "assertion": "La Revista de la Asociación Médica Estadounidense realizó el estudio sobre las drogas contra la artritis."
+    },
+    {
+      "id": 699,
+      "quales_id": 549,
+      "quales_split": "train",
+      "assertion": "La interleucina IL-6 es un tipo de proteína llamada citocina que le pide al cuerpo aumentar una respuesta inflamatoria."
+    },
+    {
+      "id": 700,
+      "quales_id": 55,
+      "quales_split": "train",
+      "assertion": "Aproximadamente el 15% de las personas con COVID-19 desarrolló una enfermedad grave con dificultad respiratoria, y el 5% requirió cuidados intensivos."
+    },
+    {
+      "id": 701,
+      "quales_id": 553,
+      "quales_split": "train",
+      "assertion": "La investigación para el desarrollo de diagnósticos comenzó al inicio de la pandemia en China."
+    },
+    {
+      "id": 702,
+      "quales_id": 554,
+      "quales_split": "train",
+      "assertion": "Rodrigo Arim es el rector de la Universidad de la República (Udelar)."
+    },
+    {
+      "id": 703,
+      "quales_id": 555,
+      "quales_split": "train",
+      "assertion": "Alberto Fernández fue presidente de Argentina."
+    },
+    {
+      "id": 704,
+      "quales_id": 56,
+      "quales_split": "train",
+      "assertion": "En Uruguay, en el marco de la pandemia por coronavirus, el uso del tapabocas se empezó a recomendar en abril."
+    },
+    {
+      "id": 705,
+      "quales_id": 560,
+      "quales_split": "train",
+      "assertion": "Martín Guzmán fue ministro de Economía de Argentina."
+    },
+    {
+      "id": 706,
+      "quales_id": 561,
+      "quales_split": "train",
+      "assertion": "El programa Recomiendo aporta información sobre productos y recetas de lo que el chef prueba junto al entrevistado."
+    },
+    {
+      "id": 707,
+      "quales_id": 562,
+      "quales_split": "train",
+      "assertion": "El nuevo programa de televisión Recomiendo, conducido por Hugo Soca, se televisa en Canal 4."
+    },
+    {
+      "id": 708,
+      "quales_id": 563,
+      "quales_split": "train",
+      "assertion": "El salón de té Doña Inés se encuentra en Pocitos."
+    },
+    {
+      "id": 709,
+      "quales_id": 564,
+      "quales_split": "train",
+      "assertion": "El tomate favorito de Hugo Soca es el carnoso corazón de buey."
+    },
+    {
+      "id": 710,
+      "quales_id": 565,
+      "quales_split": "train",
+      "assertion": "Hugo Soca recorrerá el Mercado Ferrando en su programa de televisión Recomiendo de Canal 4."
+    },
+    {
+      "id": 711,
+      "quales_id": 569,
+      "quales_split": "train",
+      "assertion": "La lista de precios publicada por el Área de Defensa del Consumidor del Ministerio de Economía y Finanzas (MEF) incluye productos de cuidado personal."
+    },
+    {
+      "id": 712,
+      "quales_id": 57,
+      "quales_split": "train",
+      "assertion": "El tapabocas debía cambiarse cuando estaba húmedo o cada cuatro horas."
+    },
+    {
+      "id": 713,
+      "quales_id": 58,
+      "quales_split": "train",
+      "assertion": "En Uruguay, según las indicaciones del Ministerio de Salud Pública, las personas que tengan un diagnóstico de covid-19 o que sospechen que pueden tener la enfermedad tienen que hacer cuarentena obligatoria y no pueden salir de su casa."
+    },
+    {
+      "id": 714,
+      "quales_id": 588,
+      "quales_split": "train",
+      "assertion": "El estudio de la Cámara de Comercio y Servicios del Uruguay sobre los impactos económicos de la pandemia del Covid-19 consideró 629 empresas."
+    },
+    {
+      "id": 715,
+      "quales_id": 59,
+      "quales_split": "train",
+      "assertion": "En cuanto a cantidad, los tipos de coronavirus que afectan a los humanos son siete."
+    },
+    {
+      "id": 716,
+      "quales_id": 590,
+      "quales_split": "train",
+      "assertion": "Según el autor José Stagnaro, en el contexto de la pandemia de coronavirus, el miedo a la enfermedad se parece al miedo a la inseguridad."
+    },
+    {
+      "id": 717,
+      "quales_id": 593,
+      "quales_split": "train",
+      "assertion": "Nuestros mejores recursos para hacer frente al miedo son creer en soluciones solidarias, en la vida pública, en la política y, finalmente, en cierta esperanza en un mundo mejor."
+    },
+    {
+      "id": 718,
+      "quales_id": 594,
+      "quales_split": "train",
+      "assertion": "Daniel Salinas fue ministro de Salud Pública."
+    },
+    {
+      "id": 719,
+      "quales_id": 595,
+      "quales_split": "train",
+      "assertion": "El ministro de Salud, Daniel Salinas, criticó la Marcha por la Diversidad debido a la violación de las recomendaciones sanitarias durante el evento."
+    },
+    {
+      "id": 720,
+      "quales_id": 597,
+      "quales_split": "train",
+      "assertion": "La doctora Karina Rando fue la Directora general de Coordinación del Ministerio de Salud Pública."
+    },
+    {
+      "id": 721,
+      "quales_id": 598,
+      "quales_split": "train",
+      "assertion": "El ministro de Salud, Daniel Salinas, se expresó el 26 de septiembre de 2020 sobre la multitudinaria Marcha por la Diversidad a través de su cuenta de Twitter."
+    },
+    {
+      "id": 722,
+      "quales_id": 599,
+      "quales_split": "train",
+      "assertion": "La Marcha por la Diversidad en Uruguay se celebró el viernes 25 de septiembre de 2020 por la tarde."
+    },
+    {
+      "id": 723,
+      "quales_id": 6,
+      "quales_split": "train",
+      "assertion": "Las elecciones en Bolivia, previstas para el 3 de mayo, fueron aplazadas por el Tribunal Supremo Electoral debido a la pandemia de coronavirus, y aún no se ha fijado una nueva fecha."
+    },
+    {
+      "id": 724,
+      "quales_id": 60,
+      "quales_split": "train",
+      "assertion": "El Covid-19 se descubrió en diciembre de 2019."
+    },
+    {
+      "id": 725,
+      "quales_id": 603,
+      "quales_split": "train",
+      "assertion": "Debido a la pandemia de coronavirus, además de la Copa América y la Eurocopa, se postergaron la Copa Libertadores y la Sudamericana."
+    },
+    {
+      "id": 726,
+      "quales_id": 61,
+      "quales_split": "train",
+      "assertion": "El COVID-19 se descubrió en la provincia china de Wuhan."
+    },
+    {
+      "id": 727,
+      "quales_id": 611,
+      "quales_split": "train",
+      "assertion": "Guido Manini Ríos es senador y ex comandante en jefe del Ejército."
+    },
+    {
+      "id": 728,
+      "quales_id": 615,
+      "quales_split": "train",
+      "assertion": "Las sesiones remotas en el Parlamento comenzaron el miércoles 11, en el marco de la pandemia de coronavirus."
+    },
+    {
+      "id": 729,
+      "quales_id": 62,
+      "quales_split": "train",
+      "assertion": "El nombre completo del covid es SARS-CoV-2."
+    },
+    {
+      "id": 730,
+      "quales_id": 620,
+      "quales_split": "train",
+      "assertion": "La Comisión Especial de Población y Desarrollo se encarga de analizar el accionar del Ministerio de Desarrollo Social."
+    },
+    {
+      "id": 731,
+      "quales_id": 621,
+      "quales_split": "train",
+      "assertion": "Los beneficiarios de las canastas de alimentos de la iniciativa @CanastasUy durante la emergencia por coronavirus son las alcaldías de localidades vulnerables."
+    },
+    {
+      "id": 732,
+      "quales_id": 63,
+      "quales_split": "train",
+      "assertion": "El nombre de la enfermedad covid-19, causada por el nuevo coronavirus SARS-CoV-2, fue dado a conocer por la Organización Mundial de la Salud (OMS) el 11 de febrero."
+    },
+    {
+      "id": 733,
+      "quales_id": 633,
+      "quales_split": "train",
+      "assertion": "El 08004141 es el número de teléfono de Inmujeres."
+    },
+    {
+      "id": 734,
+      "quales_id": 634,
+      "quales_split": "train",
+      "assertion": "Álvaro Delgado fue prosecretario de la Presidencia de Uruguay."
+    },
+    {
+      "id": 735,
+      "quales_id": 635,
+      "quales_split": "train",
+      "assertion": "En el marco de las medidas del gobierno uruguayo para combatir la violencia de género y doméstica durante la emergencia sanitaria, una persona que no está en condiciones de hablar puede mandar un correo electrónico a denuncia@minterior.gub.uy."
+    },
+    {
+      "id": 736,
+      "quales_id": 636,
+      "quales_split": "train",
+      "assertion": "Jorge Larrañaga fue ministro del Interior."
+    },
+    {
+      "id": 737,
+      "quales_id": 64,
+      "quales_split": "train",
+      "assertion": "La organización que le puso nombre completo al COVID-19 fue la OMS."
+    },
+    {
+      "id": 738,
+      "quales_id": 642,
+      "quales_split": "train",
+      "assertion": "En el marco de la pandemia de coronavirus en Estados Unidos, el gobernador Andrew Cuomo informó que en los hospitales de Nueva York empezaron a escasear las máscaras y los respiradores artificiales."
+    },
+    {
+      "id": 739,
+      "quales_id": 644,
+      "quales_split": "train",
+      "assertion": "El estadounidense Andrew Cuomo fue gobernador del estado de Nueva York."
+    },
+    {
+      "id": 740,
+      "quales_id": 65,
+      "quales_split": "train",
+      "assertion": "Los medicamentos que sirvieron para tratar el covid fueron la cloroquina y la hidroxicloroquina."
+    },
+    {
+      "id": 741,
+      "quales_id": 650,
+      "quales_split": "train",
+      "assertion": "La obra de Florencia Caballero Bianchi, que forma parte del ciclo de teatro leído organizado por Salvadora editora y transcurre durante la crisis de 2002, se llama Cheta."
+    },
+    {
+      "id": 742,
+      "quales_id": 66,
+      "quales_split": "train",
+      "assertion": "La Suprema Corte de Justicia resolvió iniciar una Feria Judicial Sanitaria durante la pandemia de COVID-19."
+    },
+    {
+      "id": 743,
+      "quales_id": 660,
+      "quales_split": "train",
+      "assertion": "Las personas que incumplen la cuarentena obligatoria son sancionadas penalmente."
+    },
+    {
+      "id": 744,
+      "quales_id": 661,
+      "quales_split": "train",
+      "assertion": "Los trabajadores exceptuados durante la cuarentena obligatoria fueron aquellos vinculados a la salud, la seguridad, la producción y distribución de petróleo, y quienes ocupaban cargos de conducción política en el gobierno."
+    },
+    {
+      "id": 745,
+      "quales_id": 671,
+      "quales_split": "train",
+      "assertion": "Nacional, Peñarol, Liverpool, Fénix, River Plate y Plaza son clubes que han jugado la Copa Libertadores y la Copa Sudamericana."
+    },
+    {
+      "id": 746,
+      "quales_id": 674,
+      "quales_split": "train",
+      "assertion": "Debido a la falta de clases presenciales, el Consejo de Educación Técnico-Profesional (CETP-UTU) resolvió que todas las carreras de su nivel terciario se realizarán de forma virtual."
+    },
+    {
+      "id": 747,
+      "quales_id": 678,
+      "quales_split": "train",
+      "assertion": "Antes de la resolución del Consejo de Educación Técnico-Profesional (CETP-UTU) de virtualizar todas sus carreras terciarias por la emergencia sanitaria, las carreras que se podían realizar virtualmente eran prevencionista, logística, turismo y tecnólogo cárnico."
+    },
+    {
+      "id": 748,
+      "quales_id": 681,
+      "quales_split": "train",
+      "assertion": "María José Santacreu es la directora de Cinemateca Uruguaya."
+    },
+    {
+      "id": 749,
+      "quales_id": 682,
+      "quales_split": "train",
+      "assertion": "La protagonista de Familia sumergida es Mercedes Morán."
+    },
+    {
+      "id": 750,
+      "quales_id": 683,
+      "quales_split": "train",
+      "assertion": "La fábrica de nada fue dirigida por Pedro Piño."
+    },
+    {
+      "id": 751,
+      "quales_id": 689,
+      "quales_split": "train",
+      "assertion": "Kevin Durant es alero de los Brooklyn Nets, de la NBA."
+    },
+    {
+      "id": 752,
+      "quales_id": 69,
+      "quales_split": "train",
+      "assertion": "En Uruguay, el trabajo judicial se reanudaría el lunes 4 de mayo tras la Feria Judicial Sanitaria decretada por la Suprema Corte de Justicia debido a la pandemia de coronavirus."
+    },
+    {
+      "id": 753,
+      "quales_id": 690,
+      "quales_split": "train",
+      "assertion": "Kevin Durant es estadounidense."
+    },
+    {
+      "id": 754,
+      "quales_id": 693,
+      "quales_split": "train",
+      "assertion": "Los equipos de la NBA con casos confirmados de covid-19 fueron Utah Jazz, Detroit Pistons y Brooklyn Nets."
+    },
+    {
+      "id": 755,
+      "quales_id": 696,
+      "quales_split": "train",
+      "assertion": "La Facultad de Veterinaria de la Universidad de la República presentó un proyecto para estudiar el contagio de coronavirus en mascotas."
+    },
+    {
+      "id": 756,
+      "quales_id": 697,
+      "quales_split": "train",
+      "assertion": "El ARN es una molécula presente en las células que se encarga de mediar entre la información almacenada en el ADN y la síntesis de proteínas adecuada."
+    },
+    {
+      "id": 757,
+      "quales_id": 698,
+      "quales_split": "train",
+      "assertion": "El patrullaje fronterizo consiste en la identificación de vehículos, cargas, revisación de bodegas y todo lo que estaba pensado hacerse."
+    },
+    {
+      "id": 758,
+      "quales_id": 7,
+      "quales_split": "train",
+      "assertion": "Las elecciones en Bolivia, aplazadas por la pandemia del coronavirus, estaban previstas para el 3 de mayo."
+    },
+    {
+      "id": 759,
+      "quales_id": 70,
+      "quales_split": "train",
+      "assertion": "La Feria Judicial Sanitaria fue una decisión de la Suprema Corte de Justicia."
+    },
+    {
+      "id": 760,
+      "quales_id": 702,
+      "quales_split": "train",
+      "assertion": "El avión presidencial comprado durante el gobierno del ex presidente Tabaré Vázquez será rematado por un millón de dólares."
+    },
+    {
+      "id": 761,
+      "quales_id": 705,
+      "quales_split": "train",
+      "assertion": "Elbia Pereira fue dirigente sindical de magisterio."
+    },
+    {
+      "id": 762,
+      "quales_id": 71,
+      "quales_split": "train",
+      "assertion": "El secretario general de la Organización Mundial de la Salud (OMS) es el etíope Tedros Adhanom Ghebreyesus."
+    },
+    {
+      "id": 763,
+      "quales_id": 710,
+      "quales_split": "train",
+      "assertion": "La OIT es la Organización Internacional del Trabajo."
+    },
+    {
+      "id": 764,
+      "quales_id": 715,
+      "quales_split": "train",
+      "assertion": "Harry Kane es el capitán de la selección de fútbol de Inglaterra."
+    },
+    {
+      "id": 765,
+      "quales_id": 722,
+      "quales_split": "train",
+      "assertion": "En el marco de la crisis en el fútbol uruguayo, la campaña de solidaridad comenzada por la Organización de Futbolistas Uruguayas beneficia a las jugadoras que vivan o estén cercanas a gente en situación de riesgo."
+    },
+    {
+      "id": 766,
+      "quales_id": 733,
+      "quales_split": "train",
+      "assertion": "Nitzan Horowitz fue ministro de Sanidad de Israel."
+    },
+    {
+      "id": 767,
+      "quales_id": 746,
+      "quales_split": "train",
+      "assertion": "Mitchell Duarte fue secretario general de la Mutual Uruguaya de Futbolistas Profesionales."
+    },
+    {
+      "id": 768,
+      "quales_id": 748,
+      "quales_split": "train",
+      "assertion": "El Consejo Nacional Consultivo por una Vida Libre de Violencia de Género está integrado por 14 organismos del Estado y representantes de la sociedad civil."
+    },
+    {
+      "id": 769,
+      "quales_id": 751,
+      "quales_split": "train",
+      "assertion": "Mónica Bottero fue la directora de Inmujeres."
+    },
+    {
+      "id": 770,
+      "quales_id": 752,
+      "quales_split": "train",
+      "assertion": "El número de teléfono de Inmujeres es 0800 4141 o 4141*."
+    },
+    {
+      "id": 771,
+      "quales_id": 753,
+      "quales_split": "train",
+      "assertion": "El número de la Línea Azul es 0800 5050."
+    },
+    {
+      "id": 772,
+      "quales_id": 759,
+      "quales_split": "train",
+      "assertion": "Albert Uderzo nació en 1927."
+    },
+    {
+      "id": 773,
+      "quales_id": 76,
+      "quales_split": "train",
+      "assertion": "La Organización Mundial de la Salud (OMS) declaró el estado de emergencia mundial por el coronavirus (Covid-19) el 30 de enero."
+    },
+    {
+      "id": 774,
+      "quales_id": 760,
+      "quales_split": "train",
+      "assertion": "Albert Uderzo fue el creador de Asterix."
+    },
+    {
+      "id": 775,
+      "quales_id": 761,
+      "quales_split": "train",
+      "assertion": "René Goscinny, cocreador de la historieta Asterix junto a Albert Uderzo, murió en 1977."
+    },
+    {
+      "id": 776,
+      "quales_id": 762,
+      "quales_split": "train",
+      "assertion": "El golpe de estado en Argentina fue el 24 de marzo de 1976."
+    },
+    {
+      "id": 777,
+      "quales_id": 763,
+      "quales_split": "train",
+      "assertion": "Alberto Fernández fue presidente de Argentina."
+    },
+    {
+      "id": 778,
+      "quales_id": 767,
+      "quales_split": "train",
+      "assertion": "La Federación Nacional de Profesores de Enseñanza Secundaria (Fenapes) inició la campaña #ProfesTiranPiques, una serie de videos cortos en los que docentes de diversas asignaturas recomiendan películas, aplicaciones o cuentas en redes sociales para mantenerse vinculados con las materias."
+    },
+    {
+      "id": 779,
+      "quales_id": 771,
+      "quales_split": "train",
+      "assertion": "La biblioteca virtual del Frente de Participación Estudiantil se llama Pimba."
+    },
+    {
+      "id": 780,
+      "quales_id": 773,
+      "quales_split": "train",
+      "assertion": "Federico de Pallejas fue encargado de comunicaciones de Fenapes."
+    },
+    {
+      "id": 781,
+      "quales_id": 781,
+      "quales_split": "train",
+      "assertion": "En el marco de la pandemia de COVID-19 y la crisis sanitaria, económica y social derivada de ella, las personas más afectadas son las trabajadoras en condiciones de informalidad, cuentapropistas, monotributistas, independientes, de economías de plataformas y trabajadoras domésticas."
+    },
+    {
+      "id": 782,
+      "quales_id": 786,
+      "quales_split": "train",
+      "assertion": "Realizar la mayor cantidad posible de tests para el Covid permite convertir casos de portadores desconocidos en portadores conocidos."
+    },
+    {
+      "id": 783,
+      "quales_id": 789,
+      "quales_split": "train",
+      "assertion": "El SMU es el Sindicato Médico del Uruguay."
+    },
+    {
+      "id": 784,
+      "quales_id": 792,
+      "quales_split": "train",
+      "assertion": "Los tests de diagnóstico del COVID-19 sirven para el rastreo de casos e indicar aislamiento."
+    },
+    {
+      "id": 785,
+      "quales_id": 796,
+      "quales_split": "train",
+      "assertion": "Anthony Fauci fue el principal epidemiólogo de Estados Unidos."
+    },
+    {
+      "id": 786,
+      "quales_id": 8,
+      "quales_split": "train",
+      "assertion": "Los ciudadanos de Bolivia entraron en cuarentena total un domingo."
+    },
+    {
+      "id": 787,
+      "quales_id": 800,
+      "quales_split": "train",
+      "assertion": "Merkel estuvo en cuarentena porque un médico con el que estuvo en contacto dio positivo por coronavirus."
+    },
+    {
+      "id": 788,
+      "quales_id": 803,
+      "quales_split": "train",
+      "assertion": "El plan 'Nueva York en Pausa' consiste en cuarentena obligatoria y el cierre de todos los negocios, excepto los considerados esenciales."
+    },
+    {
+      "id": 789,
+      "quales_id": 806,
+      "quales_split": "train",
+      "assertion": "El coronavirus Covid-19 afecta las vías respiratorias de los seres humanos."
+    },
+    {
+      "id": 790,
+      "quales_id": 807,
+      "quales_split": "train",
+      "assertion": "El Covid19 pertenece a la familia Coronaviridae."
+    },
+    {
+      "id": 791,
+      "quales_id": 808,
+      "quales_split": "train",
+      "assertion": "El virus Covid19 es de tipo beta."
+    },
+    {
+      "id": 792,
+      "quales_id": 81,
+      "quales_split": "train",
+      "assertion": "Las zonas de Brasil más afectadas por el Covid fueron San Pablo y Río de Janeiro."
+    },
+    {
+      "id": 793,
+      "quales_id": 814,
+      "quales_split": "train",
+      "assertion": "Como medida para evitar el contagio de Covid-19, la Intendencia de Montevideo extendió el horario de las ferias vecinales de frutas y verduras hasta las 14.00."
+    },
+    {
+      "id": 794,
+      "quales_id": 816,
+      "quales_split": "train",
+      "assertion": "Fernando Nopitsch fue el secretario general de la Intendencia de Montevideo."
+    },
+    {
+      "id": 795,
+      "quales_id": 818,
+      "quales_split": "train",
+      "assertion": "Luis Lacalle Pou fue presidente de la República."
+    },
+    {
+      "id": 796,
+      "quales_id": 82,
+      "quales_split": "train",
+      "assertion": "Luiz Henrique Mandetta es el ex Ministro de Salud de Brasil destituido por Bolsonaro."
+    },
+    {
+      "id": 797,
+      "quales_id": 820,
+      "quales_split": "train",
+      "assertion": "Mario Abdo Benítez fue el presidente de Paraguay."
+    },
+    {
+      "id": 798,
+      "quales_id": 822,
+      "quales_split": "train",
+      "assertion": "Efraín Alegre es el líder del opositor Partido Liberal en Paraguay."
+    },
+    {
+      "id": 799,
+      "quales_id": 829,
+      "quales_split": "train",
+      "assertion": "Álvaro Delgado fue el secretario de Presidencia."
+    },
+    {
+      "id": 800,
+      "quales_id": 83,
+      "quales_split": "train",
+      "assertion": "Axel Kicillof fue gobernador de la provincia de Buenos Aires."
+    },
+    {
+      "id": 801,
+      "quales_id": 836,
+      "quales_split": "train",
+      "assertion": "Carlos Leoni es el director de Salud de Paysandú."
+    },
+    {
+      "id": 802,
+      "quales_id": 843,
+      "quales_split": "train",
+      "assertion": "La pastilla para tratar la covid-19, desarrollada por farmacéuticas como Shionogi, Pfizer y MSD, se toma una vez que una persona se contagia."
+    },
+    {
+      "id": 803,
+      "quales_id": 845,
+      "quales_split": "train",
+      "assertion": "Pfizer y MSD son farmacéuticas."
+    },
+    {
+      "id": 804,
+      "quales_id": 846,
+      "quales_split": "train",
+      "assertion": "Tamiflu y Xofluza son medicamentos que se usan contra la gripe."
+    },
+    {
+      "id": 805,
+      "quales_id": 847,
+      "quales_split": "train",
+      "assertion": "El Remdesivir es un tratamiento contra la covid-19 que se administra en hospitales y se reserva para pacientes más graves."
+    },
+    {
+      "id": 806,
+      "quales_id": 850,
+      "quales_split": "train",
+      "assertion": "El cuestionario del portal cuarentena.uy, diseñado para predecir la percepción de la crisis sanitaria durante la pandemia, fue realizado por la Facultad de Psicología de la Universidad de la República y el equipo de DATA."
+    },
+    {
+      "id": 807,
+      "quales_id": 854,
+      "quales_split": "train",
+      "assertion": "Los resultados preliminares del cuestionario sobre la percepción de la crisis sanitaria por la pandemia de cuarentena.uy se pueden ver en cuarentena.uy/resultados."
+    },
+    {
+      "id": 808,
+      "quales_id": 855,
+      "quales_split": "train",
+      "assertion": "Alejandro Maiche, profesor e investigador de la Facultad de Psicología de la Universidad de la República, es quien tuvo la idea del portal cuarentena.uy, diseñado para medir la percepción de la crisis sanitaria durante la pandemia."
+    },
+    {
+      "id": 809,
+      "quales_id": 856,
+      "quales_split": "train",
+      "assertion": "El PIT-CNT es una central sindical."
+    },
+    {
+      "id": 810,
+      "quales_id": 858,
+      "quales_split": "train",
+      "assertion": "ASSE es la Administración de los Servicios de Salud del Estado."
+    },
+    {
+      "id": 811,
+      "quales_id": 86,
+      "quales_split": "train",
+      "assertion": "Martin Guzmán fue Ministro de Economía de Argentina."
+    },
+    {
+      "id": 812,
+      "quales_id": 861,
+      "quales_split": "train",
+      "assertion": "En el marco de las medidas dispuestas por el gobierno uruguayo para reducir la exposición al coronavirus, las personas que forman parte de la población de riesgo son las personas de más de 65 años."
+    },
+    {
+      "id": 813,
+      "quales_id": 863,
+      "quales_split": "train",
+      "assertion": "Álvaro Delgado fue el Secretario de la Presidencia."
+    },
+    {
+      "id": 814,
+      "quales_id": 87,
+      "quales_split": "train",
+      "assertion": "Daniel Arroyo fue Ministro de Desarrollo Social de Argentina."
+    },
+    {
+      "id": 815,
+      "quales_id": 878,
+      "quales_split": "train",
+      "assertion": "El número del Servicio de Atención Médica de Emergencia, al que la familia de Martín Mesa llamó en abril antes de su ingreso al Hospital Español, es el 105."
+    },
+    {
+      "id": 816,
+      "quales_id": 879,
+      "quales_split": "train",
+      "assertion": "Virginia Longo fue la directora de la región sur de ASSE."
+    },
+    {
+      "id": 817,
+      "quales_id": 880,
+      "quales_split": "train",
+      "assertion": "Virginia Longo es la directora de la Región Sur de ASSE."
+    },
+    {
+      "id": 818,
+      "quales_id": 883,
+      "quales_split": "train",
+      "assertion": "Lautréamont es una librería."
+    },
+    {
+      "id": 819,
+      "quales_id": 886,
+      "quales_split": "train",
+      "assertion": "Los videos en los que autores uruguayos recomiendan literatura nacional, publicados por la librería Lautréamont y las editoriales Hum y Estuario bajo la iniciativa #autoresencuarentena, duran menos de un minuto."
+    },
+    {
+      "id": 820,
+      "quales_id": 889,
+      "quales_split": "train",
+      "assertion": "El merendero Solidarios Unidos Seis Barrios se encuentra en el cruce de las calles Rafael y Teniente Galeano."
+    },
+    {
+      "id": 821,
+      "quales_id": 9,
+      "quales_split": "train",
+      "assertion": "Debido a la pandemia de coronavirus, el confinamiento total en Bolivia anunciado por la presidenta interina Jeanine Áñez fue previsto por 14 días."
+    },
+    {
+      "id": 822,
+      "quales_id": 90,
+      "quales_split": "train",
+      "assertion": "El sector terciario de la economía es el de servicios."
+    },
+    {
+      "id": 823,
+      "quales_id": 907,
+      "quales_split": "train",
+      "assertion": "Hasta el 10% de los contagios de coronavirus se dieron en ámbitos asistenciales."
+    },
+    {
+      "id": 824,
+      "quales_id": 909,
+      "quales_split": "train",
+      "assertion": "Los testeos de Covid19 en el interior del país estaban previstos para realizarse en el Laboratorio de Virología Molecular de la Universidad de la República."
+    },
+    {
+      "id": 825,
+      "quales_id": 91,
+      "quales_split": "train",
+      "assertion": "El Ministerio de Desarrollo Social ofrece Asignación Familiar, Asignación Familiar Plan de Equidad y Tarjeta Uruguay Social."
+    },
+    {
+      "id": 826,
+      "quales_id": 910,
+      "quales_split": "train",
+      "assertion": "Los resultados de análisis de Covid-19 en el interior del país demoraban hasta cinco días."
+    },
+    {
+      "id": 827,
+      "quales_id": 914,
+      "quales_split": "train",
+      "assertion": "La sigla ONU significa Organización de las Naciones Unidas."
+    },
+    {
+      "id": 828,
+      "quales_id": 917,
+      "quales_split": "train",
+      "assertion": "Casi 2.000 uruguayos volvieron a través de la operación Todos en Casa."
+    },
+    {
+      "id": 829,
+      "quales_id": 928,
+      "quales_split": "train",
+      "assertion": "La serie Feriados fue dirigida por Leonardo Pintos, Claudio Quijano y Lucas Cilintano."
+    },
+    {
+      "id": 830,
+      "quales_id": 93,
+      "quales_split": "train",
+      "assertion": "Shai Steinhaus fue el vocero de Comida para Héroes."
+    },
+    {
+      "id": 831,
+      "quales_id": 94,
+      "quales_split": "train",
+      "assertion": "El bar Rumba se encuentra en la intersección de las calles Héctor Miranda y Ellauri."
+    },
+    {
+      "id": 832,
+      "quales_id": 96,
+      "quales_split": "train",
+      "assertion": "En el marco del proyecto benéfico Comida para Héroes, Pedidos Ya apoya la logística cediendo motos tres veces por semana para el envío de las viandas destinadas al personal sanitario y grupos vulnerables."
+    },
+    {
+      "id": 833,
+      "quales_id": 98,
+      "quales_split": "train",
+      "assertion": "Bibliobarrio es una biblioteca."
+    }
+  ]
+}

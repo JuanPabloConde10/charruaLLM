@@ -1,4 +1,4 @@
-"""Tokenize the .txt corpus into train.bin / val.bin / test.bin (numpy uint16) + meta.json."""
+"""Tokenize the .txt corpus by news article into train.bin / val.bin / test.bin + meta.json."""
 
 import argparse
 import hashlib
@@ -21,13 +21,33 @@ def sha256_file(path: Path, chunk_size: int = 8 * 1024 * 1024) -> str:
     return h.hexdigest()
 
 
-def tokenize_lines(tok: Tokenizer, lines: list[str], batch_size: int) -> list[int]:
+def collect_documents(files: list[Path]) -> list[str]:
+    documents = []
+    current = []
+    for fpath in files:
+        with open(fpath, "r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line:
+                    current.append(line)
+                    continue
+                if current:
+                    documents.append(" ".join(current))
+                    current = []
+        if current:
+            documents.append(" ".join(current))
+            current = []
+    return documents
+
+
+def tokenize_documents(tok: Tokenizer, documents: list[str], batch_size: int, eos_id: int) -> list[int]:
     all_ids = []
-    for i in tqdm(range(0, len(lines), batch_size), desc="tokenizing", unit="batch"):
-        batch = lines[i : i + batch_size]
+    for i in tqdm(range(0, len(documents), batch_size), desc="tokenizing", unit="batch"):
+        batch = documents[i : i + batch_size]
         encs = tok.encode_batch(batch)
         for e in encs:
             all_ids.extend(e.ids)
+            all_ids.append(eos_id)
     return all_ids
 
 
@@ -36,9 +56,16 @@ def main():
     p.add_argument("--data-dir", default="data")
     p.add_argument("--tokenizer", default="tokenizer.json")
     p.add_argument("--out-dir", default=".")
-    p.add_argument("--val-frac", type=float, default=0.005, help="fraction of lines for validation")
-    p.add_argument("--test-frac", type=float, default=0.005, help="fraction of lines for test")
-    p.add_argument("--batch-lines", type=int, default=4096, help="lines tokenized per batch")
+    p.add_argument("--val-frac", type=float, default=0.005, help="fraction of documents for validation")
+    p.add_argument("--test-frac", type=float, default=0.005, help="fraction of documents for test")
+    p.add_argument(
+        "--batch-docs",
+        "--batch-lines",
+        dest="batch_docs",
+        type=int,
+        default=1024,
+        help="documents tokenized per batch",
+    )
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--verify", action="store_true", help="verify checksums of existing .bin files")
     args = p.parse_args()
@@ -83,27 +110,21 @@ def main():
         return
 
     tok = Tokenizer.from_file(args.tokenizer)
-    eot_token = chr(10)
-    eot_id = tok.token_to_id(eot_token)
-    assert eot_id is not None, "tokenizer missing " + repr(chr(10))
+    eos_token = "<|endoftext|>"
+    eos_id = tok.token_to_id(eos_token)
+    assert eos_id is not None, f"tokenizer missing {eos_token!r}"
     vocab_size = tok.get_vocab_size()
     dtype = np.uint16 if vocab_size < (1 << 16) else np.uint32
-    print(f"vocab_size={vocab_size}, dtype={dtype.__name__}, eot_id={eot_id}")
+    print(f"vocab_size={vocab_size}, dtype={dtype.__name__}, eos_id={eos_id}")
 
     data_dir = Path(args.data_dir)
     files = sorted(data_dir.glob("*.txt"))
     assert files, f"no .txt files in {data_dir}"
 
-    print("Collecting lines...")
-    all_lines = []
-    for fpath in files:
-        with open(fpath, "r", encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if line:
-                    all_lines.append(line)
-    total = len(all_lines)
-    print(f"Total lines: {total:,}")
+    print("Collecting documents...")
+    all_documents = collect_documents(files)
+    total = len(all_documents)
+    print(f"Total documents: {total:,}")
 
     rng = np.random.default_rng(args.seed)
     indices = rng.permutation(total)
@@ -113,17 +134,22 @@ def main():
     val_indices = set(indices[:n_val].tolist())
     test_indices = set(indices[n_val:n_val + n_test].tolist())
 
-    train_lines = [all_lines[i] for i in range(total) if i not in val_indices and i not in test_indices]
-    val_lines = [all_lines[i] for i in indices[:n_val].tolist()]
-    test_lines = [all_lines[i] for i in indices[n_val:n_val + n_test].tolist()]
-    print(f"train: {len(train_lines):,} lines | val: {len(val_lines):,} lines | test: {len(test_lines):,} lines")
+    train_documents = [all_documents[i] for i in range(total) if i not in val_indices and i not in test_indices]
+    val_documents = [all_documents[i] for i in indices[:n_val].tolist()]
+    test_documents = [all_documents[i] for i in indices[n_val:n_val + n_test].tolist()]
+    print(
+        f"train: {len(train_documents):,} documents | "
+        f"val: {len(val_documents):,} documents | "
+        f"test: {len(test_documents):,} documents"
+    )
+    train_document_count = len(train_documents)
+    val_document_count = len(val_documents)
+    test_document_count = len(test_documents)
 
-    del all_lines, indices
+    del all_documents, indices
 
-    def write_split(split_lines, path, split_name, add_eot=False):
-        ids = tokenize_lines(tok, split_lines, args.batch_lines)
-        if add_eot:
-            ids.append(eot_id)
+    def write_split(split_documents, path):
+        ids = tokenize_documents(tok, split_documents, args.batch_docs, eos_id)
         arr = np.asarray(ids, dtype=dtype)
         arr.tofile(path)
         checksum = sha256_file(path)
@@ -131,21 +157,27 @@ def main():
         return len(arr), checksum
 
     print("\nTokenizing train...")
-    train_count, train_sha = write_split(train_lines, train_path, "train", add_eot=True)
-    del train_lines
+    train_count, train_sha = write_split(train_documents, train_path)
+    del train_documents
 
     print("\nTokenizing val...")
-    val_count, val_sha = write_split(val_lines, val_path, "val")
-    del val_lines
+    val_count, val_sha = write_split(val_documents, val_path)
+    del val_documents
 
     print("\nTokenizing test...")
-    test_count, test_sha = write_split(test_lines, test_path, "test")
-    del test_lines
+    test_count, test_sha = write_split(test_documents, test_path)
+    del test_documents
 
     meta = {
         "vocab_size": vocab_size,
         "dtype": dtype.__name__,
-        "eot_id": eot_id,
+        "eos_token": eos_token,
+        "eos_id": eos_id,
+        "split_unit": "document",
+        "document_separator": "blank_line",
+        "train_documents": train_document_count,
+        "val_documents": val_document_count,
+        "test_documents": test_document_count,
         "train_tokens": train_count,
         "val_tokens": val_count,
         "test_tokens": test_count,
@@ -156,6 +188,7 @@ def main():
         "seed": args.seed,
         "val_frac": args.val_frac,
         "test_frac": args.test_frac,
+        "batch_docs": args.batch_docs,
     }
     with open(meta_path, "w") as f:
         json.dump(meta, f, indent=2)

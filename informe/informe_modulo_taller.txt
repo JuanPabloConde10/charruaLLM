@@ -1,0 +1,547 @@
+INFORME MÓDULO TALLER
+======================
+
+Desarrollo y evaluación de charruaLLM: un modelo de lenguaje autoregresivo
+entrenado con noticias uruguayas
+
+
+1. BREVES ANTECEDENTES
+======================
+
+Los modelos de lenguaje modernos estiman la probabilidad de una secuencia de
+texto a partir de sus componentes. En un modelo autoregresivo, la probabilidad
+de una secuencia de tokens se factoriza como el producto de la probabilidad de
+cada token condicionada por todos los tokens anteriores. Esta formulación hace
+posible entrenar un modelo con texto sin etiquetar mediante una tarea simple:
+predecir el token siguiente.
+
+La arquitectura Transformer, introducida por Vaswani et al. (2017), sustituyó
+la recurrencia de arquitecturas anteriores por mecanismos de atención. Esto
+permitió modelar dependencias entre posiciones de una secuencia y paralelizar
+mejor el entrenamiento. A partir de esta arquitectura surgieron dos grandes
+familias de modelos de lenguaje: los modelos de tipo encoder, como BERT y
+RoBERTa, y los modelos autoregresivos decoder-only, como GPT y GPT-2.
+
+El modelo desarrollado en este trabajo pertenece a la segunda familia. Su
+objetivo no es clasificar texto ni responder preguntas mediante fine-tuning,
+sino aprender una distribución sobre el texto y generar continuaciones mediante
+predicción del token siguiente.
+
+
+1.1. Paper RoBERTa
+------------------
+
+RoBERTa (Liu et al., 2019), cuyo nombre significa “A Robustly Optimized BERT
+Pretraining Approach”, es una revisión de la receta de entrenamiento de BERT.
+El trabajo mostró que parte de las mejoras atribuidas a nuevas arquitecturas
+podía obtenerse entrenando BERT durante más tiempo, con lotes mayores y más
+datos. También eliminó el objetivo de Next Sentence Prediction, utilizó
+secuencias más largas y aplicó enmascaramiento dinámico.
+
+RoBERTa es un modelo encoder y se entrena con masked language modeling: recibe
+información a ambos lados de una posición enmascarada. Por ello no es la
+arquitectura usada directamente en charruaLLM, que debe generar texto de
+izquierda a derecha. Sin embargo, es un antecedente relevante por dos motivos.
+Primero, muestra que los datos y el régimen de entrenamiento pueden importar
+tanto como los cambios arquitectónicos. Segundo, el sistema ganador de la tarea
+QuALES 2022 empleó un modelo RoBERTa multilingüe preentrenado y ajustado para
+preguntas y respuestas. Esto aporta un punto de referencia para el origen del
+dataset que luego adaptamos a nuestra evaluación de completado de palabras.
+
+
+1.2. Paper GPT-2
+----------------
+
+GPT-2 fue presentado por Radford et al. (2019) en “Language Models are
+Unsupervised Multitask Learners”. Es un Transformer decoder-only entrenado con
+un objetivo causal: predecir cada token a partir de los tokens anteriores. El
+trabajo mostró que, al aumentar la escala y la diversidad de los datos, un mismo
+modelo autoregresivo podía adquirir capacidades útiles para diferentes tareas
+sin modificar sus parámetros para cada una de ellas.
+
+charruaLLM sigue esta idea central a una escala mucho menor y orientada al
+español uruguayo. Al igual que GPT-2, utiliza atención causal, bloques
+Transformer decoder-only, embeddings posicionales aprendidos y generación
+autoregresiva. La diferencia principal está en la escala: el GPT-2 más grande
+tenía 1.500 millones de parámetros, mientras que cada modelo de este trabajo
+tiene 17.114.880 parámetros. Nuestro objetivo fue construir un modelo que
+pudiera entrenarse con recursos académicos accesibles y estudiar el efecto del
+dominio de los datos, no reproducir la escala de GPT-2.
+
+
+1.3. Paper Chinchilla y elección de la cantidad de parámetros
+--------------------------------------------------------------
+
+Hoffmann et al. (2022), en “Training Compute-Optimal Large Language Models”,
+estudiaron cómo distribuir un presupuesto de cómputo entre la cantidad de
+parámetros del modelo y la cantidad de tokens de entrenamiento. El resultado
+principal fue que ambos factores deben crecer de forma aproximadamente pareja.
+El trabajo mostró que varios modelos grandes estaban subentrenados: tenían
+demasiados parámetros para la cantidad de datos que habían procesado. Como
+regla práctica derivada del estudio suele mencionarse un orden de magnitud de
+aproximadamente 20 tokens de entrenamiento por parámetro, aunque no debe
+interpretarse como una constante universal, especialmente fuera de las escalas
+analizadas en el paper.
+
+Cada modelo de este proyecto tiene 17.114.880 parámetros. El corpus uruguayo
+contiene 523.695.440 tokens en train, equivalentes a 30,60 tokens únicos de
+train por parámetro. El corpus general en español contiene 735.225.214 tokens
+en train, equivalentes a 42,96 tokens por parámetro. Estos cocientes muestran
+que ambos corpus poseen suficiente volumen para el tamaño elegido.
+
+No obstante, durante 960.000 pasos, con batches de 32 secuencias de 512 tokens,
+cada entrenamiento presenta aproximadamente 15.728.640.000 posiciones de token
+al modelo. Esto implica múltiples recorridos estadísticos sobre el corpus: unas
+30 veces el tamaño del train uruguayo y unas 21 veces el del train general. Por
+lo tanto, el experimento no debe describirse como una reproducción estricta del
+óptimo de Chinchilla. La decisión práctica fue mantener un modelo pequeño y
+entrenarlo extensamente. Con un presupuesto fijo de cómputo, el trabajo de
+Chinchilla sugiere que también sería pertinente experimentar con un modelo de
+mayor tamaño y menos repeticiones de los datos.
+
+
+1.4. Tokenización BPE
+---------------------
+
+Los dos modelos utilizan tokenizadores Byte-Level BPE independientes, con un
+vocabulario de 16.384 tokens y el token especial <|endoftext|>. BPE representa
+palabras frecuentes mediante uno o pocos tokens y descompone palabras poco
+frecuentes en unidades menores. Esto evita depender de un vocabulario cerrado
+de palabras completas y permite representar nombres propios, variaciones
+morfológicas y caracteres acentuados.
+
+La elección de tokenizadores independientes permite adaptar el vocabulario a
+cada corpus, pero introduce una precaución al comparar métricas por token. Una
+misma palabra puede tener diferente cantidad de tokens en cada modelo. En la
+evaluación realizada, las 834 palabras objetivo produjeron 1.467 tokens con el
+tokenizer de charruaLLM y 2.553 con el de spanishLLM.
+
+
+2. DESCRIPCIÓN DEL TRABAJO
+==========================
+
+El objetivo fue construir un modelo de lenguaje base para noticias uruguayas en
+español y medir si la especialización de dominio le permite anticipar mejor la
+última palabra de afirmaciones relacionadas con noticias uruguayas. Para que la
+comparación no dependiera únicamente del tamaño o de la arquitectura, también
+se entrenó un segundo modelo con exactamente la misma configuración, pero con
+un corpus amplio y heterogéneo en español.
+
+El flujo de trabajo fue el siguiente:
+
+1. Recolección y preparación del corpus de noticias uruguayas.
+2. Entrenamiento de un tokenizer Byte-Level BPE específico.
+3. Conversión del corpus a secuencias de identificadores de tokens.
+4. Separación por documentos en train, validation y test.
+5. Entrenamiento de charruaLLM mediante predicción del token siguiente.
+6. Preparación de un corpus general en español y entrenamiento de spanishLLM.
+7. Creación de un dataset de evaluación a partir de afirmaciones de QuUANTO,
+   derivadas originalmente de QuALES.
+8. Evaluación mediante exact matching y negative log-likelihood (NLL).
+9. Almacenamiento de las predicciones y métricas individuales en archivos CSV.
+
+
+2.1. Arquitectura del modelo y cantidad de parámetros
+------------------------------------------------------
+
+Ambos modelos comparten la misma arquitectura:
+
+- Tipo: Transformer autoregresivo decoder-only.
+- Capas Transformer: 6.
+- Cabezas de atención por capa: 6.
+- Dimensión del embedding: 384.
+- Dimensión interna del MLP: 1.536, cuatro veces el embedding.
+- Longitud máxima de contexto: 512 tokens.
+- Vocabulario: 16.384 tokens.
+- Embeddings posicionales: aprendidos.
+- Activación del MLP: GELU.
+- Normalización: pre-norm con LayerNorm.
+- Atención: scaled dot-product attention causal.
+- Conexiones residuales en atención y MLP.
+- Dropout: 0,0.
+- Pesos compartidos entre el embedding de tokens y la capa de salida.
+
+Distribución de parámetros:
+
+- Embedding de tokens:                  6.291.456
+- Embedding de posiciones:                196.608
+- Seis bloques Transformer:            10.626.048
+- LayerNorm final:                            768
+- Total:                               17.114.880
+
+El peso compartido entre el embedding y la salida evita agregar otra matriz de
+16.384 x 384 parámetros. Todos los 17.114.880 parámetros son entrenables.
+
+La configuración de entrenamiento fue la misma para ambos modelos:
+
+- Optimizador: AdamW, betas (0,9; 0,95).
+- Learning rate máximo: 3e-4.
+- Learning rate mínimo: 3e-5.
+- Warmup: 200 pasos.
+- Schedule: decaimiento cosenoidal.
+- Batch size: 32.
+- Gradient accumulation: 1.
+- Gradient clipping: 1,0.
+- Weight decay: 0,1.
+- Pasos de entrenamiento: 960.000.
+- Evaluación cada 250 pasos, usando 50 batches.
+- Semilla de entrenamiento: 1337.
+- Objetivo: cross-entropy para predicción causal del token siguiente.
+
+
+2.2. Datos utilizados y procedencia
+-----------------------------------
+
+Corpus de charruaLLM
+~~~~~~~~~~~~~~~~~~~~
+
+charruaLLM se entrenó con noticias de tres medios uruguayos:
+
+- El Observador.
+- El País.
+- Montevideo Portal.
+
+Los archivos procesados fueron eo22-unified-splitted.txt,
+ep22-unified-splitted.txt y mp22-unified-splitted.txt. Las líneas no vacías se
+agruparon como documentos y los documentos se separaron de forma reproducible
+con semilla 42. La partición resultante fue:
+
+- Train:      884.682 documentos y 523.695.440 tokens.
+- Validation:   4.468 documentos y   2.658.412 tokens.
+- Test:         4.468 documentos y   2.707.620 tokens.
+
+Se reservó 0,5 % de los documentos para validation y 0,5 % para test. El token
+<|endoftext|> se agregó al final de cada documento.
+
+Corpus de spanishLLM
+~~~~~~~~~~~~~~~~~~~~
+
+Para construir un control de español general se emplearon muestras
+preprocesadas y convertidas a minúsculas de 15 corpus que corresponden a la
+composición de Large Spanish Corpus: DGT, DOGC, ECB, EMEA, EUBookShop,
+Europarl, GlobalVoices, JRC-Acquis, News Commentary 11, OpenSubtitles 2018,
+ParaCrawl, TED, UN, Spanish Wikis y MultiUN. Muchos de estos recursos provienen
+de la colección OPUS y cubren dominios muy distintos: legislación, documentos
+institucionales, medicina, noticias, subtítulos, Wikipedia y transcripciones.
+
+La partición procesada fue:
+
+- Train:      250.929 documentos, 270.579 chunks y 735.225.214 tokens.
+- Validation:   1.263 documentos y 712.293 tokens.
+- Test:         1.304 documentos y 808.811 tokens.
+
+El material de origen ocupaba 3.220.405.289 bytes. Debido a su tamaño, se
+preparó mediante streaming, asignación determinista de documentos a cada split
+y tokenización en chunks acotados, sin cargar el corpus completo en memoria.
+
+
+2.3. Creación del nuevo dataset de evaluación
+----------------------------------------------
+
+Se partió del archivo QuUANTO_unified_final.json. Según su metadato, QuUANTO
+contiene afirmaciones derivadas de pares de pregunta-respuesta de QuALES,
+validadas mediante un procedimiento multiagente y revisión humana. QuALES fue
+una tarea de Question Answering extractivo en español organizada en IberLEF
+2022 y basada en noticias uruguayas sobre la pandemia de COVID-19 y temas
+relacionados.
+
+Para convertir las afirmaciones en una tarea de completado se tomó la última
+palabra de cada oración como objetivo y el resto como entrada. Por ejemplo:
+
+Afirmación:  El Pereira Rossell es un hospital.
+Entrada:     El Pereira Rossell es un
+Objetivo:     hospital
+
+Se eliminó el punto final de la palabra objetivo y se mantuvo un espacio al
+principio de goal para conservar correctamente el límite de palabra al usar los
+tokenizers Byte-Level. El resultado se guardó en final_dataset.csv.
+
+El dataset contiene 834 ejemplos:
+
+- Split train original de QuALES: 319.
+- Split dev_gold:                 261.
+- Split test_gold:                254.
+
+Los nombres de los splits originales se conservaron. La evaluación principal
+se ejecutó sobre los 834 ejemplos; también se calcularon resultados separados
+por split. Esta transformación evalúa conocimiento léxico y capacidad de
+continuación, pero ya no constituye la tarea extractiva de QA original.
+
+
+2.4. Entrenamiento del segundo modelo para comparación
+-------------------------------------------------------
+
+spanishLLM se entrenó como modelo de control. Tiene exactamente la misma
+arquitectura, cantidad de parámetros, tamaño de vocabulario, longitud de
+contexto, optimizador y número de pasos que charruaLLM. Las variables que
+cambian son el corpus y el tokenizer aprendido sobre ese corpus.
+
+Este diseño permite estudiar la hipótesis principal: ante una capacidad de
+modelo comparable, el entrenamiento sobre noticias uruguayas debería mejorar
+la predicción de palabras en afirmaciones del mismo dominio frente a un corpus
+general de español. Al mismo tiempo, spanishLLM fue entrenado con texto
+convertido a minúsculas, mientras el dataset de evaluación conserva mayúsculas
+y numerosos nombres propios. Esta diferencia forma parte del experimento, pero
+también debe considerarse al interpretar los resultados.
+
+
+2.5. Metodología de evaluación
+------------------------------
+
+Evaluación 1: exact matching
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para cada entrada se realizó generación greedy autoregresiva: en cada posición
+se eligió el token de mayor probabilidad. La generación se detuvo al detectar
+el comienzo de una segunda palabra, el token de fin de texto o un máximo de 32
+tokens. La predicción se decodificó y se eliminó, de forma consistente con el
+dataset, un posible punto final.
+
+El resultado se consideró correcto solamente cuando la palabra predicha fue
+idéntica a la palabra objetivo. La comparación fue sensible a mayúsculas,
+acentos y caracteres. Esta métrica es estricta: una palabra semánticamente
+razonable, pero diferente del objetivo, cuenta como error.
+
+El detalle se guardó en evaluación/exact_matching_results.csv. Cada fila
+incluye el modelo, la afirmación, la entrada, el objetivo, la palabra predicha,
+los tokens generados y el indicador exact_match.
+
+Evaluación 2: NLL de la palabra objetivo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La segunda evaluación midió la probabilidad que el modelo asignaba a la
+secuencia correcta de tokens, aunque esa secuencia no fuera la elegida por
+generación greedy. Se utilizó teacher forcing: para predecir cada token objetivo
+se proporcionaron como contexto los tokens objetivo anteriores correctos.
+
+Para una palabra tokenizada como t1, ..., tk, la métrica fue:
+
+NLL_palabra = - sumatoria desde i=1 hasta k de
+              log P(ti | contexto, t1, ..., t(i-1))
+
+Una NLL menor indica que el modelo asignó mayor probabilidad a la palabra. La
+probabilidad conjunta de la palabra es exp(-NLL_palabra). También se guardaron
+la probabilidad y la NLL individual de cada token, la NLL media por token, la
+media geométrica de probabilidades y la perplexity por token.
+
+El detalle se guardó en evaluación/nll_results.csv. Ese CSV también incluye la
+palabra generada en la evaluación de exact matching.
+
+
+3. RESULTADOS OBTENIDOS
+=======================
+
+
+3.1. Gráfica de la loss
+-----------------------
+
+En el notebook se graficaron, para cada modelo, la loss de entrenamiento y la
+loss de validación en función de los pasos. Se utilizaron dos paneles con la
+misma escala lineal en ambos ejes. La serie de train se mostró tanto en su forma
+original como suavizada mediante una media móvil, mientras que validation se
+mostró en los puntos de evaluación.
+
+Resumen numérico de las curvas:
+
+Modelo          Val inicial   Mejor val   Paso del mejor   Val en paso 960.000
+--------------  ------------  -----------  ---------------  -------------------
+charruaLLM         9,8118        3,0833          939.250          3,1035
+spanishLLM         9,8010        3,5004          946.250          3,5364
+
+Loss de train evaluada en el paso 960.000:
+
+- charruaLLM: 3,0924.
+- spanishLLM: 3,3738.
+
+Las dos curvas descienden fuertemente desde valores cercanos a 9,8 y luego se
+estabilizan. charruaLLM alcanza una loss de validación menor. En ambos casos, la
+loss final es levemente superior al mínimo, por lo que para la evaluación se
+utilizaron los pesos best.pt: paso 939.250 para charruaLLM y paso 946.250 para
+spanishLLM.
+
+
+3.2. Evaluación con exact matching
+----------------------------------
+
+Resultados sobre los 834 ejemplos:
+
+Modelo          Aciertos   Total   Exact matching
+--------------  ---------  ------  --------------
+charruaLLM          222      834        26,62 %
+spanishLLM           39      834         4,68 %
+
+Resultados por split original:
+
+Modelo          Split       Aciertos/total   Exact matching
+--------------  ----------  ---------------  --------------
+charruaLLM      dev_gold        71/261           27,20 %
+charruaLLM      test_gold       71/254           27,95 %
+charruaLLM      train           80/319           25,08 %
+spanishLLM      dev_gold        13/261            4,98 %
+spanishLLM      test_gold       16/254            6,30 %
+spanishLLM      train           10/319            3,13 %
+
+En el conjunto completo, charruaLLM supera a spanishLLM por 21,94 puntos
+porcentuales y obtiene aproximadamente 5,69 veces su tasa de acierto. La
+ventaja también aparece en cada split y es especialmente relevante en
+test_gold, donde alcanza 27,95 % frente a 6,30 %.
+
+Algunos errores no implican una continuación lingüísticamente absurda. Por
+ejemplo, para “El Pereira Rossell es un hospital”, charruaLLM predijo “centro”;
+y para oraciones terminadas en “desempleo” predijo “paro”. Exact matching
+penaliza estas alternativas aunque estén relacionadas semánticamente. Esta es
+una de las razones para complementar la evaluación con NLL.
+
+
+3.3. Evaluación con NLL
+-----------------------
+
+Resultados agregados sobre los 834 ejemplos:
+
+Modelo          NLL media    NLL corpus    Perplexity   Prob. media
+                por palabra  por token     por token    de palabra
+--------------  -----------  ------------  -----------  ------------
+charruaLLM         4,1396       2,3534        10,52        25,06 %
+spanishLLM        22,8143       7,4529      1.724,80         3,00 %
+
+Cantidad total de tokens objetivo:
+
+- charruaLLM: 1.467 tokens, 1,76 tokens por palabra en promedio.
+- spanishLLM: 2.553 tokens, 3,06 tokens por palabra en promedio.
+
+Resultados de NLL en test_gold:
+
+Modelo          NLL media    NLL corpus    Perplexity   Prob. media
+                por palabra  por token     por token    de palabra
+--------------  -----------  ------------  -----------  ------------
+charruaLLM         3,7852       2,0587          7,84        25,56 %
+spanishLLM        24,6254       7,7220      2.257,54         3,84 %
+
+charruaLLM asigna mucha más probabilidad a las palabras correctas y obtiene una
+NLL sustancialmente menor. El resultado es consistente con exact matching, pero
+la NLL aporta información adicional: permite observar si el objetivo tenía una
+probabilidad razonable incluso cuando otra palabra quedó en primer lugar.
+
+La comparación de NLL por token y perplexity requiere cautela porque cada
+modelo utiliza su propio tokenizer. spanishLLM divide las palabras objetivo en
+muchos más tokens, en parte porque fue entrenado con texto en minúsculas y el
+dataset contiene nombres propios y mayúsculas. La NLL total por palabra compara
+la probabilidad asignada a la misma cadena objetivo y es una referencia más
+interpretable entre los dos sistemas, pero tampoco separa por sí sola el efecto
+del modelo del efecto de su tokenizer. Una evaluación futura podría sumar bits
+por byte o bits por carácter para reducir esta dependencia.
+
+
+3.4. Interpretación general
+---------------------------
+
+Los resultados apoyan la hipótesis de que la especialización de dominio es
+importante. Con la misma arquitectura y cantidad de parámetros, el modelo
+entrenado con noticias uruguayas predice mejor palabras de afirmaciones basadas
+en noticias uruguayas que el modelo entrenado con un corpus general en español.
+
+La diferencia puede explicarse por varios factores relacionados:
+
+1. charruaLLM fue entrenado con el dominio periodístico uruguayo.
+2. Su tokenizer representa con menos tokens las palabras de la evaluación.
+3. El corpus general mezcla dominios muy heterogéneos.
+4. spanishLLM fue entrenado con texto en minúsculas, mientras la evaluación
+   conserva capitalización y contiene numerosos nombres propios.
+5. Los modelos son pequeños, por lo que la selección del dominio y el uso del
+   vocabulario disponible tienen un impacto particularmente visible.
+
+Estos resultados no demuestran que un modelo general de español sea
+intrínsecamente inferior. Muestran que, bajo esta arquitectura, estos datos y
+este protocolo, el corpus especializado ofrece una ventaja clara para el
+benchmark seleccionado.
+
+
+3.5. Limitaciones y trabajo futuro
+----------------------------------
+
+- El dataset contiene 834 ejemplos, por lo que convendría ampliarlo.
+- La evaluación completa incluye ejemplos con etiquetas train, dev_gold y
+  test_gold de QuALES. Para una cifra principal estrictamente held-out debería
+  priorizarse test_gold.
+- QuALES y el corpus de charruaLLM proceden de noticias uruguayas. No se realizó
+  una auditoría de solapamiento textual entre los documentos de preentrenamiento
+  y las afirmaciones de evaluación, por lo que no puede descartarse leakage.
+- Exact matching no reconoce sinónimos ni equivalencias morfológicas.
+- Los tokenizers distintos dificultan la comparación directa de perplexity.
+- La conversión a minúsculas de spanishLLM introduce una diferencia adicional
+  además del dominio de los datos.
+- Sería útil entrenar un control con el mismo tokenizer para ambos corpus y
+  otro spanishLLM sin conversión a minúsculas.
+- También sería útil reportar top-k accuracy, mean reciprocal rank, bits por
+  carácter y calibración de probabilidades.
+- Las reglas de escalamiento de Chinchilla motivan probar modelos de mayor
+  tamaño con menos pasos para comparar eficiencia de cómputo.
+
+
+4. CONCLUSIONES
+===============
+
+Se construyeron y entrenaron dos modelos Transformer decoder-only de 17,1
+millones de parámetros: charruaLLM, especializado en noticias uruguayas, y
+spanishLLM, entrenado con un corpus general en español. Además, se creó un nuevo
+dataset de completado de 834 ejemplos a partir de afirmaciones de QuUANTO y se
+implementaron dos evaluaciones complementarias.
+
+charruaLLM obtuvo 26,62 % de exact matching frente a 4,68 % de spanishLLM. En
+test_gold obtuvo 27,95 % frente a 6,30 %. También alcanzó una NLL media por
+palabra considerablemente menor: 4,1396 frente a 22,8143 en el conjunto
+completo. Las curvas de entrenamiento muestran asimismo una mejor loss de
+validación para charruaLLM: 3,0833 frente a 3,5004.
+
+En conjunto, el experimento muestra que un modelo pequeño puede beneficiarse
+fuertemente de datos y tokenización adaptados al dominio. También evidencia que
+una evaluación responsable debe complementar la predicción exacta con medidas
+probabilísticas y explicitar las diferencias de tokenización, capitalización y
+posible solapamiento de datos.
+
+
+5. ARCHIVOS PRODUCIDOS
+======================
+
+- evaluación/final_dataset.csv: dataset de 834 ejemplos.
+- evaluación/exact_matching_results.csv: predicciones y exact matching.
+- evaluación/nll_results.csv: NLL y probabilidades por palabra y por token.
+- evaluación/charruaLLM/best.pt: mejor checkpoint de charruaLLM.
+- evaluación/spanishLLM/best.pt: mejor checkpoint de spanishLLM.
+- evaluación/charruaLLM/losses.csv: historial de entrenamiento.
+- evaluación/spanishLLM/losses.csv: historial de entrenamiento.
+- evaluación/notebook.ipynb: preparación, evaluación y visualización.
+
+
+6. REFERENCIAS
+==============
+
+Hoffmann, J., et al. (2022). Training Compute-Optimal Large Language Models.
+arXiv:2203.15556.
+https://arxiv.org/abs/2203.15556
+
+Liu, Y., et al. (2019). RoBERTa: A Robustly Optimized BERT Pretraining
+Approach. arXiv:1907.11692.
+https://arxiv.org/abs/1907.11692
+
+Radford, A., Wu, J., Child, R., Luan, D., Amodei, D. y Sutskever, I. (2019).
+Language Models are Unsupervised Multitask Learners.
+https://cdn.openai.com/better-language-models/language-models.pdf
+
+Rosá, A., Chiruzzo, L., Bouza, L., et al. (2022). Overview of QuALES at
+IberLEF 2022: Question Answering Learning from Examples in Spanish.
+https://www.fing.edu.uy/inco/grupos/pln/quales/
+https://rua.ua.es/dspace/handle/10045/127433
+
+Sennrich, R., Haddow, B. y Birch, A. (2016). Neural Machine Translation of
+Rare Words with Subword Units. Proceedings of ACL 2016, pp. 1715-1725.
+https://aclanthology.org/P16-1162/
+
+Vaswani, A., et al. (2017). Attention Is All You Need. arXiv:1706.03762.
+https://arxiv.org/abs/1706.03762
+
+Cañete, J. Large Spanish Corpus. Hugging Face Datasets.
+https://huggingface.co/datasets/josecannete/large_spanish_corpus
+
+OPUS: Open Parallel Corpus.
+https://opus.nlpl.eu/

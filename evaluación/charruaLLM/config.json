@@ -1,0 +1,61 @@
+{
+  "args": {
+    "data_dir": "processed",
+    "out_dir": "runs/run10",
+    "resume": "runs/run9",
+    "device": "cuda",
+    "compile": false,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 384,
+    "block_size": 512,
+    "dropout": 0.0,
+    "batch_size": 32,
+    "grad_accum": 1,
+    "lr": 0.0003,
+    "min_lr": 3e-05,
+    "warmup_steps": 200,
+    "max_steps": 960000,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "eval_every": 250,
+    "eval_iters": 50,
+    "log_every": 10,
+    "loss_log": "losses.csv",
+    "seed": 1337
+  },
+  "model_cfg": {
+    "vocab_size": 16384,
+    "block_size": 512,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 384,
+    "dropout": 0.0
+  },
+  "meta": {
+    "vocab_size": 16384,
+    "dtype": "uint16",
+    "eos_token": "<|endoftext|>",
+    "eos_id": 0,
+    "split_unit": "document",
+    "document_separator": "blank_line",
+    "train_documents": 884682,
+    "val_documents": 4468,
+    "test_documents": 4468,
+    "train_tokens": 523695440,
+    "val_tokens": 2658412,
+    "test_tokens": 2707620,
+    "train_sha256": "4f268d09c01d0a32e7ab2e8fbe5e83715f82bc7a25c9eb5403ab064e91ae4d80",
+    "val_sha256": "dce166c9a50a83b0c6413d60841e8a6f39d4ae0c16a17c8cb3e696f45393ec16",
+    "test_sha256": "f5e16656faeb243db9a544e8e644411b71cf427066f69f0d462168047a752e9a",
+    "files": [
+      "eo22-unified-splitted.txt",
+      "ep22-unified-splitted.txt",
+      "mp22-unified-splitted.txt"
+    ],
+    "seed": 42,
+    "val_frac": 0.005,
+    "test_frac": 0.005,
+    "batch_docs": 1024
+  }
+}

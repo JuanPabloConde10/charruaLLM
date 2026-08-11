@@ -1,6 +1,7 @@
 """Training loop for charruaLLM base model."""
 
 import argparse
+import csv
 import json
 import math
 import time
@@ -87,6 +88,7 @@ def main():
     p.add_argument("--eval-every", type=int, default=250)
     p.add_argument("--eval-iters", type=int, default=50)
     p.add_argument("--log-every", type=int, default=10)
+    p.add_argument("--loss-log", default="losses.csv", help="CSV file for loss history inside out-dir")
     p.add_argument("--seed", type=int, default=1337)
     args = p.parse_args()
 
@@ -172,51 +174,84 @@ def main():
     )
 
     t0 = time.time()
+    loss_log_path = Path(args.loss_log)
+    if not loss_log_path.is_absolute():
+        loss_log_path = out_dir / loss_log_path
+    loss_log_mode = "a" if args.resume and loss_log_path.exists() else "w"
+    loss_fields = ["step", "split", "loss", "lr", "elapsed_min", "kind"]
+    with open(loss_log_path, loss_log_mode, newline="") as loss_file:
+        loss_writer = csv.DictWriter(loss_file, fieldnames=loss_fields)
+        if loss_log_mode == "w":
+            loss_writer.writeheader()
 
-    for step in range(start_step, args.max_steps + 1):
-        lr = cosine_lr(step, args.warmup_steps, args.max_steps, args.lr, args.min_lr)
-        for g in optimizer.param_groups:
-            g["lr"] = lr
+        for step in range(start_step, args.max_steps + 1):
+            lr = cosine_lr(step, args.warmup_steps, args.max_steps, args.lr, args.min_lr)
+            for g in optimizer.param_groups:
+                g["lr"] = lr
 
-        if step % args.eval_every == 0:
-            losses = estimate_loss(model, data_dict, args.block_size, args.batch_size, device, n_eval=args.eval_iters)
-            elapsed = (time.time() - t0) / 60
-            print(
-                f"[eval] step {step:6d} | train {losses['train']:.4f} "
-                f"| val {losses['val']:.4f} | lr {lr:.2e} | {elapsed:.1f}m"
-            )
-            if losses["val"] < best_val and step > 0:
-                best_val = losses["val"]
-                ckpt = {
-                    "model": raw_model.state_dict(),
-                    "cfg": cfg.__dict__,
-                    "optimizer": optimizer.state_dict(),
-                    "step": step,
-                    "val_loss": losses["val"],
-                    "best_val": best_val,
-                    "args": vars(args),
-                }
-                torch.save(ckpt, out_dir / "best.pt")
-                print(f"       saved best.pt (val={best_val:.4f})")
+            if step % args.eval_every == 0:
+                losses = estimate_loss(model, data_dict, args.block_size, args.batch_size, device, n_eval=args.eval_iters)
+                elapsed = (time.time() - t0) / 60
+                print(
+                    f"[eval] step {step:6d} | train {losses['train']:.4f} "
+                    f"| val {losses['val']:.4f} | lr {lr:.2e} | {elapsed:.1f}m"
+                )
+                for split, split_loss in losses.items():
+                    loss_writer.writerow(
+                        {
+                            "step": step,
+                            "split": split,
+                            "loss": split_loss,
+                            "lr": lr,
+                            "elapsed_min": elapsed,
+                            "kind": "eval",
+                        }
+                    )
+                loss_file.flush()
+                if losses["val"] < best_val and step > 0:
+                    best_val = losses["val"]
+                    ckpt = {
+                        "model": raw_model.state_dict(),
+                        "cfg": cfg.__dict__,
+                        "optimizer": optimizer.state_dict(),
+                        "step": step,
+                        "val_loss": losses["val"],
+                        "best_val": best_val,
+                        "args": vars(args),
+                    }
+                    torch.save(ckpt, out_dir / "best.pt")
+                    print(f"       saved best.pt (val={best_val:.4f})")
 
-        if step == args.max_steps:
-            break
+            if step == args.max_steps:
+                break
 
-        optimizer.zero_grad(set_to_none=True)
-        last_loss = 0.0
-        for _ in range(args.grad_accum):
-            x, y = get_batch(train_data, args.block_size, args.batch_size, device)
-            with autocast_ctx:
-                _, loss = model(x, y)
-                loss = loss / args.grad_accum
-            loss.backward()
-            last_loss += loss.item()
-        if args.grad_clip > 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
-        optimizer.step()
+            optimizer.zero_grad(set_to_none=True)
+            last_loss = 0.0
+            for _ in range(args.grad_accum):
+                x, y = get_batch(train_data, args.block_size, args.batch_size, device)
+                with autocast_ctx:
+                    _, loss = model(x, y)
+                    loss = loss / args.grad_accum
+                loss.backward()
+                last_loss += loss.item()
+            if args.grad_clip > 0:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
+            optimizer.step()
 
-        if step % args.log_every == 0:
-            print(f"step {step:6d} | loss {last_loss:.4f} | lr {lr:.2e}")
+            if step % args.log_every == 0:
+                elapsed = (time.time() - t0) / 60
+                print(f"step {step:6d} | loss {last_loss:.4f} | lr {lr:.2e}")
+                loss_writer.writerow(
+                    {
+                        "step": step,
+                        "split": "train",
+                        "loss": last_loss,
+                        "lr": lr,
+                        "elapsed_min": elapsed,
+                        "kind": "train",
+                    }
+                )
+                loss_file.flush()
 
     torch.save(
         {"model": raw_model.state_dict(), "cfg": cfg.__dict__, "optimizer": optimizer.state_dict(),

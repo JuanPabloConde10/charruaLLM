@@ -8,6 +8,10 @@ dependencies = [
     "numpy>=1.26",
     "tokenizers>=0.20",
     "tqdm>=4.66",
+    "transformers>=5.13.0",
+    "pandas>=2.3.3",
+    "matplotlib>=3.10.9",
+    "scikit-learn>=1.7.2",
 ]
 
 [tool.uv]
