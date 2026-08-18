@@ -1,10 +1,13 @@
-busqueda de hiper
-comentar mas sobre quanto en el informe *
-conclusiones cualitativa *
-analisis de donde se equivoca y cosas asi
-hoja de tura para el paper
-entrenar con el dataset en minuscula para coincidir con el otro
-o evaluar tanto mayus como minus como correcto
+Agregar al informe:
+- comentar mas sobre QuUANTO en el informe *
+- conclusiones cualitativas *
+
+Limitaciones y trabajo futuro:
+- busqueda de hiperparámetros
+- analisis de donde se equivoca el modelo (más cualitativo que cuantitativo)
+- hoja de ruta para el paper
+- entrenar con el dataset en minuscula para coincidir con el otro
+- o considerar tanto mayus como minus como correcto al evaluar el modelo
 
 
 los que tienen * son los que faltan para terminar el taller
