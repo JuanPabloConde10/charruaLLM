@@ -1,0 +1,11 @@
+busqueda de hiper
+comentar mas sobre quanto en el informe *
+conclusiones cualitativa *
+analisis de donde se equivoca y cosas asi
+hoja de tura para el paper
+entrenar con el dataset en minuscula para coincidir con el otro
+o evaluar tanto mayus como minus como correcto
+
+
+los que tienen * son los que faltan para terminar el taller
+lo demás es extra para el paper
