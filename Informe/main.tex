@@ -439,12 +439,26 @@ acotados, sin cargar el corpus completo en memoria.
 
 \subsection{Creación del nuevo dataset de evaluación}
 
-Para evaluar el modelo se empleó QuUANTO, un dataset de elaboración propia que
-contiene afirmaciones derivadas de pares de pregunta-respuesta extraídos de
-QuALES y validadas mediante revisión humana. QuALES fue una tarea de Question
-Answering extractivo en español organizada en IberLEF 2022 y basada en noticias
-uruguayas sobre la pandemia de COVID-19 y temas relacionados~\cite{rosa2022}.
-Las afirmaciones para la evaluación se tomaron del archivo \code{QuUANTO\_unified\_final.json}. 
+Para evaluar el modelo se empleó QuUANTO, acrónimo de \emph{QuALES-derived
+Uruguay Assertions for Neural Training Objectives}. Es un dataset de afirmaciones
+declarativas en español derivadas de pares de pregunta-respuesta de QuALES. QuALES
+fue una tarea de \emph{Question Answering} extractivo organizada en IberLEF 2022 y
+basada principalmente en noticias uruguayas sobre la pandemia de COVID-19 y temas
+relacionados~\cite{rosa2022}. Las afirmaciones para la evaluación se tomaron del
+archivo \code{QuUANTO\_unified\_final.json} y del repositorio que documenta su
+construcción~\cite{quanto}.
+
+La construcción de QuUANTO combinó generación automática y revisión humana. En
+primer lugar, un modelo de lenguaje convirtió cada par de pregunta y respuesta en
+una afirmación autocontenida y marcó si su contenido dependía de un momento
+específico. Luego se conservaron las afirmaciones no sensibles al tiempo y se
+intentaron reescribir las restantes para expresar una formulación atemporal.
+También se aplicaron filtrado de contenido relacionado principalmente con COVID-19
+y correcciones del orden de la información. Finalmente, las afirmaciones fueron
+sometidas a revisión humana. Este proceso
+mejora la coherencia y la fidelidad respecto de la fuente, pero no equivale a una
+verificación independiente de los hechos: el dataset hereda el sesgo temático y
+periodístico de las noticias de QuALES.
 
 Para convertir las afirmaciones en una tarea de completado se tomó la última
 palabra de cada oración como objetivo y el resto como entrada. Por ejemplo:
@@ -460,13 +474,12 @@ palabra de cada oración como objetivo y el resto como entrada. Por ejemplo:
 Se eliminó el punto final de la palabra objetivo y se mantuvo un espacio al
 principio de \code{goal} para conservar correctamente el límite de palabra al
 usar tokenizers Byte-Level. El resultado se guardó en
-\code{final\_dataset.csv}. El dataset contiene 834 ejemplos: 319 del split
-train original de QuALES, 261 de \code{dev\_gold} y 254 de
-\code{test\_gold}.
-
-Los nombres de los splits originales se conservaron. La evaluación principal
-se ejecutó sobre los 834 ejemplos y también se calcularon resultados separados
-por split. Esta transformación evalúa conocimiento léxico y capacidad de
+\code{final\_dataset.csv}, que contiene 834 ejemplos. Aunque cada afirmación
+conserva el split original de QuALES como dato de procedencia, para este trabajo
+se combinaron los ejemplos de \code{train}, \code{dev\_gold} y \code{test\_gold}
+en un único conjunto de evaluación. Por lo tanto, esos nombres no representan
+particiones propias del experimento ni se utilizaron para definir un conjunto
+held-out. Esta transformación evalúa conocimiento léxico y capacidad de
 continuación, pero ya no constituye la tarea extractiva de QA original.
 
 
@@ -537,7 +550,7 @@ la palabra generada en la evaluación de exact matching.
 
 \section{Resultados obtenidos}
 
-\subsection{Gráfica de la loss}
+\subsection{Gráfica de loss}
 
 La Figura~\ref{fig:loss} presenta, para cada modelo, la loss de entrenamiento y
 la loss de validación en función de los pasos. Los dos paneles utilizan la misma
@@ -591,36 +604,8 @@ por lo que para la evaluación se utilizaron los pesos \code{best.pt}: paso
     \end{tabular}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \caption{Exact matching por split original de QuALES.}
-    \label{tab:exact-split}
-    \begin{tabular}{llrr}
-        \toprule
-        Modelo & Split & Aciertos/total & Exact matching \\
-        \midrule
-        \charrua & \code{dev\_gold} & 71/261 & 27,20\,\% \\
-        \charrua & \code{test\_gold} & 71/254 & 27,95\,\% \\
-        \charrua & train & 80/319 & 25,08\,\% \\
-        \midrule
-        \spanishmodel & \code{dev\_gold} & 13/261 & 4,98\,\% \\
-        \spanishmodel & \code{test\_gold} & 16/254 & 6,30\,\% \\
-        \spanishmodel & train & 10/319 & 3,13\,\% \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 En el conjunto completo, \charrua{} supera a \spanishmodel{} por 21,94 puntos
-porcentuales y obtiene aproximadamente 5,69 veces su tasa de acierto. La
-ventaja aparece en cada split y es especialmente relevante en
-\code{test\_gold}, donde alcanza 27,95\,\% frente a 6,30\,\%.
-
-Algunos errores no implican una continuación lingüísticamente absurda. Por
-ejemplo, para ``El Pereira Rossell es un hospital'', \charrua{} predijo
-``centro''; y para oraciones terminadas en ``desempleo'' predijo ``paro''.
-Exact matching penaliza estas alternativas aunque estén relacionadas
-semánticamente. Esta es una de las razones para complementar la evaluación con
-NLL.
+porcentuales y obtiene aproximadamente 5,69 veces su tasa de acierto.
 
 
 \subsection{Resultados de NLL}
@@ -643,21 +628,6 @@ NLL.
 La cantidad total de tokens objetivo fue 1.467 para \charrua{} y 2.553 para
 \spanishmodel, equivalentes a 1,76 y 3,06 tokens por palabra respectivamente.
 
-\begin{table}[H]
-    \centering
-    \small
-    \caption{Resultados de NLL en el split \code{test\_gold}.}
-    \label{tab:nll-test}
-    \begin{tabular}{lrrrr}
-        \toprule
-        Modelo & NLL/palabra & NLL/token & Perplexity/token & Prob. palabra \\
-        \midrule
-        \charrua & 3,7852 & 2,0587 & 7,84 & 25,56\,\% \\
-        \spanishmodel & 24,6254 & 7,7220 & 2.257,54 & 3,84\,\% \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 \charrua{} asigna mucha más probabilidad a las palabras correctas y obtiene una
 NLL sustancialmente menor. El resultado es consistente con exact matching, pero
 la NLL aporta información adicional: permite observar si el objetivo tenía una
@@ -671,6 +641,27 @@ palabra compara la probabilidad asignada a la misma cadena objetivo y es una
 referencia más interpretable entre los dos sistemas, pero tampoco separa por sí
 sola el efecto del modelo del efecto de su tokenizer. Una evaluación futura
 podría sumar bits por byte o bits por carácter para reducir esta dependencia.
+
+
+\subsection{Análisis cualitativo de las predicciones}
+
+La comparación exacta no captura por completo la calidad lingüística de las
+continuaciones. Algunos errores de \charrua{} son palabras relacionadas con el
+objetivo y resultan razonables en el contexto. Por ejemplo, ante la afirmación
+``El Pereira Rossell es un hospital'', el modelo predijo ``centro''; y ante
+oraciones cuyo objetivo era ``desempleo'', predijo ``paro''. Estas respuestas no
+coinciden con la cadena esperada y por eso cuentan como errores de exact matching,
+pero muestran que el modelo puede recuperar relaciones léxicas y semánticas del
+dominio periodístico.
+
+Este tipo de casos justifica complementar la métrica exacta con NLL. La primera
+responde si el modelo generó exactamente la palabra de referencia, mientras que
+la segunda permite medir cuánta probabilidad asignó a esa palabra aunque otra
+continuación haya quedado en primer lugar. El análisis también debe considerar
+que \spanishmodel{} fue entrenado con texto en minúsculas, mientras que las
+afirmaciones conservan mayúsculas y nombres propios. Por ello, algunos errores
+pueden reflejar una diferencia de representación además de una falta de
+conocimiento del contenido.
 
 
 \subsection{Interpretación general}
@@ -704,29 +695,18 @@ benchmark seleccionado.
 \subsection{Limitaciones y trabajo futuro}
 
 \begin{itemize}
-    \item El dataset contiene 834 ejemplos, por lo que convendría ampliarlo.
-    \item La evaluación completa incluye ejemplos con etiquetas train,
-          \code{dev\_gold} y \code{test\_gold} de QuALES. Para una cifra
-          principal estrictamente held-out debería priorizarse
-          \code{test\_gold}.
-    \item QuALES y el corpus de \charrua{} proceden de noticias uruguayas. No
-          se realizó una auditoría de solapamiento textual entre los documentos
-          de preentrenamiento y las afirmaciones de evaluación, por lo que no
-          puede descartarse leakage.
-    \item Exact matching no reconoce sinónimos ni equivalencias morfológicas.
-    \item Los resultados de masked-word prediction de ROUBERTa no son
-          directamente comparables con los nuestros: su encoder observa ambos
-          lados de la máscara, mientras nuestro decoder solo observa el prefijo.
-    \item Los tokenizers distintos dificultan la comparación directa de
-          perplexity.
-    \item La conversión a minúsculas de \spanishmodel{} introduce una
-          diferencia adicional además del dominio de los datos.
-    \item Sería útil entrenar un control con el mismo tokenizer para ambos
-          corpus y otro \spanishmodel{} sin conversión a minúsculas.
-    \item También sería útil reportar top-$k$ accuracy, mean reciprocal rank,
-          bits por carácter y calibración de probabilidades.
-    \item Las reglas de escalamiento de Chinchilla motivan probar modelos de
-          mayor tamaño con menos pasos para comparar eficiencia de cómputo.
+    \item No se realizó una búsqueda sistemática de hiperparámetros. Sería útil
+          comparar distintas tasas de aprendizaje, tamaños de modelo, longitudes
+          de contexto y regímenes de entrenamiento.
+    \item Sería conveniente analizar cualitativamente una muestra amplia de
+          errores y agruparlos, por ejemplo, en sinónimos, nombres propios,
+          errores morfológicos, errores sintácticos y falta de conocimiento.
+    \item Sería útil entrenar con el dataset convertido a minúsculas para
+          coincidir con el otro modelo.
+    \item También podría reportarse una métrica auxiliar que considere
+          equivalentes las predicciones que solo difieren en mayúsculas y
+          minúsculas. La métrica principal debería mantenerse sensible a la
+          capitalización para conservar la evaluación original.
 \end{itemize}
 
 
@@ -746,8 +726,7 @@ ofrecen evidencia convergente sobre el valor de los datos de prensa uruguaya y
 la especialización de dominio.
 
 \charrua{} obtuvo 26,62\,\% de exact matching frente a 4,68\,\% de
-\spanishmodel. En \code{test\_gold} obtuvo 27,95\,\% frente a 6,30\,\%.
-También alcanzó una NLL media por palabra considerablemente menor: 4,1396
+\spanishmodel{} sobre los 834 ejemplos combinados. También alcanzó una NLL media por palabra considerablemente menor: 4,1396
 frente a 22,8143 en el conjunto completo. Las curvas de entrenamiento muestran
 asimismo una mejor loss de validación para \charrua: 3,0833 frente a 3,5004.
 
@@ -804,6 +783,12 @@ Rosá, A., Chiruzzo, L., Bouza, L. et al. (2022).
 \newblock \emph{Overview of QuALES at IberLEF 2022: Question Answering
 Learning from Examples in Spanish}.
 \newblock \url{https://rua.ua.es/dspace/handle/10045/127433}
+
+\bibitem{quanto}
+QuUANTO.
+\newblock \emph{QuALES-derived Uruguay Assertions for Neural Training Objectives}.
+\newblock Repositorio del dataset.
+\newblock \url{https://github.com/McBruno712/QuUANTO}
 
 \bibitem{sennrich2016}
 Sennrich, R., Haddow, B. y Birch, A. (2016).
