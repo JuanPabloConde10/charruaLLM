@@ -646,22 +646,137 @@ podría sumar bits por byte o bits por carácter para reducir esta dependencia.
 \subsection{Análisis cualitativo de las predicciones}
 
 La comparación exacta no captura por completo la calidad lingüística de las
-continuaciones. Algunos errores de \charrua{} son palabras relacionadas con el
-objetivo y resultan razonables en el contexto. Por ejemplo, ante la afirmación
-``El Pereira Rossell es un hospital'', el modelo predijo ``centro''; y ante
-oraciones cuyo objetivo era ``desempleo'', predijo ``paro''. Estas respuestas no
-coinciden con la cadena esperada y por eso cuentan como errores de exact matching,
-pero muestran que el modelo puede recuperar relaciones léxicas y semánticas del
-dominio periodístico.
+continuaciones. Para ilustrar los comportamientos observados se seleccionaron
+diez ejemplos del archivo \code{exact\_matching\_results.csv}. Cada ejemplo se
+presenta con la afirmación completa, el prompt utilizado, las predicciones de
+ambos modelos y el análisis cualitativo correspondiente.
 
-Este tipo de casos justifica complementar la métrica exacta con NLL. La primera
-responde si el modelo generó exactamente la palabra de referencia, mientras que
-la segunda permite medir cuánta probabilidad asignó a esa palabra aunque otra
-continuación haya quedado en primer lugar. El análisis también debe considerar
-que \spanishmodel{} fue entrenado con texto en minúsculas, mientras que las
-afirmaciones conservan mayúsculas y nombres propios. Por ello, algunos errores
-pueden reflejar una diferencia de representación además de una falta de
-conocimiento del contenido.
+\subsubsection{Alternativas semánticamente relacionadas}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.9em]
+    \item \textbf{Afirmación (id 0):} ``El Pereira Rossell es un hospital.''\\
+          \textbf{Prompt:} ``El Pereira Rossell es un''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{centro}\\
+          \hspace*{1em}\spanishmodel{}: \code{tipo}\\
+          \textbf{Análisis cualitativo:} \code{centro} no coincide exactamente
+          con el objetivo, pero es una continuación semánticamente plausible.
+
+    \item \textbf{Afirmación (id 1):} ``El sector de alojamiento y servicios de
+          comida envió la mayor cantidad de trabajadores al seguro de desempleo.''\\
+          \textbf{Prompt:} ``El sector de alojamiento y servicios de comida envió
+          la mayor cantidad de trabajadores al seguro de''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{paro}\\
+          \hspace*{1em}\spanishmodel{}: \code{vida}\\
+          \textbf{Análisis cualitativo:} \code{paro} es una alternativa léxica
+          relacionada con el dominio laboral, mientras que \code{vida} no guarda
+          una relación clara con el contexto.
+
+    \item \textbf{Afirmación (id 23):} ``Los clubes de la B y de la C recibieron
+          donaciones de alimentos y productos de limpieza.''\\
+          \textbf{Prompt:} ``Los clubes de la B y de la C recibieron donaciones de
+          alimentos y productos de''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{higiene}\\
+          \hspace*{1em}\spanishmodel{}: \code{origen}\\
+          \textbf{Análisis cualitativo:} \code{higiene} conserva el campo
+          semántico de la limpieza; \code{origen} resulta irrelevante.
+
+    \item \textbf{Afirmación (id 44):} ``Las policlínicas estuvieron cerradas
+          desde que se conocieron los primeros casos de covid-19.''\\
+          \textbf{Prompt:} ``Las policlínicas estuvieron cerradas desde que se
+          conocieron los primeros casos de''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{coronavirus}\\
+          \hspace*{1em}\spanishmodel{}: \code{cáncer}\\
+          \textbf{Análisis cualitativo:} \code{coronavirus} es otra
+          denominación relacionada con el objetivo, mientras que \code{cáncer}
+          cambia de enfermedad.
+\end{enumerate}
+
+Estos casos muestran que algunos errores de \charrua{} pueden ser razonables
+desde el punto de vista lingüístico o semántico, aunque exact matching los
+clasifique como incorrectos. También muestran una diferencia cualitativa frente
+a continuaciones de \spanishmodel{} que no guardan relación clara con el contexto.
+
+\subsubsection{Aciertos de entidades y expresiones institucionales}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.9em]
+    \item \textbf{Afirmación (id 13):} ``Jair Bolsonaro fue presidente de Brasil.''\\
+          \textbf{Prompt:} ``Jair Bolsonaro fue presidente de''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{Brasil}\\
+          \hspace*{1em}\spanishmodel{}: \code{la}\\
+          \textbf{Análisis cualitativo:} \charrua{} completa correctamente una
+          entidad geopolítica, mientras que \spanishmodel{} produce una palabra
+          funcional sin completar la afirmación.
+
+    \item \textbf{Afirmación (id 122):} ``Daniel Salinas fue ministro de Salud
+          Pública.''\\
+          \textbf{Prompt:} ``Daniel Salinas fue ministro de Salud''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{Pública}\\
+          \hspace*{1em}\spanishmodel{}: \code{í!}\\
+          \textbf{Análisis cualitativo:} \charrua{} completa correctamente una
+          expresión institucional de varias palabras.
+
+    \item \textbf{Afirmación (id 5):} ``La OPS es la Organización Panamericana
+          de la Salud.''\\
+          \textbf{Prompt:} ``La OPS es la Organización Panamericana de la''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{Salud}\\
+          \hspace*{1em}\spanishmodel{}: \code{rrrr...}\\
+          \textbf{Análisis cualitativo:} \charrua{} acierta, mientras que
+          \spanishmodel{} produce una secuencia repetitiva marcada como truncada
+          en el archivo de resultados.
+\end{enumerate}
+
+Estos aciertos sugieren que el modelo especializado puede memorizar o recuperar
+con mayor facilidad nombres propios, instituciones y expresiones frecuentes en
+el dominio periodístico uruguayo. La comparación no permite atribuir cada caso
+exclusivamente al dominio, porque ambos modelos también tienen tokenizadores
+distintos.
+
+\subsubsection{Puntuación, capitalización y continuaciones incompletas}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.9em]
+    \item \textbf{Afirmación (id 16):} ``El canciller de Brasil fue Ernesto
+          Araújo.''\\
+          \textbf{Prompt:} ``El canciller de Brasil fue Ernesto''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{Araújo,}\\
+          \hspace*{1em}\spanishmodel{}: \code{íta}\\
+          \textbf{Análisis cualitativo:} \charrua{} recupera el nombre correcto,
+          pero añade una coma y obtiene un falso negativo de exact matching.
+
+    \item \textbf{Afirmación (id 25):} ``Se deja constancia de los datos de
+          coronavirus en la página web del Sistema Nacional de Emergencias
+          (SINAE).''\\
+          \textbf{Prompt:} ``Se deja constancia de los datos de coronavirus en la
+          página web del Sistema Nacional de Emergencias''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: \code{(Sinae)}\\
+          \hspace*{1em}\spanishmodel{}: \code{y}\\
+          \textbf{Análisis cualitativo:} el error de \charrua{} es principalmente
+          de capitalización, mientras que \spanishmodel{} no recupera la sigla.
+
+    \item \textbf{Afirmación (id 57):} ``Crea fue la principal herramienta que
+          utilizaron los docentes y alumnos en la educación virtual escolar.''\\
+          \textbf{Prompt:} ``Crea fue la principal herramienta que utilizaron los
+          docentes y alumnos en la educación virtual''\\
+          \textbf{Predicciones:}\\
+          \hspace*{1em}\charrua{}: punto final, sin palabra\\
+          \hspace*{1em}\spanishmodel{}: coma\\
+          \textbf{Análisis cualitativo:} ambos modelos detienen la generación sin
+          completar la palabra objetivo.
+\end{enumerate}
+
+Estos ejemplos muestran que la puntuación y la capitalización influyen
+directamente en exact matching. También evidencian que una generación puede
+detenerse antes de completar la palabra objetivo. Por ello, la métrica estricta
+debe interpretarse junto con una inspección cualitativa y, cuando esté disponible,
+con medidas probabilísticas como la NLL.
 
 
 \subsection{Interpretación general}
@@ -692,24 +807,6 @@ este protocolo, el corpus especializado ofrece una ventaja clara para el
 benchmark seleccionado.
 
 
-\subsection{Limitaciones y trabajo futuro}
-
-\begin{itemize}
-    \item No se realizó una búsqueda sistemática de hiperparámetros. Sería útil
-          comparar distintas tasas de aprendizaje, tamaños de modelo, longitudes
-          de contexto y regímenes de entrenamiento.
-    \item Sería conveniente analizar cualitativamente una muestra amplia de
-          errores y agruparlos, por ejemplo, en sinónimos, nombres propios,
-          errores morfológicos, errores sintácticos y falta de conocimiento.
-    \item Sería útil entrenar con el dataset convertido a minúsculas para
-          coincidir con el otro modelo.
-    \item También podría reportarse una métrica auxiliar que considere
-          equivalentes las predicciones que solo difieren en mayúsculas y
-          minúsculas. La métrica principal debería mantenerse sensible a la
-          capitalización para conservar la evaluación original.
-\end{itemize}
-
-
 \section{Conclusiones}
 
 Se construyeron y entrenaron dos modelos Transformer decoder-only de 17,1
@@ -735,6 +832,24 @@ fuertemente de datos y tokenización adaptados al dominio. También evidencia qu
 una evaluación responsable debe complementar la predicción exacta con medidas
 probabilísticas y explicitar las diferencias de tokenización, capitalización y
 posible solapamiento de datos.
+
+
+\section{Limitaciones y trabajo futuro}
+
+\begin{itemize}
+    \item No se realizó una búsqueda sistemática de hiperparámetros. Sería útil
+          comparar distintas tasas de aprendizaje, tamaños de modelo, longitudes
+          de contexto y regímenes de entrenamiento.
+    \item Sería conveniente analizar cualitativamente una muestra amplia de
+          errores y agruparlos, por ejemplo, en sinónimos, nombres propios,
+          errores morfológicos, errores sintácticos y falta de conocimiento.
+    \item Sería útil entrenar con el dataset convertido a minúsculas para
+          coincidir con el otro modelo.
+    \item También podría reportarse una métrica auxiliar que considere
+          equivalentes las predicciones que solo difieren en mayúsculas y
+          minúsculas. La métrica principal debería mantenerse sensible a la
+          capitalización para conservar la evaluación original.
+\end{itemize}
 
 
 \section{Archivos producidos}
